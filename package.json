@@ -1,0 +1,23 @@
+{
+  "name": "fullstack_ballaway_clone",
+  "version": "1.0.0",
+  "description": "",
+
+  "engines": {
+    "node": "16.x"
+  },
+  "scripts": {
+    "build": "npm install --prefix frontend && npm run build --prefix frontend"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rlattanz1/Ballaway-Clone.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rlattanz1/Ballaway-Clone/issues"
+  },
+  "homepage": "https://github.com/rlattanz1/Ballaway-Clone#readme"
+}
