@@ -10,12 +10,12 @@ require "open-uri"
     # Unnecessary if using `rails db:seed:replant`
     User.destroy_all
     Product.destroy_all
-    Review.destroy_all
+    # Review.destroy_all
     puts "Resetting primary keys..."
     # For easy testing, so that after seeding, the first `User` has `id` of 1
     ApplicationRecord.connection.reset_pk_sequence!('users')
     ApplicationRecord.connection.reset_pk_sequence!('products')
-    ApplicationRecord.connection.reset_pk_sequence!('reviews')
+    # ApplicationRecord.connection.reset_pk_sequence!('reviews')
 
     # puts "Creating demo user..." for when I have my demo user button set up tonight
     # User.create!(
@@ -45,14 +45,14 @@ require "open-uri"
 
     puts "Creating products..."
 
-    p1 = Product.create!({
+    Product.create!({
         name: "Paradym Night Mode Driver",
         description: "This limited edition design has shifted Paradym to a sleeker, darker place. It is available in NIGHT MODE. The driver head features an all-black crown, blacked out Forged Carbon on the sole and special anodized weights. We partnered with Project X on a Limited Edition HZRDUS Gen 4 Blackout shaft and completed the design with a Golf Pride MCC Blackout grip and Callaway Customs Night Mode headcover.",
         price: 699,
         category: "Driver",
-        specs: "9° RH ONLY 45.75" 57.0° 460 D3"
+        specs: ['9°', 'RH ONLY', '45.75"', '57.0°', '460', 'D3'],
       })
-    p2 = Product.create!({
+    Product.create!({
         name: "Paradym Driver",
         description: "The Paradym driver model provides a refined shape with high MOI and adjustable perimeter weighting. Engineered for players of all skill levels, this club promotes high launch and low spin characteristics along with a neutral ball flight. It’s our best combination of distance, forgiveness, and adjustability.",
         price: 599,
