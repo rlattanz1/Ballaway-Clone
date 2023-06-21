@@ -1,0 +1,10 @@
+.product_search {
+    display: flex;
+    flex-direction: row;
+}
+
+.search_icon {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}

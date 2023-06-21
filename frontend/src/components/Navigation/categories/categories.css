@@ -1,0 +1,27 @@
+.search_bar {
+
+}
+
+.category_links {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.category_links li {
+
+}
+
+.category {
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.category_li a:visited {
+    color: black;
+}
+
+.categories_div {
+
+}

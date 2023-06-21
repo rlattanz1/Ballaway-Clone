@@ -60,3 +60,9 @@ li {
 .phone_num:hover {
     text-decoration: underline;
 } */
+
+.categories {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

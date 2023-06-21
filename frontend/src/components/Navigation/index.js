@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 import ProfileButton from './ProfileButton';
 import './Navigation.css';
 import LoginFormModal from '../LoginFormModal';
-import Categories from '../../categories/categories';
+import Categories from './categories/categories';
 import {cartImage} from "../../images/cartImage"
 import { Logo } from '../../images/logo';
 import {AiOutlineQuestionCircle} from 'react-icons/ai'
@@ -49,7 +49,7 @@ function Navigation() {
         {sessionLinks}
       </li>
       <br/>
-      <li>
+      <li className="categories">
         <Categories />
       </li>
     </ul>
