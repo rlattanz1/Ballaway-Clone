@@ -31,5 +31,5 @@ export const cartImage = <svg xlmns="http://www.w3.org/2000/svg" width="22" heig
     6.05963L12.4072 4.99897Z" fill="black">
     </path>
     <circle cx="4.55526" cy="14.3529" r="1.89706" fill="white" stroke="black" stroke-width="1.5" />
-    <circle cx="4.55526" cy="14.3529" r="1.89706" fill="white" stroke="black" stroke-width="1.5" />
+    <circle cx="15.55526" cy="14.3529" r="1.89706" fill="white" stroke="black" stroke-width="1.5" />
 </svg>

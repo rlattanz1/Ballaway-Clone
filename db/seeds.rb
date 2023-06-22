@@ -45,31 +45,35 @@ require "open-uri"
 
     puts "Creating products..."
 
-    Product.create!({
-        name: "Paradym Night Mode Driver",
-        description: "This limited edition design has shifted Paradym to a sleeker, darker place. It is available in NIGHT MODE. The driver head features an all-black crown, blacked out Forged Carbon on the sole and special anodized weights. We partnered with Project X on a Limited Edition HZRDUS Gen 4 Blackout shaft and completed the design with a Golf Pride MCC Blackout grip and Callaway Customs Night Mode headcover.",
-        price: 699,
-        category: "Driver",
-        specs: "9°, RH ONLY, 45.75\", 57.0°, 460, D3"
-      })
-    Product.create!({
+    p1 = Product.create!({
         name: "Paradym Driver",
         description: "The Paradym driver model provides a refined shape with high MOI and adjustable perimeter weighting. Engineered for players of all skill levels, this club promotes high launch and low spin characteristics along with a neutral ball flight. It is our best combination of distance, forgiveness, and adjustability.",
         price: 599,
         category: "Driver",
         specs: "9°, RH / LH, 45.75\", 57.0°, 460"
       })
-    Product.create!({
+
+      p1.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/paradym-1.webp'), filename: 'paradym-1.webp')
+      p1.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/paradym-2.webp'), filename: 'paradym-2.webp')
+
+    p2 = Product.create!({
         name: "Paradym X Driver",
         description: "The Paradym X Driver is built for a high launch with high MOI, along with a generously stretched profile at address. This model is best suited for golfers seeking extreme forgiveness and a slight draw bias from their driver.",
         price: 599,
         category: "Driver",
         specs: "9°, RH / LH, 45.75\", 60.0°, 460"
       })
-    Product.create!({
+
+      p2.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/paradym-td-1.webp'), filename: 'paradym-td-1.webp')
+      p2.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/paradym-td-2.webp'), filename: 'paradym-td-2.webp')
+
+    p3 = Product.create!({
         name: "Paradym Triple Diamond Driver",
         description: "TThe Paradym Triple Diamond Driver is a compact, 450cc shape designed for better players who want to work the ball. It is the lowest spinning and lowest launching Paradym model with a neutral ball flight.",
         price: 599,
         category: "Driver",
         specs: "9°, RH / LH, 45.75\", 57.0°, 450"
       })
+
+      p3.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/paradym-x-1.webp'), filename: 'paradym-x-1.webp')
+      p3.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/paradym-x-2.webp'), filename: 'paradym-x-2.webp')

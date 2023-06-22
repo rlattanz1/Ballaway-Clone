@@ -6,17 +6,21 @@ import './categories.css'
 export default function Categories() {
     const categories = ['Clubs', 'Balls', 'Gear']
     return (
-        <div className="categories_div">
-            <ul className="category_links">
-                {categories.map(category => (
-                <li className="category_li">
-                    <NavLink className="category" to="">{category}</NavLink>
-                </li>
-                ))}
-                <div className="search_bar">
+        <div className="categories-div">
+            <div className="category-links">
+                <ul className="category-ul">
+
+                    {categories.map(category => (
+                    <li className="category-li">
+                        <NavLink className="category" to="">{category}</NavLink>
+                    </li>
+                    ))}
+
+                </ul>
+                <div className="search-bar">
                     <Searchbar />
                 </div>
-            </ul>
+            </div>
         </div>
     )
 }
