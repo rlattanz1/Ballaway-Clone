@@ -1,16 +1,17 @@
 .search_bar {
-
+    display: flex;
+ 
 }
 
 .category_links {
+    width: 500px;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 }
 
 
-.category_links li {
 
-}
 
 .category {
     text-decoration: none;
