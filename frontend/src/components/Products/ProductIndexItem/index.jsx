@@ -19,7 +19,6 @@ export default function ProductIndexItem({product}) {
                     </div>
                 </div>
                 <p className="prod-name">{product.name}</p>
-                <p className="prod-description">{product.description}</p>
                 <br/>
                 <p className="prod-price">{product.price}</p>
             </div>

@@ -5,7 +5,7 @@
 }
 
 .category-links {
-    margin-left: 40%;
+    margin-left: 35%;
     display: flex;
     justify-content: space-between;
 }
@@ -20,11 +20,8 @@
 .prod-ele {
     width: 400px;
     display: flex;
-
     align-items: center;
     justify-content: space-evenly;
-
-
 }
 
 
@@ -41,3 +38,4 @@
 .categories-div {
     width: 100%
 }
+

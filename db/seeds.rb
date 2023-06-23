@@ -21,8 +21,7 @@ require "open-uri"
     User.create!(
       username: 'Demo-user',
       email: 'demo@user.io',
-      first_name: 'Demo',
-      last_name: 'User',
+      username: 'Demo-lition',
       password: 'password'
     )
     puts "done creating demo user"
@@ -80,11 +79,14 @@ require "open-uri"
 
       p4 = Product.create!({
           name: "#4 Paradym Iron",
-          description: "Our Paradym Irons combine our A.I. Designed Forged 455 Face with the all-new Speed Frame. They’re designed for golfers who are looking for a players’ distance iron with a refined shape and premium forging.",
+          description: "Our Paradym Irons combine our A.I. Designed Forged 455 Face with the all-new Speed Frame. They\'re designed for golfers who are looking for a players\' distance iron with a refined shape and premium forging.",
           price: 599,
           category: "Iron, Clubs, Featured",
           specs: "20°, RH / LH, 38.875\", 61.0°"
         })
+
+        p4.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/iron-paradym-1.webp'), filename: 'iron-paradym-1.webp')
+        p4.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/irons-paradym-2.webp'), filename: 'irons-paradym-2.webp')
 
       p5 = Product.create!({
           name: "Fairway C Stand Bag",
@@ -94,10 +96,20 @@ require "open-uri"
           specs: "none"
         })
 
+        p5.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/fairway-c-1.png'), filename: 'fairway-c-1.png')
+        p5.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/fairway-c-2.png'), filename: 'fairway-c-2.png')
+
       p6 = Product.create!({
           name: "Limited Edition Chrome Soft Truvis Donut Golf Balls",
-          description: "Chrome Soft is better for everyone, from amateurs to major winners. With our proprietary Precision Technology, it’s longer through the bag while providing the signature soft feel that golfers love. And now it’s available in a special design to celebrate National Donut Day. Everything is better with donuts, including Chrome Soft.",
-          price: 599,
+          description: "Chrome Soft is better for everyone, from amateurs to major winners. With our proprietary Precision Technology, it\'s longer through the bag while providing the signature soft feel that golfers love. And now it\'s available in a special design to celebrate National Donut Day. Everything is better with donuts, including Chrome Soft.",
+          price: 49,
           category: "Balls",
           specs: "none"
         })
+
+        p6.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/donut-day-1.png'), filename: 'donut-ball-1.png')
+        p6.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/donut-day-2.webp'), filename: 'donut-ball-2.webp')
+
+
+        # p.photos.attach(io: URI.open(''), filename: '')
+        # p.photos.attach(io: URI.open(''), filename: '')

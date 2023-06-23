@@ -1,12 +1,12 @@
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
-import { fetchProducts, getProducts } from "../../store/products";
-import ProductIndexItem from "../ProductIndexItem";
+import { fetchProducts, getProducts } from "../../../store/products";
+import ProductIndexItem from "../../Products/ProductIndexItem";
 import './index.css'
 
 
 
-export default function ProductIndexPage({ category }) {
+export default function ProductIndex({ category }) {
     const dispatch = useDispatch();
     const products = useSelector(getProducts);
 

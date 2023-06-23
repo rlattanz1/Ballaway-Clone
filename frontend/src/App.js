@@ -1,9 +1,9 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import ProductIndexPage from './components/ProductIndex';
-import ProductShowPage from './components/ProductShow'
+import ProductIndex from './components/Products/ProductIndex';
+import ProductShowPage from './components/Products/ProductShow';
 import SignupFormPage from './components/SignupFormPage';
-import Navigation from "./components/Navigation";
+import Navigation from './components/Navigation'
 import HomeComponent from './components/Home';
 
 
@@ -19,7 +19,7 @@ function App() {
             <SignupFormPage />
           </Route>
           <Route path="/">
-            <ProductIndexPage />
+            <ProductIndex />
           </Route>
         </Switch>
       <HomeComponent />

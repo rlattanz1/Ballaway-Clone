@@ -17,7 +17,22 @@ function Navigation() {
   let sessionLinks;
   if (sessionUser) {
     sessionLinks = (
-      <ProfileButton user={sessionUser} />
+      <div class="right_links">
+        {/* phone num spells 1-800-bal-away */}
+        <p className='phone_num'>1-800-225-2929</p> &nbsp; &nbsp;
+        <span>|</span> &nbsp; &nbsp;
+        <div className='nav_item'>
+          <AiOutlineQuestionCircle/> &nbsp;
+          <NavLink class="help_link" to="">Help</NavLink> &nbsp; &nbsp;
+        </div>
+        <div className='nav_item'>
+          <CgProfile/> &nbsp;
+          <ProfileButton user={sessionUser} />
+        </div>
+        <div className='nav_item'>
+            <NavLink className='cart_button' to="">{cartImage} &nbsp; Cart(num of cartItems)</NavLink> &nbsp;
+        </div>
+      </div>
     );
   } else {
     sessionLinks = (
@@ -30,8 +45,9 @@ function Navigation() {
             <NavLink class="help_link" to="">Help</NavLink> &nbsp; &nbsp;
         </div>
         <div className='nav_item'>
+
             <CgProfile/> &nbsp;
-            <LoginFormModal />  &nbsp; &nbsp;
+            <LoginFormModal /> &nbsp; &nbsp;
         </div>
         <div className='nav_item'>
             <NavLink className='cart_button' to="">{cartImage} &nbsp; Cart(num of cartItems)</NavLink> &nbsp;

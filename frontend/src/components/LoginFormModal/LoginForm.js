@@ -84,7 +84,7 @@ export default function LoginForm(props) {
             required
           />
         <button type="submit">Log In</button>
-        <button type='submit' onClick={handleDemoUser()}>Demo User</button>
+        <button onClick={handleDemoUser}>Demo User</button>
 
         <p>Create an Account. &nbsp;
             <NavLink to="/signup" onClick={() => props.setShowModal(false)} >
