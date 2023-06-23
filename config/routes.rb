@@ -1,4 +1,18 @@
 Rails.application.routes.draw do
+  namespace :api do
+    get 'reviews/index'
+    get 'reviews/show'
+    get 'reviews/create'
+    get 'reviews/update'
+    get 'reviews/destroy'
+    get 'reviews/review_params'
+  end
+  get 'reviews/index'
+  get 'reviews/show'
+  get 'reviews/create'
+  get 'reviews/update'
+  get 'reviews/destroy'
+  get 'reviews/review_params'
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
@@ -10,7 +24,7 @@ Rails.application.routes.draw do
     resources :users, only: [:create]
     resource :session, only: [:create, :show, :destroy]
     resources :products, only: [:index, :show]
-    #   resources :reviews, only: [:index, :show, :create, :update, :destroy]
+    resources :reviews, only: [:index, :show, :create, :update, :destroy]
     #   resources :cart_items, only: []
   end
   get '*path', to: "static_pages#frontend_index"
