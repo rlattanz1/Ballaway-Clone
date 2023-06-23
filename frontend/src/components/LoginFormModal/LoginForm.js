@@ -34,6 +34,24 @@ export default function LoginForm(props) {
         });
     }
 
+    const handleDemoUser = e => {
+      e.preventDefault();
+      setErrors([]);
+      return dispatch(sessionActions.login({ email: 'demo@user.io', password: 'password'}))
+        .catch(async (res) => {
+          let data;
+          try {
+            // .clone() essentially allows you to read the response body twice
+            data = await res.clone().json();
+          } catch {
+            data = await res.text(); // Will hit this case if the server is down
+          }
+          if (data?.errors) setErrors(data.errors); //IDK get clarification
+          else if (data) setErrors([data]);
+          else setErrors([res.statusText]);
+        });
+    }
+
     return (    //frontend form submittal
       <form onSubmit={handleSubmit}>
         <ul>
@@ -66,6 +84,7 @@ export default function LoginForm(props) {
             required
           />
         <button type="submit">Log In</button>
+        <button type='submit' onClick={handleDemoUser()}>Demo User</button>
 
         <p>Create an Account. &nbsp;
             <NavLink to="/signup" onClick={() => props.setShowModal(false)} >

@@ -17,16 +17,16 @@ require "open-uri"
     ApplicationRecord.connection.reset_pk_sequence!('products')
     # ApplicationRecord.connection.reset_pk_sequence!('reviews')
 
-    # puts "Creating demo user..." for when I have my demo user button set up tonight
-    # User.create!(
-    #   username: 'Demo-lition',
-    #   email: 'demo@user.io',
-    #   first_name: 'Demo',
-    #   last_name: 'User',
-    #   password: 'password'
-    # )
-    # puts "done creating demo user"
-    # puts ""
+    puts "Creating demo user..."
+    User.create!(
+      username: 'Demo-user',
+      email: 'demo@user.io',
+      first_name: 'Demo',
+      last_name: 'User',
+      password: 'password'
+    )
+    puts "done creating demo user"
+    puts ""
 
     # puts "Creating users..."
     # # More users
@@ -39,8 +39,8 @@ require "open-uri"
     #     password: 'password'
     #   })
     # end
-    # puts "done creating users"
-    # puts ""
+    puts "done creating users"
+    puts ""
 
 
     puts "Creating products..."
@@ -49,8 +49,8 @@ require "open-uri"
         name: "Paradym Driver",
         description: "The Paradym driver model provides a refined shape with high MOI and adjustable perimeter weighting. Engineered for players of all skill levels, this club promotes high launch and low spin characteristics along with a neutral ball flight. It is our best combination of distance, forgiveness, and adjustability.",
         price: 599,
-        category: "Driver",
-        specs: "9°, RH / LH, 45.75\", 57.0°, 460"
+        category: "Driver, Clubs, Featured",
+        specs: "9°, RH / LH, 45.75\", 57.0°"
       })
 
       p1.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/paradym-1.webp'), filename: 'paradym-1.webp')
@@ -60,8 +60,8 @@ require "open-uri"
         name: "Paradym X Driver",
         description: "The Paradym X Driver is built for a high launch with high MOI, along with a generously stretched profile at address. This model is best suited for golfers seeking extreme forgiveness and a slight draw bias from their driver.",
         price: 599,
-        category: "Driver",
-        specs: "9°, RH / LH, 45.75\", 60.0°, 460"
+        category: "Driver, Clubs",
+        specs: "9°, RH / LH, 45.75\", 60.0°"
       })
 
       p2.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/paradym-td-1.webp'), filename: 'paradym-td-1.webp')
@@ -69,11 +69,35 @@ require "open-uri"
 
     p3 = Product.create!({
         name: "Paradym Triple Diamond Driver",
-        description: "TThe Paradym Triple Diamond Driver is a compact, 450cc shape designed for better players who want to work the ball. It is the lowest spinning and lowest launching Paradym model with a neutral ball flight.",
+        description: "The Paradym Triple Diamond Driver is a compact, 450cc shape designed for better players who want to work the ball. It is the lowest spinning and lowest launching Paradym model with a neutral ball flight.",
         price: 599,
-        category: "Driver",
-        specs: "9°, RH / LH, 45.75\", 57.0°, 450"
+        category: "Driver, Clubs, Featured",
+        specs: "9°, RH / LH, 45.75\", 57.0°"
       })
 
       p3.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/paradym-x-1.webp'), filename: 'paradym-x-1.webp')
       p3.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/paradym-x-2.webp'), filename: 'paradym-x-2.webp')
+
+      p4 = Product.create!({
+          name: "#4 Paradym Iron",
+          description: "Our Paradym Irons combine our A.I. Designed Forged 455 Face with the all-new Speed Frame. They’re designed for golfers who are looking for a players’ distance iron with a refined shape and premium forging.",
+          price: 599,
+          category: "Iron, Clubs, Featured",
+          specs: "20°, RH / LH, 38.875\", 61.0°"
+        })
+
+      p5 = Product.create!({
+          name: "Fairway C Stand Bag",
+          description: "The compact, sleek and stylish Fairway C is ready for every round and easily accommodates all of your golf essentials.",
+          price: 249,
+          category: "Bags, Gear",
+          specs: "none"
+        })
+
+      p6 = Product.create!({
+          name: "Limited Edition Chrome Soft Truvis Donut Golf Balls",
+          description: "Chrome Soft is better for everyone, from amateurs to major winners. With our proprietary Precision Technology, it’s longer through the bag while providing the signature soft feel that golfers love. And now it’s available in a special design to celebrate National Donut Day. Everything is better with donuts, including Chrome Soft.",
+          price: 599,
+          category: "Balls",
+          specs: "none"
+        })

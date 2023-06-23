@@ -9,12 +9,13 @@ export default function Categories() {
         <div className="categories-div">
             <div className="category-links">
                 <ul className="category-ul">
-
+                    <div className="prod-ele">
                     {categories.map(category => (
                     <li className="category-li">
                         <NavLink className="category" to="">{category}</NavLink>
                     </li>
                     ))}
+                    </div>
 
                 </ul>
                 <div className="search-bar">
