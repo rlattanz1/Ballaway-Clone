@@ -4,7 +4,7 @@ export default function SlotSwiper1() {
 
 
     return (
-        <div>
+        <div className='ssl-1'>
             
         </div>
     )

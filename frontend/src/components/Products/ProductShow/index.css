@@ -1,4 +1,10 @@
-.product-show-container {
+.outer-product-show-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.inner-product-show-container {
 width: 100vw;
 display: flex;
 flex-direction: row;
@@ -58,4 +64,34 @@ width: 350px;
 .add-button {
     width: 100px;
     height: 30px;
+}
+
+
+/* reviews css below in case I want ot split it up later*/
+
+.outer-reviews-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.review-index {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: space-between;
+
+}
+
+.review-button {
+    background-color: black;
+    color: white;
+    border-radius: 2em;
+    border-style: solid;
+    border-color: black;
+    font-weight: bolder;
+    font-size: 12px;
+    font-family: sans-serif;
+    width: 200px;
+    height: 50px
 }

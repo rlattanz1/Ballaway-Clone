@@ -1,18 +1,9 @@
 class Api::ReviewsController < ApplicationController
-  before_action :logged_in, only: [:create, :update, :destroy]
+  # before_action :require_logged_in, only: [:create, :update, :destroy]
 
   def index
     @reviews = Review.all
     render :index
-  end
-
-  def show
-    @review = Review.find_by(id: params[:id])
-    if @review
-      render :show
-    else
-      render json: {message: @review.errors.full_messages}, status: 422
-    end
   end
 
   def create
@@ -45,7 +36,7 @@ class Api::ReviewsController < ApplicationController
   private
 
   def review_params
-    params.require(:review).permit(:title, :body, :rating)
+    params.require(:review).permit(:title, :body, :rating, :user_id, :product_id)
   end
 
 end

@@ -1,8 +1,9 @@
 
 
-
 export const RECEIVE_PRODUCTS = 'products/RECEIVE_PRODUCTS'
 export const RECEIVE_PRODUCT = 'products/RECEIVE_PRODUCT'
+
+
 
 
 export const receiveProducts = (products) => {
@@ -12,10 +13,11 @@ export const receiveProducts = (products) => {
     }
 }
 
-export const receiveProduct = (product) => {
+export const receiveProduct = (data) => {
     return {
         type: RECEIVE_PRODUCT,
-        product
+        product: data.product,
+        reviews: data.reviews
     }
 }
 
@@ -40,8 +42,9 @@ export const fetchProduct = (productId) => async(dispatch) => {
     const res = await fetch(`/api/products/${productId}`);
 
     if (res.ok) {
-        const product = await res.json();
-        dispatch(receiveProduct(product))
+        const data = await res.json();
+        console.log(data);
+        dispatch(receiveProduct(data));
     }
 }
 

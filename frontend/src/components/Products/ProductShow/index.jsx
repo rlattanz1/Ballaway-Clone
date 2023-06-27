@@ -1,8 +1,9 @@
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
-import { useParams } from "react-router-dom/cjs/react-router-dom.min";
+import { NavLink, Redirect, useParams } from "react-router-dom";
 import { fetchProduct, getProduct } from "../../../store/products";
 import './index.css'
+import ReviewIndex from "../../Reviews/ReviewIndex";
 
 export default function ProductShowPage() {
     const {productId} = useParams();
@@ -11,39 +12,56 @@ export default function ProductShowPage() {
 
     useEffect(() => {
         dispatch(fetchProduct(productId))
-    }, [productId])
+    }, [])
 
-    return (
-        <div className="product-show-container">
-            <div className="prod-image-container">
-            <img
-                class="prod-image"
-                src={product.photoUrl[1]} alt=""
-            />
+    return product ? (
+        <div className="outer-product-show-container">
+            <div className="inner-product-show-container">
+                <div className="prod-image-container">
+                <img
+                    class="prod-image"
+                    src={product.photoUrl[0]} alt=""
+                />
+                </div>
+                <div className="product-content-container">
+                    <br/>
+                    <h1>{product.name}</h1>
+                    <div className="arverage-review">
+    {/* average product review rating with the stars by all users with a text link to make a new review*/}
+    {/*
+                        <a>
+                            <p className="review-smooth-scroll-label">click to view/create reviews</p>
+                        </a> */}
+                    </div>
+                    <div className="desc-container">
+                        <p>{product.description}</p>
+                    </div>
+                    <br/>
+                    <div className="price-container">
+                        <p>{`$${product.price}`}</p>
+                    </div>
+                    <div className="add-to-cart">
+                        <button className="add-button">Add To Cart</button>
+                    </div>
+                </div>
             </div>
-            <div className="product-content-container">
+            <br/>
+            <br/>
+            <br/>
+            <div className="outer-reviews-container">
+                <h1>The percentage of reviewers who reccoment this product</h1>
                 <br/>
-                <h1>{product.name}</h1>
-                <div className="arverage-review">
-{/* average product review rating with the stars by all users with a text link to make a new review*/}
-{/*
-                    <a>
-                        <p className="review-smooth-scroll-label">click to view/create reviews</p>
-                    </a> */}
-                </div>
-                <div className="desc-container">
-                    <p>{product.description}</p>
-                </div>
+                <p>avg star rating</p>
                 <br/>
-                <div className="price-container">
-                    <p>{`$${product.price}`}</p>
-                </div>
-                <div className="add-to-cart">
-                    <button className="add-button">Add To Cart</button>
+                {/* <button className="review-button" >WRITE A REVIEW</button> */}
+                <NavLink to={`/products/${productId}/createreview`}>
+                    <button className="review-button" >WRITE A REVIEW</button>
+                </NavLink>
+                <br/>
+                <div className="review-index">
+                    <ReviewIndex/>
                 </div>
             </div>
-
-
         </div>
-    )
+    ) : (<div></div>)
 }

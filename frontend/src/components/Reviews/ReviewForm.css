@@ -1,0 +1,15 @@
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    margin-left: 10%;
+}
+
+label {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rview-container{
+
+}

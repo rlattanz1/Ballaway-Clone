@@ -1,0 +1,49 @@
+.inner-reviews-container {
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: space-between;
+
+    width: 50vw;
+    height: 10vw;
+}
+.review-details {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+}
+
+.review-message {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 50%
+}
+
+.review-stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.helpful-button {
+    cursor: pointer;
+    border-style: none;
+    background-color: transparent;
+}
+
+.spacer {
+    font-size: x-large;
+    color: rgb(170, 169, 169);
+    font-weight:bolder;
+}
+
+.review-title {
+    font-size: larger;
+    font-weight: bolder;
+}
+.end-line {
+    border-top: 2px;
+    border-style: solid;
+    border-color: rgb(157, 154, 154);
+    width: 50vw;
+}

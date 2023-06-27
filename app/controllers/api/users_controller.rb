@@ -1,6 +1,5 @@
 class Api::UsersController < ApplicationController
-  wrap_parameters include: User.attribute_names + ['password', 'email'] #what goes in this array???
-  before_action :logged_in?
+  wrap_parameters include: User.attribute_names + ['password', 'email']
 
   def create
     @user = User.new(user_params)
