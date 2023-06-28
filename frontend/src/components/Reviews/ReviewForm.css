@@ -10,6 +10,14 @@ label {
     justify-content: space-between;
 }
 
-.rview-container{
+.review-container{
+    width: 50%;
 
+}
+
+
+textarea {
+    margin-left: 60px;
+    min-width: 200px;
+    max-width: 250px;
 }

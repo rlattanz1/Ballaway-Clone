@@ -18,6 +18,7 @@ class User < ApplicationRecord
     # associations when I get there someday
     has_many :reviews, dependent: :destroy
 
+    has_many :cart_items, dependent: :destroy
 
     has_secure_password
     before_validation :ensure_session_token

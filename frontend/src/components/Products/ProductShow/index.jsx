@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from "react-redux";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { NavLink, Redirect, useParams } from "react-router-dom";
 import { fetchProduct, getProduct } from "../../../store/products";
 import './index.css'
@@ -9,6 +9,11 @@ export default function ProductShowPage() {
     const {productId} = useParams();
     const product = useSelector(getProduct(productId));
     const dispatch = useDispatch();
+
+    const [isReadMore, setIsReadMore] = useState(true);
+    let toggleReadMore = () => {
+        setIsReadMore(isReadMore => !isReadMore);
+    };
 
     useEffect(() => {
         dispatch(fetchProduct(productId))
@@ -34,7 +39,12 @@ export default function ProductShowPage() {
                         </a> */}
                     </div>
                     <div className="desc-container">
-                        <p>{product.description}</p>
+                        <p className="text">
+                            {isReadMore ? product.description.slice(0, 100): product.description}
+                            <span className="read-hide-button" onClick={toggleReadMore}>
+                                {isReadMore ? "...read more" : "show less"}
+                            </span>
+                        </p>
                     </div>
                     <br/>
                     <div className="price-container">

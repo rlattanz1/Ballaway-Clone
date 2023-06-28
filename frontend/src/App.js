@@ -16,6 +16,9 @@ function App() {
           <Route exact path="/products/:productId/createreview">
             <CreateReviewPage />
           </Route>
+          <Route exact path="/products/:productId/reviews/:reviewId/updatereview">
+            <CreateReviewPage />
+          </Route>
           <Route exact path="/products/:productId">
             <ProductShowPage />
           </Route>

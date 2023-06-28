@@ -50,8 +50,8 @@ export const fetchReview = (reviewId) => async(dispatch) => {
     const res = await csrfFetch(`/api/reviews/${reviewId}`);
 
     if (res.ok) {
-        const reviews = await res.json();
-        dispatch(receiveReviews(reviews));
+        const review = await res.json();
+        dispatch(receiveReview(review));
     }
 }
 
@@ -91,6 +91,7 @@ export const deleteReview = (reviewId) => async(dispatch) => {
     });
 
     if (res.ok) {
+        console.log(reviewId)
         dispatch(removeReview(reviewId))
     }
 }

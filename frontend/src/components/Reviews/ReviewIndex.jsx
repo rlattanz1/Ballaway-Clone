@@ -1,12 +1,23 @@
-import { useSelector } from "react-redux"
-import { getProductReviews } from "../../store/reviews"
-import { useParams } from "react-router-dom/cjs/react-router-dom.min";
+import { useDispatch, useSelector } from "react-redux"
+import { deleteReview, updateReview } from "../../store/reviews"
+import { useParams } from "react-router-dom";
 import './ReviewIndex.css'
+import { useEffect } from "react";
+import { NavLink } from "react-router-dom";
 
 
-export default function ReviewIndex (props) {
+export default function ReviewIndex () {
+    // const {reviewId} = useParams()
     const {productId} = useParams()
     const reviews = useSelector((state) => Object.values(state.reviews));
+    const dispatch = useDispatch()
+
+
+    const handleDelete = (reviewId) => {
+        dispatch(deleteReview(reviewId))
+    }
+
+
 
     return (
     <>
@@ -19,18 +30,23 @@ export default function ReviewIndex (props) {
                     <span>
                         <p>{review.rating }</p>
                         <p>{review.username}</p>
-                        <p>{review.createdAt}</p>
-                        <p>{review.updatedAt}</p>
+                        <p>{review.createdAt.split('T').join(' ').slice(0, 19)}</p>
+                        <p>{review.updatedAt.split('T').join(' ').slice(0, 19)}</p>
                     </span>
                     <br/>
-                    <p>user details</p>
+                    <button className="delete-button" onClick={() => handleDelete(review.id)}>Delete Review</button>
+                    <br/>
+
+        <NavLink className="update-link" to={`/products/${productId}/reviews/${review.id}/updatereview`}>
+            Update Review
+        </NavLink>
                 </div>
                 <div className="review-message">
                     <p className="review-title">{review.title}</p>
                     <span className="spacer">___</span>
                     <p>{review.body}</p>
                     <p> would you reccomend this product:
-                        review.reccomendation(yes or no)
+                        {review.reccomendation === true ? 'no' : 'yes'}
                     </p>
                     <p>was this helpful
                         <button className="helpful-button">yes (num who clicked yes)</button>
