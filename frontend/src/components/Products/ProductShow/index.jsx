@@ -25,7 +25,6 @@ export default function ProductShowPage() {
 
         const cartItem = {
             product_id: productId,
-            user_id: userId,
             quantity: 1
         }
 
