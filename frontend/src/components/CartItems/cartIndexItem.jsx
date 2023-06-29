@@ -47,13 +47,13 @@ export default function CartIndexItem({cartItem}) { //cart item being passed int
                     </div>
                 </div>
                 <div className="cart-item-right">
-                    <button className="less-quantity" onClick={handleQuantity(-1)}>-</button>
+                    <button className="less-quantity" onClick={() => handleQuantity(-1)}>-</button>
                     <input
                     className="quantity"
                     type="number"
                     value={quantity}
                     />
-                    <button className="more-quantity" onClick={handleQuantity(1)}>+</button>
+                    <button className="more-quantity" onClick={() => handleQuantity(1)}>+</button>
                 </div>
                 <div className="cart-item-bottom">
                 </div>
