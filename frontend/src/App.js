@@ -6,6 +6,7 @@ import SignupFormPage from './components/SignupFormPage';
 import Navigation from './components/Navigation'
 import CreateReviewPage from './components/Reviews/ReviewForm';
 import HomeComponent from './components/Home';
+import CartIndex from './components/CartItems/cartIndex';
 
 
 function App() {
@@ -24,6 +25,9 @@ function App() {
           </Route>
           <Route exact path="/signup">
             <SignupFormPage />
+          </Route>
+          <Route exact path="/cart">
+            <CartIndex />
           </Route>
           <Route path="/products">
             <ProductIndex />

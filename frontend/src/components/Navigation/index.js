@@ -30,7 +30,7 @@ function Navigation() {
           <ProfileButton user={sessionUser} />
         </div>
         <div className='nav_item'>
-            <NavLink className='cart_button' to="">{cartImage} &nbsp; Cart(num of cartItems)</NavLink> &nbsp;
+            <NavLink className='cart_button' to="/cart">{cartImage} &nbsp; Cart(num of cartItems)</NavLink> &nbsp;
         </div>
       </div>
     );
@@ -45,12 +45,12 @@ function Navigation() {
             <NavLink class="help_link" to="">Help</NavLink> &nbsp; &nbsp;
         </div>
         <div className='nav_item'>
-
             <CgProfile/> &nbsp;
             <LoginFormModal /> &nbsp; &nbsp;
         </div>
         <div className='nav_item'>
-            <NavLink className='cart_button' to="">{cartImage} &nbsp; Cart(num of cartItems)</NavLink> &nbsp;
+            <NavLink  className='cart_button' to="/cart">{cartImage} &nbsp; Cart(num of cartItems)</NavLink> &nbsp;
+            {/* nav link to cart is not working */}
         </div>
       </div>
     );

@@ -8,7 +8,7 @@ export const REMOVE_CART_ITEM = '/cartItems/REMOVE_CART_ITEM';
 
 export const receiveCartItems = (cartItems) => {
     return {
-        type: RECEIVE_CART_ITEM,
+        type: RECEIVE_CART_ITEMS,
         cartItems
     }
 }
@@ -28,17 +28,19 @@ export const removeCartItem = (cartItemId) => {
 }
 
 
-export const getCartItems = (state) => {
-    state.cart_items ? Object.values(state.cart_items) : []
-}
+export const getCartItems = (state) => (
+   state.cartItems ? Object.values(state.cartItems) : []
+)
 
-export const getCartItem = (cartItemId) => (state) => {
-    state.cart_items ? state.cart_items[cartItemId] : null
-}
+
+export const getCartItem = (cartItemId) => (state) => (
+    state.cartItems ? state.cartItems[cartItemId] : null
+)
+
 
 
 export const fetchCartItems = () => async(dispatch) => {
-    res = await fetch ('/api/cart_items');
+    const res = await fetch ('/api/cart_items');
 
     if (res.ok) {
         const cartItems = await res.json();
@@ -47,7 +49,7 @@ export const fetchCartItems = () => async(dispatch) => {
 }
 
 export const fetchCartItem = (cartItemId) => async(dispatch) => {
-    res = await fetch (`/api/cart_items/${cartItemId}`);
+    const res = await fetch (`/api/cart_items/${cartItemId}`);
 
     if (res.ok) {
         const cartItem = await res.json();
@@ -56,7 +58,7 @@ export const fetchCartItem = (cartItemId) => async(dispatch) => {
 }
 
 export const createCartItem = (cartItem) => async(dispatch) => {
-    res= await csrfFetch ('/api/cart_items', {
+    const res = await csrfFetch ('/api/cart_items', {
         method: 'POST',
         headers: {
             'Content-Type': 'aplication/json'
@@ -71,7 +73,7 @@ export const createCartItem = (cartItem) => async(dispatch) => {
 }
 
 export const updateCartItem = (cartItem) => async(dispatch) => {
-    res= await csrfFetch (`/api/cart_items/${cartItem.id}`, {
+    const res = await csrfFetch (`/api/cart_items/${cartItem.id}`, {
         method: 'PATCH',
         headers: {
             'Content-Type': 'aplication/json'
@@ -103,7 +105,7 @@ export default function cartItemsReducer(state={}, action) {
             return action.cartItems;
         case RECEIVE_CART_ITEM:
             newState = {...state};
-            cartItemId = action.cartItem.id;
+            const cartItemId = action.cartItem.id;
             newState[cartItemId] = action.cartItem;
             return newState;
         case REMOVE_CART_ITEM:

@@ -4,7 +4,7 @@ import './categories.css'
 
 
 export default function Categories() {
-    const categories = ['Clubs', 'Balls', 'Gear']
+    const categories = ['products', 'clubs', 'balls', 'gear']
     return (
         <div className="categories-div">
             <div className="category-links">
@@ -12,7 +12,7 @@ export default function Categories() {
                     <div className="prod-ele">
                     {categories.map(category => (
                     <li className="category-li">
-                        <NavLink className="category" to="">{category}</NavLink>
+                        <NavLink className="category" to={`/${category}`}>{category}</NavLink>
                     </li>
                     ))}
                     </div>
