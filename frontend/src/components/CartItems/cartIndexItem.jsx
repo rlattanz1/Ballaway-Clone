@@ -50,7 +50,7 @@ export default function CartIndexItem({cartItem}) { //cart item being passed int
                     <button className="less-quantity" onClick={() => handleQuantity(-1)}>-</button>
                     <input
                     className="quantity"
-                    type="number"
+                    type="text"
                     value={quantity}
                     />
                     <button className="more-quantity" onClick={() => handleQuantity(1)}>+</button>

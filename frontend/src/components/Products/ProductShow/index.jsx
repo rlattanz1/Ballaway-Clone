@@ -4,6 +4,7 @@ import { NavLink, Redirect, useParams } from "react-router-dom";
 import { fetchProduct, getProduct } from "../../../store/products";
 import './index.css'
 import ReviewIndex from "../../Reviews/ReviewIndex";
+import { createCartItem, fetchCartItem } from "../../../store/cartItems";
 
 export default function ProductShowPage() {
     const {productId} = useParams();
@@ -18,6 +19,18 @@ export default function ProductShowPage() {
     useEffect(() => {
         dispatch(fetchProduct(productId))
     }, [])
+
+    const handleClick = e => {
+        e.preventDefault();
+
+        const cartItem = {
+            product_id: productId,
+            user_id: userId,
+            quantity: 1
+        }
+
+        dispatch(createCartItem(cartItem))
+    }
 
     return product ? (
         <div className="outer-product-show-container">
@@ -51,7 +64,7 @@ export default function ProductShowPage() {
                         <p>{`$${product.price}`}</p>
                     </div>
                     <div className="add-to-cart">
-                        <button className="add-button">Add To Cart</button>
+                        <button className="add-button" onClick={() => handleClick}>Add To Cart</button>
                     </div>
                 </div>
             </div>

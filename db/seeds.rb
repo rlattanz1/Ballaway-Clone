@@ -8,9 +8,9 @@ require "open-uri"
 #   Character.create(name: "Luke", movie: movies.first)
     puts "Destroying tables..."
     # Unnecessary if using `rails db:seed:replant`
-    User.destroy_all
-    Product.destroy_all
     Review.destroy_all
+    Product.destroy_all
+    User.destroy_all
     puts "Resetting primary keys..."
     # For easy testing, so that after seeding, the first `User` has `id` of 1
     ApplicationRecord.connection.reset_pk_sequence!('users')
@@ -118,55 +118,55 @@ require "open-uri"
 
         puts "Creating reviews..."
 
-        Review.create!({
-          user_id: 1,
-          product_id: 1,
-          title: 'Great Driver',
-          body: 'Wow this is the best driver ever',
-          rating: 5
-        })
-        Review.create!({
-          user_id: 2,
-          product_id: 1,
-          title: 'Amazing Driver',
-          body: 'Wow this is the best driver pretty awesome',
-          rating: 3
-        })
-        Review.create!({
-          user_id: 3,
-          product_id: 1,
-          title: 'Super Awesome Amazing Driver',
-          body: 'OMG this is the most super awesome amazing driver I\'ve ever used ever',
-          rating: 4
-        })
-        Review.create!({
-          user_id: 1,
-          product_id: 4,
-          title: 'best iron',
-          body: 'Wow this iron hits like a wood I am shocked',
-          rating: 4
-        })
-        Review.create!({
-          user_id: 3,
-          product_id: 5,
-          title: 'OK bag',
-          body: 'it gets the job done but a but overpriced for what it has',
-          rating: 3
-        })
-        Review.create!({
-          user_id: 1,
-          product_id: 5,
-          title: 'Sweet Balls',
-          body: 'These golf balls are the best',
-          rating: 5
-        })
-        Review.create!({
-          user_id: 2,
-          product_id: 6,
-          title: 'Cool Balls',
-          body: 'They look cool and are easily recognizable but they dont travel the belst for some reason!',
-          rating: 3
-        })
+        # Review.create!({
+        #   user_id: 1,
+        #   product_id: 1,
+        #   title: 'Great Driver',
+        #   body: 'Wow this is the best driver ever',
+        #   rating: 5
+        # })
+        # Review.create!({
+        #   user_id: 2,
+        #   product_id: 1,
+        #   title: 'Amazing Driver',
+        #   body: 'Wow this is the best driver pretty awesome',
+        #   rating: 3
+        # })
+        # Review.create!({
+        #   user_id: 3,
+        #   product_id: 1,
+        #   title: 'Super Awesome Amazing Driver',
+        #   body: 'OMG this is the most super awesome amazing driver I\'ve ever used ever',
+        #   rating: 4
+        # })
+        # Review.create!({
+        #   user_id: 1,
+        #   product_id: 4,
+        #   title: 'best iron',
+        #   body: 'Wow this iron hits like a wood I am shocked',
+        #   rating: 4
+        # })
+        # Review.create!({
+        #   user_id: 3,
+        #   product_id: 5,
+        #   title: 'OK bag',
+        #   body: 'it gets the job done but a but overpriced for what it has',
+        #   rating: 3
+        # })
+        # Review.create!({
+        #   user_id: 1,
+        #   product_id: 5,
+        #   title: 'Sweet Balls',
+        #   body: 'These golf balls are the best',
+        #   rating: 5
+        # })
+        # Review.create!({
+        #   user_id: 2,
+        #   product_id: 6,
+        #   title: 'Cool Balls',
+        #   body: 'They look cool and are easily recognizable but they dont travel the belst for some reason!',
+        #   rating: 3
+        # })
 
         puts "done creating reviews"
         puts ""
