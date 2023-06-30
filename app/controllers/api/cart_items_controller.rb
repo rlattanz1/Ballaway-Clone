@@ -30,7 +30,6 @@ class Api::CartItemsController < ApplicationController
         else
             @cart_item = CartItem.new(cart_items_params)
             @cart_item.user_id = current_user.id
-            # @cart_item.user_id = current_user.id
             if @cart_item.save
                 render :show
             else
