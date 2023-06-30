@@ -21,6 +21,10 @@
     width: 100vw;
 }
 
+.products-list {
+    display: flex;
+    flex-wrap: wrap;
+}
 
 /* .product_li {
     display: flex;
