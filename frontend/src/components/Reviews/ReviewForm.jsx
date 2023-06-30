@@ -93,7 +93,7 @@ export default function CreateReviewPage() {
                     type="number"
                     value={quality}
                     onChange={e => setQuality(e.target.value)}
-                    />
+                />
             </label>
             <br/>
             <label>Durability

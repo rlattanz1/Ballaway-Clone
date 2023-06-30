@@ -1,7 +1,26 @@
+.cart-item-wrapper {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+
+}
+
 .quantity {
- max-width: 20px;
+    width: 20px;
 }
 
 .cart-prod-image {
+    width: 150px;
+}
 
+.cart-item-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.quantity-buttons {
+    display: flex;
+    flex-direction: row;
 }

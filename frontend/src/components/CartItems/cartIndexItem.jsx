@@ -3,11 +3,12 @@ import { useDispatch, useSelector } from "react-redux";
 import { deleteCartItem, updateCartItem } from "../../store/cartItems";
 import { fetchProduct, getProduct } from "../../store/products";
 import { NavLink } from "react-router-dom";
+import {FaTrashAlt} from 'react-icons/fa'
+import './cartIndexItem.css'
 
 
 
 export default function CartIndexItem({cartItem}) { //cart item being passed into the functional component
-    console.log(cartItem)
     const dispatch = useDispatch();
     const [quantity, setQuantity] = useState(cartItem.quantity); //this will set the initial quantity of the cart item to the quantity passed when created by the user clicking 'add to cart'
     const product = useSelector(getProduct(cartItem.productId)) //get product will take in the product id of this cart item as an arg
@@ -19,15 +20,18 @@ export default function CartIndexItem({cartItem}) { //cart item being passed int
     }, [dispatch, cartItem]);
 
     const handleQuantity = (num) => {
-        setQuantity(quantity => quantity += num)
+        setQuantity(quantity + num)
 
-
-        const cartQuantity = {
-            id: cartItem.id,
-            product_id: cartItem.product_id,
+        const newCartItem = {
+            ...cartItem,
             quantity: quantity
         }
-        dispatch(updateCartItem(cartQuantity))
+        dispatch(updateCartItem(newCartItem))
+    }
+
+    const handleDelete = e => {
+        e.preventDefault()
+        dispatch(deleteCartItem(cartItem.id))
     }
 
 
@@ -47,18 +51,22 @@ export default function CartIndexItem({cartItem}) { //cart item being passed int
                     </div>
                 </div>
                 <div className="cart-item-right">
-                    <button className="less-quantity" onClick={() => handleQuantity(-1)}>-</button>
-                    <input
-                    className="quantity"
-                    type="text"
-                    value={quantity}
-                    />
-                    <button className="more-quantity" onClick={() => handleQuantity(1)}>+</button>
+                    <div className="quantity-buttons">
+                        <button className="less-quantity" onClick={() => handleQuantity(-1)}>-</button>
+                        <input
+                        className="quantity"
+                        type="text"
+                        value={quantity}
+                        />
+                        <button className="more-quantity" onClick={() => handleQuantity(1)}>+</button>
+                    </div>
+                    <div className="trash-button">
+                        <button onClick={e => handleDelete(e)}><FaTrashAlt/></button>
+                    </div>
                 </div>
                 <div className="cart-item-bottom">
                 </div>
             </div>
         </div>
-    ): null
-
-}
+    ) : null
+};

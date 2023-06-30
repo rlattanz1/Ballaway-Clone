@@ -1,0 +1,22 @@
+.cart {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+}
+.cart-right {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+}
+
+.purchase-total-title {
+    display: flex;
+    flex-direction: column;
+
+}
+.cart-left {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    margin-left: -30vw;
+}

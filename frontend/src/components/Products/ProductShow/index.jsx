@@ -44,11 +44,6 @@ export default function ProductShowPage() {
                     <br/>
                     <h1>{product.name}</h1>
                     <div className="arverage-review">
-    {/* average product review rating with the stars by all users with a text link to make a new review*/}
-    {/*
-                        <a>
-                            <p className="review-smooth-scroll-label">click to view/create reviews</p>
-                        </a> */}
                     </div>
                     <div className="desc-container">
                         <p className="text">
@@ -63,7 +58,7 @@ export default function ProductShowPage() {
                         <p>{`$${product.price}`}</p>
                     </div>
                     <div className="add-to-cart">
-                        <button className="add-button" onClick={() => handleClick}>Add To Cart</button>
+                        <button className="add-button" onClick={e => handleClick(e)}>Add To Cart</button>
                     </div>
                 </div>
             </div>
@@ -75,7 +70,6 @@ export default function ProductShowPage() {
                 <br/>
                 <p>avg star rating</p>
                 <br/>
-                {/* <button className="review-button" >WRITE A REVIEW</button> */}
                 <NavLink to={`/products/${productId}/createreview`}>
                     <button className="review-button" >WRITE A REVIEW</button>
                 </NavLink>

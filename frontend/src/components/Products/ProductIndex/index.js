@@ -17,8 +17,11 @@ export default function ProductIndex({ category }) {
     return (
         <div className="products_container">
             <ul>
+                <h1 className="products-title">Products</h1>
                 {products.map(product => (
-                    <ProductIndexItem product={product} key={product.id}/>
+                    <li className="">
+                        <ProductIndexItem product={product} key={product.id}/>
+                    </li>
                 ))}
             </ul>
         </div>
