@@ -2,3 +2,7 @@
     border-style: none;
     background-color: transparent;
 }
+
+.profile-button:hover {
+    text-decoration: underline;
+}

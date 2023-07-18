@@ -18,12 +18,14 @@ li {
     display: flex;
     flex-direction: row;
     align-items: center;
+    color: black;
 }
 
 .nav_item {
     font-family: sans-serif;
     display: flex;
     align-items: center;
+    /* color: black; */
 }
 
 .nav_item a:visited {
@@ -38,6 +40,10 @@ li {
 .help_link:hover {
     text-decoration: underline;
     transition: gray;
+}
+
+.profile:hover {
+ text-decoration: underline;
 }
 
 .cart_button {
@@ -68,5 +74,5 @@ li {
 }
 
 .left-link {
-    /* width: ; */
+
 }

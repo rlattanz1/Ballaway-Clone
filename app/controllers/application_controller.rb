@@ -16,7 +16,7 @@ class ApplicationController < ActionController::API
 
     def require_logged_in
         if !logged_in?
-            render json: {errors: ['Must be logged in to do that']}, status: unauthorized
+            render json: {errors: ['Must be logged in to do that']}, status: :unauthorized
         end
     end
 
@@ -49,7 +49,7 @@ class ApplicationController < ActionController::API
     def attach_authenticity_token
         headers['X-CSRF-Token'] = masked_authenticity_token(session)
     end
-    
+
     def invalid_authenticity_token
         render json: { message: 'Invalid authenticity token' },
           status: :unprocessable_entity

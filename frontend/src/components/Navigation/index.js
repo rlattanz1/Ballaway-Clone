@@ -27,7 +27,7 @@ function Navigation() {
         </div>
         <div className='nav_item'>
           <CgProfile/> &nbsp;
-          <ProfileButton user={sessionUser} />
+            <ProfileButton user={sessionUser} />
         </div>
         <div className='nav_item'>
             <NavLink className='cart_button' to="/cart">{cartImage} &nbsp; Cart(num of cartItems)</NavLink> &nbsp;

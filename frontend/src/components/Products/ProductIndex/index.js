@@ -12,7 +12,7 @@ export default function ProductIndex({ category }) {
 
     useEffect(() => {
         dispatch(fetchProducts())
-    }, []);
+    }, [dispatch]);
 
     return (
         <div className="products_wrapper">

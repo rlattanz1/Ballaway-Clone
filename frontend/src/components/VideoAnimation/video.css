@@ -1,0 +1,13 @@
+.video-container {
+    display: flex;
+    justify-content: center;
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+    margin-top: 2%;
+    margin-bottom: 1%;
+    overflow: hidden;
+}
+
+.video-container video {
+    width: 100%;
+}

@@ -32,8 +32,10 @@ function App() {
           <Route path="/products">
             <ProductIndex />
           </Route>
+          <Route path="/">
+            <HomeComponent />
+          </Route>
         </Switch>
-      <HomeComponent />
     </>
   );
 }

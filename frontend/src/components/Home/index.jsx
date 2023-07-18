@@ -14,7 +14,7 @@ export default function HomeComponent() {
 
     return (
     <div className='home-container'>
-        <div className='video-container'>
+        <div className='video-wrapper'>
             <VideoComponent />
         </div>
         <div className='slot-swiper-1'>

@@ -9,6 +9,7 @@ import { createCartItem, fetchCartItem } from "../../../store/cartItems";
 export default function ProductShowPage() {
     const {productId} = useParams();
     const product = useSelector(getProduct(productId));
+    // const user = useSelector(state => state.session.user);
     const dispatch = useDispatch();
 
     const [isReadMore, setIsReadMore] = useState(true);
@@ -18,7 +19,7 @@ export default function ProductShowPage() {
 
     useEffect(() => {
         dispatch(fetchProduct(productId))
-    }, [])
+    }, [dispatch])
 
     const handleClick = e => {
         e.preventDefault();
@@ -27,7 +28,6 @@ export default function ProductShowPage() {
             product_id: productId,
             quantity: 1
         }
-
         dispatch(createCartItem(cartItem))
     }
 
