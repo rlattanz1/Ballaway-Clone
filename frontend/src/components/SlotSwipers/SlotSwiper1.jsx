@@ -3,10 +3,8 @@ import './SlotSwiper1.css'
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import { fetchProducts, getProducts } from '../../store/products'
-import { useEffect, useState } from 'react'
-import { Link, useParams } from 'react-router-dom/cjs/react-router-dom.min'
+import { useEffect} from 'react'
 import ProductIndexItem from '../Products/ProductIndexItem'
-import { NavLink } from 'react-router-dom'
 
 
 export default function SlotSwiper1() {
@@ -22,15 +20,14 @@ export default function SlotSwiper1() {
     // this can then be applid to each of my slot swipers for now I will move onto bags
 
     return (
+      <>
+        <h1 className='featured-carousel-title'>Featured Paradym Clubs</h1>
         <div className='ssl-1'>
             <Carousel
                        additionalTransfrom={0}
                        centerMode={false}
                        containerClass="container"
                        infinite={true}
-                       itemClass=""
-                       keyBoardControl
-                       minimumTouchDrag={80}
                        partialVisbile
                        pauseOnHover
                        responsive={{
@@ -63,10 +60,11 @@ export default function SlotSwiper1() {
                        slidesToSlide={1}
                        swipeable
             >
-                        {products.map(product => (
+                        {products.slice(0, 4).map(product => (
                                     <ProductIndexItem product={product}/>
                         ))}
             </Carousel>
         </div>
+      </>
     )
 }

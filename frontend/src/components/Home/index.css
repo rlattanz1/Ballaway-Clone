@@ -16,4 +16,15 @@
 .slot-swiper-1 {
     display: flex;
     flex-direction: column;
+    width: 100vw;
+}
+.slot-swiper-2 {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+}
+.slot-swiper-3 {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
 }
