@@ -34,12 +34,35 @@ export default function CreateReviewPage() {
     const [recomendation, setRecomendation] = useState(review?.recomendation);
     const [title, setTitle] = useState(review?.title);
     const [body, setBody] = useState(review?.body);
+    const [err, setErr] = useState([])
+    const [reviewCreated, setReviewCreated] = useState(false)
+    const [reviewUpdated, setReviewUpdated] = useState(false)
 
     useEffect(() => {
         if (formType === 'Update Review') {
             dispatch(fetchReview(reviewId))
         }
-    }, [reviewId]);
+    }, [dispatch, reviewId]);
+
+    const handleError = async (res) => {
+        let data;
+        try {
+            data = await res.json();
+            console.log(data)
+        } catch {
+            data = await res.text();
+        }
+        if (data) {
+            setErr(data.message)
+            console.log(err)
+        } else if (data) {
+            setErr([data.message])
+            console.log(err)
+        } else {
+            setErr([res.statusText])
+            console.log(err)
+        };
+    };
 
     const handleSubmit = e => {
         e.preventDefault();
@@ -56,17 +79,36 @@ export default function CreateReviewPage() {
         }
 
         if (formType === 'Create Review') {
-            dispatch(createReview(newReview));
-            history.push(`/products/${productId}`)
+            dispatch(createReview(newReview))
+            .then(() => {
+                setReviewCreated(true);
+                // history.push(`/products/${productId}`)
+            })
+            .catch((handleError));
+            console.log(err)
         } else {
-            dispatch(updateReview(newReview));
-            history.push(`/products/${productId}`)
-        }
+            dispatch(updateReview(newReview))
+            .then(() => {
+                setReviewUpdated(true);
+                // history.push(`/products/${productId}`)
+            })
+            .catch((handleError));
+            console.log(err)
+        };
     }
 
+    if (reviewCreated || reviewUpdated) {
+            history.push(`/products/${productId}`);
+            return null
+    }
 
     return review ? (
         <form onSubmit={handleSubmit}>
+            <div className="errors-container">
+                <ul>
+                {err.map((error) => <li>{error}</li>)}
+                </ul>
+            </div>
             <div className="review-container">
 
             <h1>{formType}</h1>
