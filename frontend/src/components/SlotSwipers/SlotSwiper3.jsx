@@ -24,10 +24,6 @@ export default function SlotSwiper3() {
                     centerMode={false}
                     containerClass="container"
                     infinite={true}
-                    itemClass=""
-                    keyBoardControl
-                    minimumTouchDrag={80}
-                    partialVisbile
                     pauseOnHover
                     responsive={{
                         desktop: {

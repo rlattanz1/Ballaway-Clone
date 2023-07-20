@@ -28,7 +28,6 @@ export default function SlotSwiper1() {
                        centerMode={false}
                        containerClass="container"
                        infinite={true}
-                       partialVisbile
                        pauseOnHover
                        responsive={{
                            desktop: {

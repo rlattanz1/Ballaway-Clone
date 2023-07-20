@@ -10,4 +10,7 @@ width: 90%;
 height: 100%;
 }
 
-
+.react-multiple-carousel__arrow:hover {
+ margin-right: -5px;
+ margin-left: -5px;
+}
