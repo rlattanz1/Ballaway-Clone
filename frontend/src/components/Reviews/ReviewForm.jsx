@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useParams, Redirect, useHistory } from "react-router-dom";
+import { useParams, useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getReview, createReview, fetchReview, updateReview } from "../../store/reviews";
 import './ReviewForm.css'
@@ -12,7 +12,7 @@ export default function CreateReviewPage() {
     const {productId} = useParams();
     const {reviewId} = useParams();
     const dispatch = useDispatch();
-    const history = useHistory()
+    const history = useHistory();
     let review = useSelector(getReview(reviewId));
     const formType = reviewId ? 'Update Review' : 'Create Review';
     if (formType === 'Create Review') {
@@ -102,13 +102,14 @@ export default function CreateReviewPage() {
             return null
     }
 
+    const err_arr = err.map((error) => {
+        return(
+            error
+        )
+    })
+
     return review ? (
         <form onSubmit={handleSubmit}>
-            <div className="errors-container">
-                <ul>
-                {err.map((error) => <li>{error}</li>)}
-                </ul>
-            </div>
             <div className="review-container">
 
             <h1>{formType}</h1>
@@ -121,6 +122,18 @@ export default function CreateReviewPage() {
                     />
                 {/* <StarRatingInput/> */}
             </label>
+            <div className="errors-container">
+                <ul>
+                {err.map( error => {
+                if (error.includes('Rating')) {
+                    return(
+                            <li>
+                                {error}
+                            </li>
+                        )}
+                    })}
+                </ul>
+            </div>
             <br/>
             <label>Value
                 <input
@@ -129,6 +142,18 @@ export default function CreateReviewPage() {
                     onChange={e => setValue(e.target.value)}
                     />
             </label>
+            <div className="errors-container">
+                <ul>
+                {err.map( error => {
+                if (error.includes('Value')) {
+                    return(
+                            <li>
+                                {error}
+                            </li>
+                        )}
+                    })}
+                </ul>
+            </div>
             <br/>
             <label>Quality
                 <input
@@ -137,6 +162,18 @@ export default function CreateReviewPage() {
                     onChange={e => setQuality(e.target.value)}
                 />
             </label>
+            <div className="errors-container">
+                <ul>
+                {err.map( error => {
+                if (error.includes('Quality')) {
+                    return(
+                            <li>
+                                {error}
+                            </li>
+                        )}
+                    })}
+                </ul>
+            </div>
             <br/>
             <label>Durability
                 <input
@@ -145,6 +182,18 @@ export default function CreateReviewPage() {
                     onChange={e => setDurability(e.target.value)}
                     />
             </label>
+            <div className="errors-container">
+                <ul>
+                {err.map( error => {
+                if (error.includes('Durability')) {
+                    return(
+                            <li>
+                                {error}
+                            </li>
+                        )}
+                    })}
+                </ul>
+            </div>
             <br/>
             <label>Do you recommend this product
                 <input
@@ -166,6 +215,18 @@ export default function CreateReviewPage() {
                     onChange={e => setTitle(e.target.value)}
                     />
             </label>
+            <div className="errors-container">
+                <ul>
+                {err.map( error => {
+                if (error.includes('Title')) {
+                    return(
+                            <li>
+                                {error}
+                            </li>
+                        )}
+                    })}
+                </ul>
+            </div>
             <br/>
             <label>Body
                 <textarea
@@ -174,6 +235,18 @@ export default function CreateReviewPage() {
                     onChange={e => setBody(e.target.value)}
                 />
             </label>
+            <div className="errors-container">
+                <ul>
+                {err.map( error => {
+                if (error.includes('Body')) {
+                    return(
+                            <li>
+                                {error}
+                            </li>
+                        )}
+                    })}
+                </ul>
+            </div>
             <br/>
             <button className="submit-button">{formType}</button>
 

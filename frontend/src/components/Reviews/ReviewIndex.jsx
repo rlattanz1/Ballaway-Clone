@@ -10,8 +10,9 @@ export default function ReviewIndex () {
     // const {reviewId} = useParams()
     const {productId} = useParams()
     const reviews = useSelector((state) => Object.values(state.reviews));
-    const currentUser = useSelector(state => state.session.user)
-    const dispatch = useDispatch()
+    const currentUser = useSelector(state => state.session.user);
+    const user_review = useSelector(state => state.reviews.userId)
+    const dispatch = useDispatch();
 
 
     const handleDelete = (reviewId) => {

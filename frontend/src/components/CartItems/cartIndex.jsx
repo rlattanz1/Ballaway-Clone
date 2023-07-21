@@ -3,7 +3,9 @@ import { fetchCartItems, getCartItems } from "../../store/cartItems";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchProducts } from "../../store/products";
+import LoginFormModal from "../LoginFormModal";
 import './cartIndex.css'
+
 
 
 
@@ -50,7 +52,7 @@ export default function CartIndex() {
     else {
         return (
             <div>
-                <p> {error} </p>
+                
             </div>
         )
     }

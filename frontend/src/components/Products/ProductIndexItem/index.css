@@ -16,9 +16,16 @@
     flex-direction:column;
 }
 
+
+
+.prod-image{
+    background-color: rgb(208, 214, 216);
+    margin: 10px
+}
+.prod-image:hover {
+    background-color: darkgray;
+}
+
 .prod-image {
     width: 150px;
 }
-
-
-

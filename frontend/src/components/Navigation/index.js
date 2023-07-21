@@ -10,9 +10,16 @@ import {cartImage} from "../../images/cartImage"
 import { Logo } from '../../images/logo';
 import {AiOutlineQuestionCircle} from 'react-icons/ai'
 import {CgProfile} from 'react-icons/cg'
+import LoginForm from '../LoginFormModal/LoginForm';
+import { useState } from 'react';
+import { Modal } from '../../context/Modal';
+import '../../context/Modal.css'
+
+
 
 function Navigation() {
   const sessionUser = useSelector(state => state.session.user);
+  const [showModal, setShowModal] = useState(false);
 
   let sessionLinks;
   if (sessionUser) {
@@ -49,7 +56,16 @@ function Navigation() {
             <LoginFormModal /> &nbsp; &nbsp;
         </div>
         <div className='nav_item'>
-            <NavLink  className='cart_button' to="/cart">{cartImage} &nbsp; Cart(num of cartItems)</NavLink> &nbsp;
+            {/* <NavLink  className='cart_button' to="/cart">{cartImage} &nbsp; Cart(num of cartItems)</NavLink> &nbsp; */}
+          <NavLink  className='cart_button' to={'/'} onClick={() => setShowModal(true)}>
+            {showModal && (
+              <Modal onClose={() => setShowModal(false)}>
+                <LoginForm setShowModal={setShowModal}/>
+              </Modal>
+              )}
+            {cartImage} &nbsp; Cart(num of cartItems)
+          </NavLink> &nbsp;
+            {/* <LoginForm setShowModal={true}/> */}
             {/* nav link to cart is not working */}
         </div>
       </div>

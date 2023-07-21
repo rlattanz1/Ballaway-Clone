@@ -31,7 +31,7 @@ export default function SlotSwiper3() {
                             max: 3000,
                             min: 1100
                             },
-                            items: 3,
+                            items: 4,
                             partialVisibilityGutter: 40
                         },
                         mobile: {

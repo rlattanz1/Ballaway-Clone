@@ -47,3 +47,7 @@
     border-color: rgb(157, 154, 154);
     width: 50vw;
 }
+
+.errors-container {
+    color: red;
+}

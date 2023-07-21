@@ -12,6 +12,7 @@ export default function ProductShowPage() {
     const {productId} = useParams();
     const product = useSelector(getProduct(productId));
     const user = useSelector(state => state.session.user);
+    const user_review = useSelector(state => state.reviews.userId);
     const dispatch = useDispatch();
     // const images = useSelector(state => state.products[productId]);
 
@@ -55,27 +56,14 @@ export default function ProductShowPage() {
         }
     }
 
-    if (user) {
+    if (user && !user_review) {
 
         return product ? (
             <div className="outer-product-show-container">
                 <div className="inner-product-show-container">
                     <div className="prod-image-container">
-                        {/* {console.log(images.photoUrl)}
-                        {console.log(productId)} */}
                         {gallery()}
-
-                        {/* <ImageGallery
-                        items={items}
-                        showThumbnails={true}
-                        thumbnailPosition="left"
-                        /> */}
-
-                    {/* <img
-                        class="prod-image"
-                        src={product.photoUrl[0]} alt=""
-                    /> */}
-                </div>
+                    </div>
                     <div className="product-content-container">
                         <br/>
                         <h1>{product.name}</h1>
@@ -120,11 +108,8 @@ export default function ProductShowPage() {
         return product ? (
             <div className="outer-product-show-container">
                 <div className="inner-product-show-container">
-                    <div className="prod-image-container">
-                    <img
-                        class="prod-image"
-                        src={product.photoUrl[0]} alt=""
-                    />
+                <div className="prod-image-container">
+                        {gallery()}
                     </div>
                     <div className="product-content-container">
                         <br/>
