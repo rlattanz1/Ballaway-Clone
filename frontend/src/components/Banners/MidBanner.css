@@ -1,0 +1,50 @@
+.mid-outer-banner-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin: 20px;
+}
+
+.mid-inner-banner-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+    margin-right: 7%;
+    width: 50%;
+    height: 100%;
+}
+.mid-inner-banner-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 4%;
+    background-color: black;
+    width: 50%;
+    height: 100%;
+}
+.mid-inner-banner-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.mid-inner-banner-text img{
+    width: 300px;
+}
+.mid-inner-banner-text span{
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+}
+.mid-inner-banner-text p{
+font-size: 15px;
+color: white;
+}
+.big-bertha {
+    width: 100%;
+    height: 100%;
+}

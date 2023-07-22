@@ -1,0 +1,49 @@
+.top-outer-banner-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin: 20px;
+}
+
+.top-inner-banner-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+    margin-left: 4%;
+    width: 50%;
+    height: 100%;
+}
+.top-inner-banner-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    margin-right: 7%;
+    background-color: black;
+    width: 50%;
+    height: 100%;
+}
+.top-inner-banner-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.top-inner-banner-text h2{
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+.top-inner-banner-text p{
+font-size: 15px;
+color: white;
+text-decoration: underline white;
+}
+.swag-bag {
+    width: 100%;
+    height: 100%;
+}

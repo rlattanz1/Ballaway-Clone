@@ -10,21 +10,46 @@
     display: flex;
     justify-content: center;
     max-width: 100%;
-    height: 100%;
+    height: 900px;
 }
 
 .slot-swiper-1 {
     display: flex;
     flex-direction: column;
-    width: 100vw;
+    width: 100%;
+    height: 100%;
 }
 .slot-swiper-2 {
     display: flex;
     flex-direction: column;
-    width: 100vw;
+    width: 100%;
+    height: 100%;
+
 }
 .slot-swiper-3 {
     display: flex;
     flex-direction: column;
-    width: 100vw;
+    width: 100%;
+    height: 100%;
+}
+.top-banner {
+    margin: 50px;
+    width: 100%;
+    height: 500px;
+}
+
+.mid-banner {
+    margin: 50px;
+    width: 100%;
+    height: 500px;
+}
+.bot-banner {
+    margin: 50px;
+    width: 100%;
+    height: 400px;
+}
+.footer-wrapper {
+    margin: 10px;
+    width: 100%;
+
 }

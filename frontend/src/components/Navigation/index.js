@@ -57,7 +57,9 @@ function Navigation() {
         </div>
         <div className='nav_item'>
             {/* <NavLink  className='cart_button' to="/cart">{cartImage} &nbsp; Cart(num of cartItems)</NavLink> &nbsp; */}
-          <NavLink  className='cart_button' to={'/'} onClick={() => setShowModal(true)}>
+          <NavLink  className='cart_button' to={'/'}
+          onClick={() => setShowModal(true)}
+          >
             {showModal && (
               <Modal onClose={() => setShowModal(false)}>
                 <LoginForm setShowModal={setShowModal}/>
@@ -65,7 +67,6 @@ function Navigation() {
               )}
             {cartImage} &nbsp; Cart(num of cartItems)
           </NavLink> &nbsp;
-            {/* <LoginForm setShowModal={true}/> */}
             {/* nav link to cart is not working */}
         </div>
       </div>
