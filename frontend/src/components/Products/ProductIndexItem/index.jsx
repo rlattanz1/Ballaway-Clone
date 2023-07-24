@@ -20,7 +20,7 @@ export default function ProductIndexItem({product}) {
                 </div>
                 <p className="prod-name">{product.name}</p>
                 <br/>
-                <p className="prod-price">{product.price}</p>
+                <p className="prod-price">${product.price}</p>
             </div>
         </NavLink>
     )

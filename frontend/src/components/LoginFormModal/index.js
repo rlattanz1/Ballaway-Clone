@@ -4,12 +4,12 @@ import LoginForm from "./LoginForm";
 
 
 
-function LoginFormModal() {
+function LoginFormModal({text}) {
   const [showModal, setShowModal] = useState(false);
 
   return (
     <>
-      <p class="login_modal" onClick={() => setShowModal(true)}>Log In</p>
+      <p class="login_modal" onClick={() => setShowModal(true)}>{text}</p>
       {showModal && (
         <Modal onClose={() => setShowModal(false)}>
           <LoginForm setShowModal={setShowModal}/>

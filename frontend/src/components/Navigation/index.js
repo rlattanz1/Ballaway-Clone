@@ -20,6 +20,7 @@ import '../../context/Modal.css'
 function Navigation() {
   const sessionUser = useSelector(state => state.session.user);
   const [showModal, setShowModal] = useState(false);
+  console.log(showModal)
 
   let sessionLinks;
   if (sessionUser) {
@@ -53,19 +54,14 @@ function Navigation() {
         </div>
         <div className='nav_item'>
             <CgProfile/> &nbsp;
-            <LoginFormModal /> &nbsp; &nbsp;
+            <LoginFormModal text={'Login'}/> &nbsp; &nbsp;
         </div>
         <div className='nav_item'>
             {/* <NavLink  className='cart_button' to="/cart">{cartImage} &nbsp; Cart(num of cartItems)</NavLink> &nbsp; */}
           <NavLink  className='cart_button' to={'/'}
-          onClick={() => setShowModal(true)}
           >
-            {showModal && (
-              <Modal onClose={() => setShowModal(false)}>
-                <LoginForm setShowModal={setShowModal}/>
-              </Modal>
-              )}
-            {cartImage} &nbsp; Cart(num of cartItems)
+            {cartImage} &nbsp;
+            <LoginFormModal text={'Cart'}/>
           </NavLink> &nbsp;
             {/* nav link to cart is not working */}
         </div>
