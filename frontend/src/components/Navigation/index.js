@@ -10,17 +10,13 @@ import {cartImage} from "../../images/cartImage"
 import { Logo } from '../../images/logo';
 import {AiOutlineQuestionCircle} from 'react-icons/ai'
 import {CgProfile} from 'react-icons/cg'
-import LoginForm from '../LoginFormModal/LoginForm';
 import { useState } from 'react';
-import { Modal } from '../../context/Modal';
-import '../../context/Modal.css'
 
 
 
 function Navigation() {
   const sessionUser = useSelector(state => state.session.user);
   const [showModal, setShowModal] = useState(false);
-  console.log(showModal)
 
   let sessionLinks;
   if (sessionUser) {

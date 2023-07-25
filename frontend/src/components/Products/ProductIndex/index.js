@@ -1,18 +1,28 @@
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
-import { fetchProducts, getProducts } from "../../../store/products";
+import { fetchCategoryProducts, fetchProducts, getProducts } from "../../../store/products";
 import ProductIndexItem from "../../Products/ProductIndexItem";
 import './index.css'
+import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 
 
 
-export default function ProductIndex({ category }) {
+export default function ProductIndex() {
+    const {category} = useParams();
     const dispatch = useDispatch();
     const products = useSelector(getProducts);
-
     useEffect(() => {
-        dispatch(fetchProducts())
-    }, [dispatch]);
+        if (!category) {
+            console.log(products, "products-UE")
+            console.log("fired")
+            dispatch(fetchProducts());
+        } else {
+            console.log(products, "products-UE")
+            console.log(category, "category-UE")
+            console.log("fired else")
+            dispatch(fetchCategoryProducts(category));
+        }
+    }, [dispatch, category]);
 
     return (
         <div className="products_wrapper">
@@ -24,8 +34,8 @@ export default function ProductIndex({ category }) {
             </div>
             <div className="products-container">
                 <div className="products-list">
-                        {products.map(product => (
-                                <ProductIndexItem product={product} key={product.id}/>
+                    {products.map(product => (
+                        <ProductIndexItem product={product} key={product.id}/>
                     ))}
                 </div>
             </div>

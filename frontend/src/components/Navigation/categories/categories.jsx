@@ -12,7 +12,7 @@ export default function Categories() {
                     <div className="prod-ele">
                     {categories.map(category => (
                     <li className="category-li">
-                        <NavLink className="category" to={`/${category}`}>{category}</NavLink>
+                        <NavLink className="category" to={`/category/${category}`}>{category}</NavLink>
                     </li>
                     ))}
                     </div>

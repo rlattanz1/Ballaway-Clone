@@ -1,7 +1,13 @@
 class Api::ProductsController < ApplicationController
     def index
         if params[:category]
-            @products = Product.where(category: params[:category])
+            categories = params[:category].split(',')
+            product_ids = nil
+            categories.each do |category|
+                category_products = Product.where('category LIKE ?', "%#{category}%").pluck(:id)
+                product_ids = product_ids.nil? ? category_products : product_ids & category_products
+            end
+            @products = Product.where(id: product_ids)
         else
             @products = Product.all
         end

@@ -7,6 +7,7 @@ export const RECEIVE_PRODUCT = 'products/RECEIVE_PRODUCT'
 
 
 export const receiveProducts = (products) => {
+    console.log(products, "products action")
     return {
         type: RECEIVE_PRODUCTS,
         products
@@ -38,6 +39,17 @@ export const fetchProducts = () => async(dispatch) => {
     }
 }
 
+export const fetchCategoryProducts = (category) => async(dispatch) => {
+    const res = await fetch(`/api/products/category/${category}`);
+    console.log(category, "category-TA")
+    if (res.ok) {
+        console.log(res);
+        const products = await res.json(); //issue here for my categories returns uncaught in promise here
+        console.log(products, "products-TA"); //products never reaches here because the promise is not received
+        dispatch(receiveProducts(products));
+    }
+}
+
 export const fetchProduct = (productId) => async(dispatch) => {
     const res = await fetch(`/api/products/${productId}`);
 
@@ -48,12 +60,10 @@ export const fetchProduct = (productId) => async(dispatch) => {
     }
 }
 
-//may need an extra fetch for the searchbar category function IDK
-
 export default function productsReducer(state={}, action) {
     let newState;
     switch(action.type) {
-        case RECEIVE_PRODUCTS: //may or may not be right for the inclusion of the category search
+        case RECEIVE_PRODUCTS:
             return action.products;
         case RECEIVE_PRODUCT:
             newState = {...state};
