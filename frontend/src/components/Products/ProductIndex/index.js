@@ -13,13 +13,8 @@ export default function ProductIndex() {
     const products = useSelector(getProducts);
     useEffect(() => {
         if (!category) {
-            console.log(products, "products-UE")
-            console.log("fired")
             dispatch(fetchProducts());
         } else {
-            console.log(products, "products-UE")
-            console.log(category, "category-UE")
-            console.log("fired else")
             dispatch(fetchCategoryProducts(category));
         }
     }, [dispatch, category]);

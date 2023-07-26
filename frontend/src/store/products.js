@@ -41,11 +41,8 @@ export const fetchProducts = () => async(dispatch) => {
 
 export const fetchCategoryProducts = (category) => async(dispatch) => {
     const res = await fetch(`/api/products?category=${category}`);
-    console.log(category, "category-TA")
     if (res.ok) {
-        console.log(res);
-        const products = await res.json()
-        console.log(products, "products-TA"); 
+        const products = await res.json();
         dispatch(receiveProducts(products));
     }
 }
