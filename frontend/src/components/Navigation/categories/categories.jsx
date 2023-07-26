@@ -4,7 +4,7 @@ import './categories.css'
 
 
 export default function Categories() {
-    const categories = ['products', 'clubs', 'balls', 'gear']
+    const categories = ['Products', 'Clubs', 'Balls', 'Gear']
     return (
         <div className="categories-div">
             <div className="category-links">
