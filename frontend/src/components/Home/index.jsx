@@ -8,7 +8,7 @@ import SlotSwiper3 from '../SlotSwipers/SlotSwiper3'
 import CategorySlot1 from '../Navigation/categories/CategorySlots/CategorySlot1'
 import BotBanner from '../Banners/BotBanner'
 import CategorySlot2 from '../Navigation/categories/CategorySlots/CategorySlot2'
-import Footer from '../Footer/footer'
+// import Footer from '../Footer/footer'
 
 
 export default function HomeComponent() {
@@ -42,9 +42,9 @@ export default function HomeComponent() {
         <div className='category-slot-2'>
             <CategorySlot2 />
         </div>
-        <div className='footer-wrapper'>
+        {/* <div className='footer-wrapper'>
             <Footer />
-        </div>
+        </div> */}
     </div>
     )
 }

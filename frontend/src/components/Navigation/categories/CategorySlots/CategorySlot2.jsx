@@ -11,34 +11,49 @@ export default function CategorySlot2() {
             <h2>Club Categories</h2>
             <div className='club-slot-container'>
                 <div className='drivers-category-slot'>
+                    <div className='category-link-img'>
+                        <NavLink to={`/category/Driver`}>
+                            <img src="https://ballaway-seeds.s3.us-west-1.amazonaws.com/paradym-td-1.webp" alt="" />
+                        </NavLink>
+                    </div>
+                    <br />
                     <h3>Drivers</h3>
-                    <NavLink to={`/category/Driver`}>
-                        <img src="https://ballaway-seeds.s3.us-west-1.amazonaws.com/paradym-td-1.webp" alt="" />
-                    </NavLink>
                 </div>
                 <div className='woods-category-slot'>
+                    <div className='category-link-img'>
+                        <NavLink to={`/category/Woods`}>
+                            <img src="https://ballaway-seeds.s3.us-west-1.amazonaws.com/paradym-td-1.webp" alt="" />
+                        </NavLink>
+                    </div>
+                    <br />
                     <h3>Woods</h3>
-                    <NavLink to={`/category/Woods`}>
-                        <img src="https://ballaway-seeds.s3.us-west-1.amazonaws.com/paradym-td-1.webp" alt="" />
-                    </NavLink>
                 </div>
                 <div className='irons-category-slot'>
+                    <div className='category-link-img'>
+                        <NavLink to={`/category/Iron`}>
+                            <img src="https://ballaway-seeds.s3.us-west-1.amazonaws.com/iron-paradym-1.webp" alt="" />
+                        </NavLink>
+                    </div>
+                    <br />
                     <h3>Irons</h3>
-                    <NavLink to={`/category/Iron`}>
-                        <img src="https://ballaway-seeds.s3.us-west-1.amazonaws.com/iron-paradym-1.webp" alt="" />
-                    </NavLink>
                 </div>
                 <div className='wedges-category-slot'>
+                    <div className='category-link-img'>
+                        <NavLink to={`/category/Wedges`}>
+                            <img src="https://ballaway-seeds.s3.us-west-1.amazonaws.com/iron-paradym-1.webp" alt="" />
+                        </NavLink>
+                    </div>
+                    <br />
                     <h3>Wedges</h3>
-                    <NavLink to={`/category/Wedges`}>
-                        <img src="https://ballaway-seeds.s3.us-west-1.amazonaws.com/iron-paradym-1.webp" alt="" />
-                    </NavLink>
                 </div>
                 <div className='putters-category-slot'>
+                    <div className='category-link-img'>
+                        <NavLink to={`/category/Putters`}>
+                            <img src="https://ballaway-seeds.s3.us-west-1.amazonaws.com/iron-paradym-1.webp" alt="" />
+                        </NavLink>
+                    </div>
+                    <br />
                     <h3>Putters</h3>
-                    <NavLink to={`/category/Putters`}>
-                        <img src="https://ballaway-seeds.s3.us-west-1.amazonaws.com/iron-paradym-1.webp" alt="" />
-                    </NavLink>
                 </div>
             </div>
         </>

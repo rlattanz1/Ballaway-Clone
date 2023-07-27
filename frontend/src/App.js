@@ -7,6 +7,8 @@ import Navigation from './components/Navigation'
 import CreateReviewPage from './components/Reviews/ReviewForm';
 import HomeComponent from './components/Home';
 import CartIndex from './components/CartItems/cartIndex';
+import Footer from './components/Footer/footer'
+
 
 function App() {
   return (
@@ -38,6 +40,9 @@ function App() {
             <HomeComponent />
           </Route>
         </Switch>
+        <div className='footer'>
+          <Footer />
+        </div>
     </>
   );
 }

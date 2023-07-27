@@ -5,6 +5,7 @@ import { getReview, createReview, fetchReview, updateReview } from "../../store/
 import './ReviewForm.css'
 import { NavLink } from "react-router-dom/cjs/react-router-dom.min";
 import StarRatingInput from "./StarRatingInput";
+import RectangleRatingInput from "./RectangleRatingInput";
 
 
 
@@ -28,6 +29,9 @@ export default function CreateReviewPage() {
         }
     }
     const [rating, setRating] = useState(review?.rating);
+    // const [valueRating, setValueRating] = useState(review?.valueRating);
+    // const [qualityRating, setQualityRating] = useState(review?.qualityRating);
+    // const [durabilityRating, setDurabilityRating] = useState(review?.durabilityRating);
     const [value, setValue] = useState(review?.value);
     const [quality, setQuality] = useState(review?.quality);
     const [durability, setDurability] = useState(review?.durability);
@@ -82,7 +86,6 @@ export default function CreateReviewPage() {
             dispatch(createReview(newReview))
             .then(() => {
                 setReviewCreated(true);
-                // history.push(`/products/${productId}`)
             })
             .catch((handleError));
             console.log(err)
@@ -90,7 +93,6 @@ export default function CreateReviewPage() {
             dispatch(updateReview(newReview))
             .then(() => {
                 setReviewUpdated(true);
-                // history.push(`/products/${productId}`)
             })
             .catch((handleError));
             console.log(err)
@@ -108,6 +110,23 @@ export default function CreateReviewPage() {
         )
     })
 
+    const onChange = (number) => {
+        setRating(parseInt(number));
+        setValue(parseInt(number));
+        setQuality(parseInt(number));
+        setDurability(parseInt(number));
+        // let state;
+        // switch(state) {
+        //     case state.starRating:
+        //         return setStarRating(parseInt(number));
+        //     case state.valueRating:
+        //         return setValueRating(parseInt(number));
+        //     case state.qualityRating:
+        //         return setQualityRating(parseInt(number));
+        //     case state.durabilityRating:
+        //         return setDurabilityRating(parseInt(number));
+    };
+
     return review ? (
         <form onSubmit={handleSubmit}>
             <div className="review-container">
@@ -119,8 +138,12 @@ export default function CreateReviewPage() {
                     type="number"
                     value={rating}
                     onChange={e => setRating(e.target.value)}
-                    />
-                {/* <StarRatingInput/> */}
+                />
+                <StarRatingInput
+                    disabled={false}
+                    onChange={onChange}
+                    rating={rating}
+                />
             </label>
             <div className="errors-container">
                 <ul>
@@ -140,7 +163,12 @@ export default function CreateReviewPage() {
                     type="number"
                     value={value}
                     onChange={e => setValue(e.target.value)}
-                    />
+                />
+                <RectangleRatingInput
+                    disabled={false}
+                    onChange={onChange}
+                    rating={value}
+                />
             </label>
             <div className="errors-container">
                 <ul>
@@ -161,6 +189,11 @@ export default function CreateReviewPage() {
                     value={quality}
                     onChange={e => setQuality(e.target.value)}
                 />
+                <RectangleRatingInput
+                    disabled={false}
+                    onChange={onChange}
+                    rating={quality}
+                />
             </label>
             <div className="errors-container">
                 <ul>
@@ -180,7 +213,12 @@ export default function CreateReviewPage() {
                     type="number"
                     value={durability}
                     onChange={e => setDurability(e.target.value)}
-                    />
+                />
+                <RectangleRatingInput
+                    disabled={false}
+                    onChange={onChange}
+                    rating={durability}
+                />
             </label>
             <div className="errors-container">
                 <ul>
@@ -200,12 +238,12 @@ export default function CreateReviewPage() {
                     type="radio"
                     name="radio1"
                     onChange={() => setRecomendation(true)}
-                    />yes
+                />yes
                 <input
                     type="radio"
                     name="radio1"
                     onChange={() => setRecomendation(false)}
-                    />no
+                />no
             </label>
             <br/>
             <label>Title

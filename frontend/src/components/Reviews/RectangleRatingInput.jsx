@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
-import {AiOutlineStar} from 'react-icons/ai'
+import {LuRectangleHorizontal} from 'react-icons/lu'
 
 
-const StarRatingInput = ({ rating, disabled, onChange }) => {
+const RectangleRatingInput = ({ rating, disabled, onChange }) => {
   const [activeRating, setActiveRating] = useState(rating);
 
   useEffect(() => {
@@ -10,7 +10,7 @@ const StarRatingInput = ({ rating, disabled, onChange }) => {
   }, [rating]);
 
 
-  const starIcon = (number) => {
+  const rectangleIcon = (number) => {
     const props = {};
     if (!disabled) {
       props.onMouseEnter = () => setActiveRating(number);
@@ -19,16 +19,16 @@ const StarRatingInput = ({ rating, disabled, onChange }) => {
     }
     return (
       <div key={number} className={activeRating >= number ? "filled" : "empty"} {...props}>
-        <AiOutlineStar className='star' size={20}/>
+        <LuRectangleHorizontal className='rectangle' size={20}/>
       </div>
     );
   };
 
   return (
     <div className="rating-input">
-      {[1, 2, 3, 4, 5].map(number => starIcon(number))}
+      {[1, 2, 3, 4, 5].map(number => rectangleIcon(number))}
     </div>
   );
 };
 
-export default StarRatingInput;
+export default RectangleRatingInput;
