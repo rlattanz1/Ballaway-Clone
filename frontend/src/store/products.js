@@ -1,4 +1,4 @@
-
+import { receiveCartItems } from "./cartItems"
 
 export const RECEIVE_PRODUCTS = 'products/RECEIVE_PRODUCTS'
 export const RECEIVE_PRODUCT = 'products/RECEIVE_PRODUCT'

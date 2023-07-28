@@ -12,9 +12,11 @@ export default function CartIndexItem({cartItem}) { //cart item being passed int
     const dispatch = useDispatch();
     const [quantity, setQuantity] = useState(cartItem.quantity); //this will set the initial quantity of the cart item to the quantity passed when created by the user clicking 'add to cart'
     const product = useSelector(getProduct(cartItem.productId)) //get product will take in the product id of this cart item as an arg
+    const currentUser = useSelector(state => state.session.user.id)
+
 
     useEffect(() => {
-        if (cartItem) { //if a cart item exists
+        if (cartItem.productId) { //if a cart item exists
             dispatch(fetchProduct(cartItem.productId));
         }
     }, [dispatch, cartItem]);
@@ -34,6 +36,7 @@ export default function CartIndexItem({cartItem}) { //cart item being passed int
         dispatch(deleteCartItem(cartItem.id))
     }
 
+if (cartItem.userId === currentUser) {
 
     return product ? (
         <div className="cart-item-wrapper">
@@ -69,4 +72,5 @@ export default function CartIndexItem({cartItem}) { //cart item being passed int
             </div>
         </div>
     ) : null
+    }
 };

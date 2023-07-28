@@ -18,7 +18,7 @@ class Api::CartItemsController < ApplicationController
 
     def create
         product_id = cart_items_params[:product_id]
-        @cart_item = CartItem.find_by(product_id: product_id)
+        @cart_item = CartItem.find_by(product_id: product_id, user_id: current_user.id)
         if @cart_item
             #if the cart item already exists in the users cart
             @cart_item.quantity += 1

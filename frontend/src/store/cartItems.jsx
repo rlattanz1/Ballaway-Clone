@@ -40,7 +40,7 @@ export const getCartItem = (cartItemId) => (state) => (
 
 
 export const fetchCartItems = () => async(dispatch) => {
-    const res = await fetch ('/api/cart_items');
+    const res = await fetch (`/api/cart_items`);
 
     if (res.ok) {
         const cartItems = await res.json();

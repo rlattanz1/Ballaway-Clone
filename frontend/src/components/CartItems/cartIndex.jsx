@@ -3,7 +3,7 @@ import { fetchCartItems, getCartItems } from "../../store/cartItems";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import './cartIndex.css'
-import { fetchProducts, getProducts } from "../../store/products";
+import { fetchCartProducts, fetchProducts, getProducts } from "../../store/products";
 
 
 
@@ -13,6 +13,8 @@ export default function CartIndex() {
     const dispatch = useDispatch();
     const carts = useSelector(getCartItems);
     const products = useSelector(getProducts);
+    // const currentUser = useSelector(state => state.session.user.id)
+
 
     useEffect(() => {
         dispatch(fetchCartItems())
@@ -21,6 +23,8 @@ export default function CartIndex() {
 
     let totalSum = 0;
     let totalTax = 0;
+
+
 return carts ? (
         <div className="cart">
             <div className="cart-right">
@@ -28,7 +32,7 @@ return carts ? (
                 <h1 className="cart-title">Cart</h1>
                     {carts.map(cartItem => (
                         <CartIndexItem  cartItem={cartItem}/>
-                        ))}
+                    ))}
                 </div>
             </div>
             <div className="cart-left">
