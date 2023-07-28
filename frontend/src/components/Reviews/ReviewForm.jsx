@@ -29,9 +29,6 @@ export default function CreateReviewPage() {
         }
     }
     const [rating, setRating] = useState(review?.rating);
-    // const [valueRating, setValueRating] = useState(review?.valueRating);
-    // const [qualityRating, setQualityRating] = useState(review?.qualityRating);
-    // const [durabilityRating, setDurabilityRating] = useState(review?.durabilityRating);
     const [value, setValue] = useState(review?.value);
     const [quality, setQuality] = useState(review?.quality);
     const [durability, setDurability] = useState(review?.durability);
@@ -110,21 +107,17 @@ export default function CreateReviewPage() {
         )
     })
 
-    const onChange = (number) => {
-        setRating(parseInt(number));
-        setValue(parseInt(number));
-        setQuality(parseInt(number));
-        setDurability(parseInt(number));
-        // let state;
-        // switch(state) {
-        //     case state.starRating:
-        //         return setStarRating(parseInt(number));
-        //     case state.valueRating:
-        //         return setValueRating(parseInt(number));
-        //     case state.qualityRating:
-        //         return setQualityRating(parseInt(number));
-        //     case state.durabilityRating:
-        //         return setDurabilityRating(parseInt(number));
+    const handleOnChange = (e, type) => {
+        switch(type) {
+            case "rating":
+                return setRating(parseInt(e));
+            case "value":
+                return setValue(parseInt(e));
+            case "quality":
+                return setQuality(parseInt(e));
+            case "durability":
+                return setDurability(parseInt(e));
+        };
     };
 
     return review ? (
@@ -141,7 +134,7 @@ export default function CreateReviewPage() {
                 />
                 <StarRatingInput
                     disabled={false}
-                    onChange={onChange}
+                    onChange={(e) => handleOnChange(e, "rating")}
                     rating={rating}
                 />
             </label>
@@ -166,7 +159,7 @@ export default function CreateReviewPage() {
                 />
                 <RectangleRatingInput
                     disabled={false}
-                    onChange={onChange}
+                    onChange={(e) => handleOnChange(e, "value")}
                     rating={value}
                 />
             </label>
@@ -191,7 +184,7 @@ export default function CreateReviewPage() {
                 />
                 <RectangleRatingInput
                     disabled={false}
-                    onChange={onChange}
+                    onChange={(e) => handleOnChange(e, "quality")}
                     rating={quality}
                 />
             </label>
@@ -216,7 +209,7 @@ export default function CreateReviewPage() {
                 />
                 <RectangleRatingInput
                     disabled={false}
-                    onChange={onChange}
+                    onChange={(e) => handleOnChange(e, "durability")}
                     rating={durability}
                 />
             </label>

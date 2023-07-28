@@ -9,7 +9,6 @@ import RectangleRatingInput from "./RectangleRatingInput";
 
 
 export default function ReviewIndex () {
-    // const {reviewId} = useParams()
     const {productId} = useParams()
     const reviews = useSelector((state) => Object.values(state.reviews));
     const currentUser = useSelector(state => state.session.user);

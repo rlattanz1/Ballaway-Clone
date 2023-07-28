@@ -10,11 +10,11 @@ export default function Searchbar() {
 
     // }
 
-    return (
-        <form /*onSubmit={handleSubmit}*/ className="product_search">
-            <input type="text" className="searchbar" placeholder="search">
-            </input>
-            <button type="submit" className="search_icon"> <AiOutlineSearch /> </button>
-        </form>
-    )
+    // return (
+    //     <form onSubmit={handleSubmit} className="product_search">
+    //         <input type="text" className="searchbar" placeholder="search">
+    //         </input>
+    //         <button type="submit" className="search_icon"> <AiOutlineSearch /> </button>
+    //     </form>
+    // )
 }

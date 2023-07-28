@@ -2,8 +2,9 @@ import { useEffect, useState } from 'react';
 import {LuRectangleHorizontal} from 'react-icons/lu'
 
 
-const RectangleRatingInput = ({ rating, disabled, onChange }) => {
+const RectangleRatingInput = ({ rating, disabled, onChange}) => {
   const [activeRating, setActiveRating] = useState(rating);
+
 
   useEffect(() => {
     setActiveRating(rating);
