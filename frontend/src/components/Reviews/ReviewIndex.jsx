@@ -4,6 +4,8 @@ import { useParams } from "react-router-dom";
 import './ReviewIndex.css'
 import { useEffect } from "react";
 import { NavLink } from "react-router-dom";
+import StarRatingInput from "./StarRatingInput";
+import RectangleRatingInput from "./RectangleRatingInput";
 
 
 export default function ReviewIndex () {
@@ -30,7 +32,7 @@ export default function ReviewIndex () {
             <div className="inner-reviews-container">
                 <div className="review-details">
                     <span>
-                        <p>{review.rating }</p>
+                        <p>{<StarRatingInput rating={review.rating} disabled={true}/>}</p>
                         <p>{review.username}</p>
                         <p>{review.createdAt.split('T').join(' ').slice(0, 19)}</p>
                         <p>{review.updatedAt.split('T').join(' ').slice(0, 19)}</p>
@@ -58,17 +60,18 @@ export default function ReviewIndex () {
                     <p>
                         value
                         <br/>
-                        {review.value}
+                        {<RectangleRatingInput rating={review.value} disabled={true}/>}
                     </p>
                     <p>
                         quality
                         <br/>
-                        {review.quality}
+                        {<RectangleRatingInput rating={review.quality} disabled={true}/>}
+
                     </p>
                     <p>
                         durability
                         <br/>
-                        {review.durability}
+                        {<RectangleRatingInput rating={review.durability} disabled={true}/>}
                     </p>
                 </div>
             </div>

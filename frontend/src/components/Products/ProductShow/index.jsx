@@ -10,11 +10,13 @@ import "react-image-gallery/styles/css/image-gallery.css";
 
 export default function ProductShowPage() {
     const {productId} = useParams();
+    // const reviewId = useSelector(state => Object.keys(state.reviews))
     const product = useSelector(getProduct(productId));
     const user = useSelector(state => state.session.user);
-    const user_review = useSelector(state => state.reviews.userId);
     const dispatch = useDispatch();
-    // const images = useSelector(state => state.products[productId]);
+    const user_review = useSelector(state => state.reviews.userId);
+    // console.log(user_review)
+    // console.log(reviewId[0])
 
     const [isReadMore, setIsReadMore] = useState(true);
     let toggleReadMore = () => {
@@ -56,7 +58,7 @@ export default function ProductShowPage() {
         }
     }
 
-    if (user && !user_review) {
+    if (user && !(user_review === user.id)) {
 
         return product ? (
             <div className="outer-product-show-container">

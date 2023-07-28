@@ -35,25 +35,33 @@ return carts ? (
                 <h1 className="purchase-total-title">Purchase Total</h1>
                 <div className="purchase-container">
                     <div className="cart-cost">
+                        <div className="item-prices">
                         items total price
                         <br />
                         {carts.map(cartItem => {
                             const product = products.find(product => product.id === cartItem.productId);
-                            totalSum += product.price * cartItem.quantity
-                            return (
-                                `(${product.price * cartItem.quantity})`
-                            )
-
-                        })};
-                        <br/>
-                        <div className="total">
-                            items total tax
-
-                            {totalTax = totalSum * 0.01587}
+                            if (product) {
+                                totalSum += product.price * cartItem.quantity;
+                                return (
+                                    <div>
+                                        {product.name}: (${product.price * cartItem.quantity}.00)
+                                    </div>
+                                )
+                            }
+                        })}
                         </div>
                         <br/>
-                        total purchase sum
-                        {totalSum += totalTax}
+                        <div className="total-tax">
+                            items total tax
+                            <br />
+                            ${totalTax = totalSum * 0.01}
+                        </div>
+                        <br/>
+                        <div className="total-cost">
+                            total purchase sum
+                            <br />
+                            ${totalSum += totalTax}
+                        </div>
                     </div>
                     <button className="purchase-button">Fake Purchase Items</button>
                 </div>
