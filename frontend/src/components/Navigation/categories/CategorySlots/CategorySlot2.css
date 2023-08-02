@@ -9,6 +9,19 @@ h2 {
 }
 .club-slot-container {
     display: flex;
+    flex-direction: column;
+}
+
+.bigger-clubs {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    margin: 20px;
+}
+.smaller-clubs {
+    display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -20,6 +33,12 @@ h2 {
 }
 
 .drivers-category-slot {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.hybrids-category-slot {
     display: flex;
     flex-direction: column;
     justify-content: center;
