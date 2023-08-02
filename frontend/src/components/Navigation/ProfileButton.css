@@ -1,6 +1,7 @@
 .profile-button {
     border-style: none;
     background-color: transparent;
+    cursor: pointer;
 }
 
 .profile-button:hover {
@@ -34,4 +35,5 @@
     background-color: transparent;
     border: none;
     font-size: 15px;
+    cursor: pointer;
 }

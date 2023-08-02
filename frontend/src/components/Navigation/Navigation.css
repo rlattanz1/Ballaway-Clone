@@ -58,6 +58,10 @@ li {
  text-decoration: underline;
 }
 
+/* .profile-button {
+    cursor: pointer;
+} */
+
 .phone_num {
     font-size: 12px;
     font-family: sans-serif;

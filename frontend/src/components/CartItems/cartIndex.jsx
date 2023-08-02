@@ -13,6 +13,7 @@ export default function CartIndex() {
     const dispatch = useDispatch();
     const carts = useSelector(getCartItems);
     const products = useSelector(getProducts);
+    const currentUser = useSelector(state => state.session.user.id);
 
     useEffect(() => {
         dispatch(fetchCartItems())
@@ -42,7 +43,7 @@ return carts ? (
                         <br />
                         {carts.map(cartItem => {
                             const product = products.find(product => product.id === cartItem.productId);
-                            if (product) {
+                            if (product && cartItem.userId === currentUser) {
                                 totalSum += product.price * cartItem.quantity;
                                 return (
                                     <div>

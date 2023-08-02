@@ -7,35 +7,25 @@ import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 
 export default function Searchbar() {
-    const dispatch = useDispatch();
-    let [searchTerm, setSearchTerm] = useState('');
+    const [searchTerm, setSearchTerm] = useState('');
     const history = useHistory();
 
-
-    const handleKeyPress = e => {
-        if (e.key === "Enter") {
-            if (searchTerm) {
-                console.log(searchTerm);
-                history.push(`/search?query=${searchTerm}`);
-                dispatch(fetchSearchResults(searchTerm));
-                setSearchTerm("");
+    const capitalize = (string) => {
+        let chars = string.split('').map((char, idx) => {
+            if (idx === 0) {
+                return char.toUpperCase();
             } else {
-                history.push('/')
+                return char.toLowerCase();
             }
-        }
+        })
+        return chars.join('')
     }
 
     const handleSubmit = e => {
         e.preventDefault();
 
-        if (searchTerm) {
-            console.log(searchTerm);
-            history.push(`/search?query=${searchTerm}`);
-            dispatch(fetchSearchResults(searchTerm));
-            setSearchTerm("");
-        } else {
-            history.push('/')
-        }
+        history.push(`/${searchTerm}`);
+        setSearchTerm(''); //this is not working how I want it to
     }
 
     return (
@@ -44,11 +34,10 @@ export default function Searchbar() {
             type="text"
             className="searchbar"
             placeholder="search"
-            onChange={(e) => setSearchTerm(e.target.value)}
-            onKeyDown={(e) => handleKeyPress(e)}
+            onChange={(e) => setSearchTerm(capitalize(e.target.value))}
             >
             </input>
-            <button type="submit" className="search_icon"> <AiOutlineSearch /> </button>
+            <button type="submit" className="search_icon" > <AiOutlineSearch /> </button>
         </form>
     )
 }

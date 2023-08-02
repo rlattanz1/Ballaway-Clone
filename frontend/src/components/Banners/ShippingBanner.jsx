@@ -14,7 +14,7 @@ export default function ShippingBanner() {
                     </h3>
                 </div>
                 <div className='modal-link'>
-                    <ShippingFormModal text={'View Details'}/>
+                    <ShippingFormModal  className='shipping-modal' text={'View Details'}/>
                 </div>
             </div>
         </div>

@@ -22,6 +22,7 @@
 }
 .ground-shipping-list li{
     list-style: circle;
+    list-style-position: inside;
 }
 .two-day-shipping-info h3 {
     display: flex;

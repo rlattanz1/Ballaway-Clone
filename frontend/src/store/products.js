@@ -47,7 +47,7 @@ export const fetchCategoryProducts = (category) => async(dispatch) => {
 }
 
 export const fetchSearchResults = (searchTerm) => async(dispatch) => {
-    const res = await fetch(`/api/products/?query=${searchTerm}`);
+    const res = await fetch(`/api/products?query=${searchTerm}`);
     if (res.ok) {
         const products = await res.json();
         dispatch(receiveProducts(products));

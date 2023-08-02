@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import ProductIndex from './components/Products/ProductIndex';
+import ProductSearchIndex from './components/Products/ProductIndex/ProductSearchIndex';
 import ProductShowPage from './components/Products/ProductShow';
 import SignupFormPage from './components/SignupFormPage';
 import Navigation from './components/Navigation'
@@ -30,14 +31,14 @@ function App() {
           <Route exact path="/category/:category">
             <ProductIndex />
           </Route>
-          <Route exact path="/:searchTerm">
-            <ProductIndex />
-          </Route>
           <Route exact path="/signup">
             <SignupFormPage />
           </Route>
           <Route exact path="/cart">
             <CartIndex />
+          </Route>
+          <Route exact path="/:searchTerm">
+            <ProductSearchIndex />
           </Route>
           <Route path="/">
             <HomeComponent />
