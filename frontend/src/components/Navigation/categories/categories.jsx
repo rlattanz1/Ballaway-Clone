@@ -1,10 +1,11 @@
 import { NavLink } from "react-router-dom"
 import Searchbar from "../searchbar/searchbar"
 import './categories.css'
+import ShippingBanner from "../../Banners/ShippingBanner"
 
 
 export default function Categories() {
-    const categories = ['Products', 'Clubs', 'Balls', 'Gear']
+    const categories = ['Products', 'Clubs', 'Balls', 'Bags', 'Gloves', 'Gear']
     return (
         <div className="categories-div">
             <div className="category-links">
@@ -16,11 +17,14 @@ export default function Categories() {
                     </li>
                     ))}
                     </div>
-
                 </ul>
                 <div className="search-bar">
                     <Searchbar />
                 </div>
+            </div>
+            <br />
+            <div className="shipping-banner">
+                <ShippingBanner/>
             </div>
         </div>
     )

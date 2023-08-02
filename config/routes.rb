@@ -23,9 +23,7 @@ Rails.application.routes.draw do
   namespace :api, defaults: {format: :json} do
     resources :users, only: [:create]
     resource :session, only: [:create, :show, :destroy]
-    resources :products, only: [:index, :show] do
-      get 'category/:category', action: :category, as: 'category' #custom route for categories fetch
-    end
+    resources :products, only: [:index, :show] 
     resources :reviews, only: [:index, :show, :create, :update, :destroy]
     resources :cart_items, only: [:index, :show, :create, :update, :destroy]
   end

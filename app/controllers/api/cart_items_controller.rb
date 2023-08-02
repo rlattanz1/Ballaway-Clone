@@ -36,15 +36,6 @@ class Api::CartItemsController < ApplicationController
                 render json: @cart_item.errors.full_messages, status: 422
             end
         end
-
-    # normal create for test
-        # @cart_item = CartItem.new(cart_items_params)
-        # @cart_item.user_id = current_user.id
-        # if @cart_item.save
-        #     render :show
-        # else
-        #     render json: @cart_item.errors.full_messages, status: 422
-        # end
     end
 
 

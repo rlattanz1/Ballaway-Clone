@@ -2,26 +2,29 @@
     display: flex;
     flex-direction: row-reverse;
     align-self: flex-end;
+    margin-right: -3%;
 }
 
 .category-links {
-    margin-left: 35%;
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .category-ul {
     display: flex;
     flex-direction: row;
-    align-self: center;
-    justify-self: space-between;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
 .prod-ele {
-    width: 400px;
+    width: 50%;
     display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+    flex-direction: row;
+    /* align-items: center; */
+    justify-content: space-between;
 }
 
 
@@ -31,11 +34,13 @@
     font-weight: bold;
 }
 
-.category-li a:visited {
+.category-li a:any-link{
     color: black;
 }
 
 .categories-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 100%
 }
-

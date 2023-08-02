@@ -3,7 +3,7 @@ import { fetchCartItems, getCartItems } from "../../store/cartItems";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import './cartIndex.css'
-import { fetchCartProducts, fetchProducts, getProducts } from "../../store/products";
+import { fetchProducts, getProducts } from "../../store/products";
 
 
 
@@ -13,8 +13,6 @@ export default function CartIndex() {
     const dispatch = useDispatch();
     const carts = useSelector(getCartItems);
     const products = useSelector(getProducts);
-    // const currentUser = useSelector(state => state.session.user.id)
-
 
     useEffect(() => {
         dispatch(fetchCartItems())

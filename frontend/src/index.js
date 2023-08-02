@@ -9,6 +9,7 @@ import {configureStore} from './store';
 import csrfFetch, { restoreCSRF } from './store/csrf';
 import * as sessionActions from './store/session';
 import { ModalProvider } from './context/Modal';
+import { ShippingModalProvider } from './context/ShippingModal';
 
 const store = configureStore();
 
@@ -21,11 +22,13 @@ if (process.env.NODE_ENV !== 'production') {
 function Root() {
   return (
     <ModalProvider>
+      <ShippingModalProvider>
       <Provider store={store}>
         <BrowserRouter>
           <App />
         </BrowserRouter>
       </Provider>
+    </ShippingModalProvider>
     </ModalProvider>
   )
 }

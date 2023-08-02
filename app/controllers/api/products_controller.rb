@@ -8,8 +8,8 @@ class Api::ProductsController < ApplicationController
                 product_ids = product_ids.nil? ? category_products : product_ids & category_products
             end
             @products = Product.where(id: product_ids)
-        # elsif
-        #     @products = Product.where("name LIKE ? OR description LIKE ?", "%#{query}%", "%#{query}%")
+        elsif params[:query]
+            @products = Product.search(params[:query])
         else
             @products = Product.all
         end

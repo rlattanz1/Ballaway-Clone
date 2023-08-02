@@ -130,9 +130,6 @@ export default function ProductShowPage() {
                         <div className="price-container">
                             <p>{`$${product.price}`}</p>
                         </div>
-                        <div className="add-to-cart">
-                            <p>Must Be logged In To Add To Cart</p>
-                        </div>
                     </div>
                 </div>
                 <br/>
@@ -142,10 +139,6 @@ export default function ProductShowPage() {
                     <h1>The percentage of reviewers who reccoment this product</h1>
                     <br/>
                     <p>avg star rating</p>
-                    <br/>
-                    {/* <NavLink to={`/products/${productId}/createreview`}>
-                        <button className="review-button" >WRITE A REVIEW</button>
-                    </NavLink> */}
                     <br/>
                     <div className="review-index">
                         <ReviewIndex/>

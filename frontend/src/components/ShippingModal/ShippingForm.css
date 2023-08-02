@@ -1,0 +1,51 @@
+.shipping-info-container{
+    display: flex;
+    flex-direction: column;
+    width: 200%;
+}
+.shipping-info-container h2{
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+}
+
+.ground-shipping-info {
+    display: flex;
+    flex-direction: column;
+
+}
+.ground-shipping-info h3{
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    margin-left: -50px;
+}
+.ground-shipping-list li{
+    list-style: circle;
+}
+.two-day-shipping-info h3 {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    margin-left: -50px;
+}
+
+.two-day-shipping-list {
+    list-style: circle;
+}
+
+.free-return-shipping-info h3 {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    margin-left: -50px;
+}
+.free-return-shipping-text {
+    margin-left: -50px;
+}
+.signup-link {
+    width: 1000px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

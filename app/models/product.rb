@@ -20,4 +20,8 @@ class Product < ApplicationRecord
 
     has_many :cart_items, dependent: :destroy
 
+    def self.search(query)
+        where("name LIKE ? OR description LIKE ?", "%#{query}%", "%#{query}%")
+    end
+
 end

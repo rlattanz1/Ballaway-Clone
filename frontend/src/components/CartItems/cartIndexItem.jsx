@@ -22,13 +22,12 @@ export default function CartIndexItem({cartItem}) { //cart item being passed int
     }, [dispatch, cartItem]);
 
     const handleQuantity = (num) => {
-        setQuantity(quantity + num)
-
         const newCartItem = {
             ...cartItem,
-            quantity: quantity
+            quantity: quantity + num
         }
         dispatch(updateCartItem(newCartItem))
+        setQuantity(quantity + num)
     }
 
     const handleDelete = e => {

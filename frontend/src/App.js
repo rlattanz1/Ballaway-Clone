@@ -30,6 +30,9 @@ function App() {
           <Route exact path="/category/:category">
             <ProductIndex />
           </Route>
+          <Route exact path="/:searchTerm">
+            <ProductIndex />
+          </Route>
           <Route exact path="/signup">
             <SignupFormPage />
           </Route>

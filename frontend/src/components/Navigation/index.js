@@ -1,7 +1,7 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import ProfileButton from './ProfileButton';
 import './Navigation.css';
 import LoginFormModal from '../LoginFormModal';
@@ -10,13 +10,33 @@ import {cartImage} from "../../images/cartImage"
 import { Logo } from '../../images/logo';
 import {AiOutlineQuestionCircle} from 'react-icons/ai'
 import {CgProfile} from 'react-icons/cg'
-import { useState } from 'react';
+import { fetchCartItems, getCartItems } from '../../store/cartItems';
+
 
 
 
 function Navigation() {
   const sessionUser = useSelector(state => state.session.user);
-  const [showModal, setShowModal] = useState(false);
+  const cartItems = useSelector(state => Object.values(state.cartItems));
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    if (sessionUser) {
+      dispatch(fetchCartItems())
+    }
+  }, [dispatch, sessionUser])
+
+  const cartCount = () => {
+    let count = 0;
+    cartItems.forEach((cartItem) => {
+      if ( sessionUser && sessionUser.id === cartItem.userId) {
+        count += cartItem.quantity;
+      }
+    });
+    return count
+  };
+
+
 
   let sessionLinks;
   if (sessionUser) {
@@ -34,7 +54,7 @@ function Navigation() {
             <ProfileButton user={sessionUser} />
         </div>
         <div className='nav_item'>
-            <NavLink className='cart_button' to="/cart">{cartImage} &nbsp; Cart(num of cartItems)</NavLink> &nbsp;
+            <NavLink className='cart_button' to="/cart">{cartImage} &nbsp; Cart({cartCount()})</NavLink> &nbsp;
         </div>
       </div>
     );
