@@ -3,14 +3,14 @@ import './BotBanner.css'
 
 export default function BotBanner() {
 
-    const history = useHistory()
+    // const history = useHistory()
 
-    const handleClick = (e) => {
+    // const handleClick = (e) => {
 
-        e.preventDefault();
+    //     e.preventDefault();
 
-        history.push('/info/fitting')
-    }
+    //     history.push('/info/fitting')
+    // }
 
     return (
         <>
@@ -38,7 +38,9 @@ export default function BotBanner() {
                 </div>
                 <br />
                 <div className='bot-inner-banner-button'>
-                    <button onClick={(e) => handleClick(e)}>
+                    <button
+                    // onClick={(e) => handleClick(e)}
+                    >
                         LEARN MORE
                     </button>
                 </div>
