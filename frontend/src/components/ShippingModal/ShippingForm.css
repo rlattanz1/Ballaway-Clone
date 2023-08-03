@@ -20,7 +20,7 @@
     font-weight: bold;
     margin-left: -50px;
 }
-.ground-shipping-list li{
+.ground-shipping-list {
     list-style: circle;
     list-style-position: inside;
 }

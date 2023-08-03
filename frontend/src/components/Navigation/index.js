@@ -83,7 +83,7 @@ function Navigation() {
   }
 
   return (
-    <ul>
+    <ul className='links'>
       <li>
         <div class="left_link">
             <NavLink class="home" to="/">{Logo}</NavLink>
