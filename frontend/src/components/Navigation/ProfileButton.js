@@ -2,8 +2,10 @@ import React, { useState, useEffect } from "react";
 import { useDispatch } from 'react-redux';
 import * as sessionActions from '../../store/session';
 import './ProfileButton.css'
+import { useHistory } from "react-router-dom";
 
 function ProfileButton({ user }) {
+  const history = useHistory()
   const dispatch = useDispatch();
   const [showMenu, setShowMenu] = useState(false);
 
@@ -29,6 +31,11 @@ function ProfileButton({ user }) {
     dispatch(sessionActions.logout());
   };
 
+  const profile = (e) => {
+    e.preventDefault();
+    history.push(`/users/${user}/profile`)
+  }
+
   return (
     <div className="profile-container">
       <button className="profile-button" onClick={openMenu}>
@@ -38,6 +45,9 @@ function ProfileButton({ user }) {
       {showMenu && (
         <ul className="profile-dropdown">
           <li>{user.username}</li>
+          {/* <li>
+            <button className="user-profile-link-button" onClick={profile}>Profile</button>
+          </li> */}
           <li>{user.email}</li>
           <li>
             <button className="logout-button" onClick={logout}>Log Out</button>

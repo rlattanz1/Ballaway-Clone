@@ -1,12 +1,15 @@
+import { useHistory } from 'react-router-dom';
 import './BotBanner.css'
 
 export default function BotBanner() {
 
+    const history = useHistory()
 
     const handleClick = (e) => {
 
         e.preventDefault();
 
+        history.push('/info/fitting')
     }
 
     return (
@@ -16,10 +19,10 @@ export default function BotBanner() {
                 {/* swag golf bag image */}
                 {/* hard code the image link from AWS after uploading it there */}
                 <div>
-                    <img className='iron-pic' src="https://ballaway-seeds.s3.us-west-1.amazonaws.com/iron-paradym-1.webp" alt="" />
+                    <img className='iron-pic' src="https://ballaway-seeds.s3.us-west-1.amazonaws.com/paradym-1.webp" alt="" />
                 </div>
                 <div>
-                    <img className='driver-pic' src="https://ballaway-seeds.s3.us-west-1.amazonaws.com/paradym-1.webp" alt="" />
+                    <img className='driver-pic' src="https://ballaway-seeds.s3.us-west-1.amazonaws.com/fwoods-paradym-x-1.png" alt="" />
                 </div>
                 <div>
                     <img className='iron-pic' src="https://ballaway-seeds.s3.us-west-1.amazonaws.com/iron-paradym-1.webp" alt="" />
@@ -36,7 +39,7 @@ export default function BotBanner() {
                 <br />
                 <div className='bot-inner-banner-button'>
                     <button onClick={(e) => handleClick(e)}>
-                        GET STARTED
+                        LEARN MORE
                     </button>
                 </div>
             </div>

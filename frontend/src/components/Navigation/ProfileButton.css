@@ -37,3 +37,10 @@
     font-size: 15px;
     cursor: pointer;
 }
+
+.user-profile-link-button {
+    background-color: transparent;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+}

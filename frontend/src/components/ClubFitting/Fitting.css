@@ -1,0 +1,32 @@
+.club-fitting-container {
+    width: 90vw;
+    height: 90vh;
+}
+
+.club-fitting-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.iron-fitting-info {
+
+}
+
+.wood-fitting-info {
+
+}
+
+.driver-fitting-info {
+
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fitting-button {
+    width: 60px;
+}

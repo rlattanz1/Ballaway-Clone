@@ -9,6 +9,8 @@ import CreateReviewPage from './components/Reviews/ReviewForm';
 import HomeComponent from './components/Home';
 import CartIndex from './components/CartItems/cartIndex';
 import Footer from './components/Footer/footer'
+import ClubFitting from './components/ClubFitting/Fitting';
+import UserProfile from './components/UserProfile/userProfile';
 
 
 function App() {
@@ -16,12 +18,15 @@ function App() {
     <>
       <Navigation />
         <Switch>
-          <Route exact path="/products/:productId/createreview">
-            <CreateReviewPage />
-          </Route>
           <Route exact path="/products/:productId/reviews/:reviewId/updatereview">
             <CreateReviewPage />
           </Route>
+          <Route exact path="/products/:productId/createreview">
+            <CreateReviewPage />
+          </Route>
+          {/* <Route exact path="/users/:user/profile">
+            <UserProfile />
+          </Route> */}
           <Route path="/category/products">
             <ProductIndex />
           </Route>
@@ -30,6 +35,9 @@ function App() {
           </Route>
           <Route exact path="/category/:category">
             <ProductIndex />
+          </Route>
+          <Route exact path="/info/Fitting">
+            <ClubFitting/>
           </Route>
           <Route exact path="/signup">
             <SignupFormPage />
