@@ -563,55 +563,76 @@ require "open-uri"
 
         puts "Creating reviews..."
 
-        # Review.create!({
-        #   user_id: 1,
-        #   product_id: 1,
-        #   title: 'Great Driver',
-        #   body: 'Wow this is the best driver ever',
-        #   rating: 5
-        # })
-        # Review.create!({
-        #   user_id: 2,
-        #   product_id: 1,
-        #   title: 'Amazing Driver',
-        #   body: 'Wow this is the best driver pretty awesome',
-        #   rating: 3
-        # })
-        # Review.create!({
-        #   user_id: 3,
-        #   product_id: 1,
-        #   title: 'Super Awesome Amazing Driver',
-        #   body: 'OMG this is the most super awesome amazing driver I\'ve ever used ever',
-        #   rating: 4
-        # })
-        # Review.create!({
-        #   user_id: 1,
-        #   product_id: 4,
-        #   title: 'best iron',
-        #   body: 'Wow this iron hits like a wood I am shocked',
-        #   rating: 4
-        # })
-        # Review.create!({
-        #   user_id: 3,
-        #   product_id: 5,
-        #   title: 'OK bag',
-        #   body: 'it gets the job done but a but overpriced for what it has',
-        #   rating: 3
-        # })
-        # Review.create!({
-        #   user_id: 1,
-        #   product_id: 5,
-        #   title: 'Sweet Balls',
-        #   body: 'These golf balls are the best',
-        #   rating: 5
-        # })
-        # Review.create!({
-        #   user_id: 2,
-        #   product_id: 6,
-        #   title: 'Cool Balls',
-        #   body: 'They look cool and are easily recognizable but they dont travel the belst for some reason!',
-        #   rating: 3
-        # })
+        Review.create!({
+          user_id: 1,
+          product_id: 1,
+          title: 'Great Driver',
+          body: 'Wow this is the best driver ever',
+          rating: 5,
+          value: 4,
+          quality: 5,
+          durability: 4
+        })
+        Review.create!({
+          user_id: 2,
+          product_id: 1,
+          title: 'Amazing Driver',
+          body: 'Wow this is the best driver pretty awesome',
+          rating: 3,
+          value: 4,
+          quality: 3,
+          durability: 4
+        })
+        Review.create!({
+          user_id: 3,
+          product_id: 1,
+          title: 'Super Awesome Amazing Driver',
+          body: 'OMG this is the most super awesome amazing driver I\'ve ever used ever',
+          rating: 4,
+          value: 4,
+          quality: 4,
+          durability: 4
+        })
+        Review.create!({
+          user_id: 1,
+          product_id: 4,
+          title: 'best iron',
+          body: 'Wow this iron hits like a wood I am shocked',
+          rating: 4,
+          value: 4,
+          quality: 5,
+          durability: 4
+        })
+        Review.create!({
+          user_id: 3,
+          product_id: 5,
+          title: 'OK bag',
+          body: 'it gets the job done but a but overpriced for what it has',
+          rating: 3,
+          value: 4,
+          quality: 5,
+          durability: 4
+        })
+        Review.create!({
+          user_id: 1,
+          product_id: 5,
+          title: 'Sweet Balls',
+          body: 'These golf balls are the best',
+          rating: 5,
+          value: 4,
+          quality: 5,
+          durability: 4
+        })
+        Review.create!({
+          user_id: 2,
+          product_id: 6,
+          title: 'Cool Balls',
+          body: 'They look cool and are easily recognizable but they dont travel the belst for some reason!',
+          rating: 3,
+          value: 4,
+          quality: 5,
+          durability: 4
+        })
 
         puts "done creating reviews"
         puts ""

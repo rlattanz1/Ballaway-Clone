@@ -23,7 +23,7 @@ export default function CategorySlot2() {
                 <div className='hybrids-category-slot'>
                     <div className='category-link-img'>
                         <NavLink to={`/category/Hybrids`}>
-                            <img src="https://ballaway-seeds.s3.us-west-1.amazonaws.com/paradym-td-1.webp" alt="" />
+                            <img src="https://ballaway-seeds.s3.us-west-1.amazonaws.com/hybrids-paradym-x-1.webp" alt="" />
                         </NavLink>
                     </div>
                     <br />
@@ -33,7 +33,7 @@ export default function CategorySlot2() {
                 <div className='woods-category-slot'>
                     <div className='category-link-img'>
                         <NavLink to={`/category/Woods`}>
-                            <img src="https://ballaway-seeds.s3.us-west-1.amazonaws.com/paradym-td-1.webp" alt="" />
+                            <img src="https://ballaway-seeds.s3.us-west-1.amazonaws.com/fwoods-paradym-x-1.png" alt="" />
                         </NavLink>
                     </div>
                     <br />

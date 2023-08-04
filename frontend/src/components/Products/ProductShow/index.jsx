@@ -15,6 +15,7 @@ export default function ProductShowPage() {
     const user = useSelector(state => state.session.user);
     const dispatch = useDispatch();
     const user_review = useSelector(state => state.reviews.userId);
+    const product_reviews = useSelector(state => state.reviews.productId)
     // console.log(user_review)
     // console.log(reviewId[0])
 

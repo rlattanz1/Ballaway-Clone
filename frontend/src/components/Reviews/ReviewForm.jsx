@@ -55,13 +55,13 @@ export default function CreateReviewPage() {
         }
         if (data) {
             setErr(data.message)
-            console.log(err)
+            // console.log(err)
         } else if (data) {
             setErr([data.message])
-            console.log(err)
+            // console.log(err)
         } else {
             setErr([res.statusText])
-            console.log(err)
+            // console.log(err)
         };
     };
 
@@ -85,14 +85,14 @@ export default function CreateReviewPage() {
                 setReviewCreated(true);
             })
             .catch((handleError));
-            console.log(err)
+            // console.log(err)
         } else {
             dispatch(updateReview(newReview))
             .then(() => {
                 setReviewUpdated(true);
             })
             .catch((handleError));
-            console.log(err)
+            // console.log(err)
         };
     }
 

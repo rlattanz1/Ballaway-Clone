@@ -3,13 +3,16 @@ json.product do
     json.photoUrl @product.photos.attached? ? @product.photos.map { |photo| photo.url} : nil
 end
 
-
-json.reviews do
-    @product.reviews.each do |review|
-        json.set! review.id do
-            json.extract! review, :rating, :title, :body, :value, :quality, :durability, :recommendation, :product_id, :user_id, :id, :created_at, :updated_at
-            json.username review.user.username
-
+puts @product
+if @product.reviews
+    json.reviews do
+        @product.reviews.each do |review|
+            json.set! review.id do
+                json.extract! review, :rating, :title, :body, :value, :quality, :durability, :recommendation, :product_id, :user_id, :id, :created_at, :updated_at
+                json.username review.user.username
+            end
         end
     end
+else
+   json.reviews []
 end

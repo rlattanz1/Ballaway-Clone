@@ -101,7 +101,11 @@ export default function reviewsReducer(state={}, action) {
     let newState;
     switch(action.type) {
         case RECEIVE_PRODUCT:
-            return action.reviews;
+            if (!action.reviews) {
+                return {}
+            } else {
+                return action.reviews;
+            }
         case RECEIVE_REVIEW:
             newState = {...state};
             const reviewId = action.review.id;

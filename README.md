@@ -5,20 +5,45 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version: ruby 3.1.1
 
-* System dependencies
+* Livelink: https://ballaway.onrender.com
 
-* Configuration
+* Features:
 
-* Database creation
+1. User Authentification for secure login user Experience
 
-* Database initialization
+2.  Review create, update, and delete ability specific to each user for the products they like or don't like
 
-* How to run the test suite
+3. Shopping Cart specific to each user that allows each user to add, update quantity, or delete products they want or don't want
 
-* Services (job queues, cache servers, search engines, etc.)
+4. Categories browsing and Search bar browsing for specific products
 
-* Deployment instructions
+* Installation Instructions:
+To get started with Ballaway locally, follow these steps:
 
-* ...
+1. Clone the repository: git clone https://github.com/rlattanz1/Ballaway-Clone
+
+2. Install the required dependencies: cd Ballaway bundle install npm install
+
+3. Set up the database: rails db:create rails db:migrate rails db:seed
+
+4. Start the Rails server: rails s
+
+5. Open a new terminal window and start the React development server: cd frontend npm install npm start
+
+6. Visit http://localhost:3000 in your browser to explore the app locally.
+
+* Technologies Used:
+1. Backend: Ruby on Rails
+2. Frontend: React, Redux, JavaScript, HTML5, CSS3
+3. Database: PostgreSQL
+4. Image Hosting: Amazon S3
+5. Deployment: Render
+
+* Future Plans:
+1. Add another CRUD feature to allow users to reserve times to get a personalized club fitting and show the reservations on their user profile
+2. Add a Store Locator using the Google Maps API
+3. Add a purchase history in the user profile that shows what Items have been purchased in the past and when they were purchased by that user
+
+

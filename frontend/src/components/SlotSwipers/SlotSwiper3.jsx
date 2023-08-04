@@ -55,7 +55,7 @@ export default function SlotSwiper3() {
                     slidesToSlide={1}
                     swipeable
             >
-                        {products.slice(27, 34).map(product => (
+                        {products.slice(21, 26).map(product => (
                                     <ProductIndexItem product={product}/>
                         ))}
             </Carousel>
