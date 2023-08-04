@@ -11,21 +11,28 @@ export default function Searchbar() {
     const history = useHistory();
 
     const capitalize = (string) => {
-        let chars = string.split('').map((char, idx) => {
-            if (idx === 0) {
-                return char.toUpperCase();
-            } else {
-                return char.toLowerCase();
+        let words = string.split(' ');
+        let capWords = words.map((word, idx) => {
+            if (idx < word.length) {
+                return word[0].toUpperCase() + word.slice(1).toLowerCase();
             }
         })
-        return chars.join('')
+        return capWords.join(' ')
+        // let chars = string.split('').map((char, idx) => {
+        //     if (idx === 0) {
+        //         return char.toUpperCase();
+        //     } else {
+        //         return char.toLowerCase();
+        //     }
+        // })
+        // return chars.join('')
     }
 
     const handleSubmit = e => {
         e.preventDefault();
-
+        console.log(searchTerm)
         history.push(`/${searchTerm}`);
-        setSearchTerm(''); //this is not working how I want it to
+        // setSearchTerm(''); //this is not working how I want it to
     }
 
     return (

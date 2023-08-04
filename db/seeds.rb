@@ -199,176 +199,113 @@ require "open-uri"
           specs: "9°, 10.5°, 12.5°"
         })
 
-        p11.photos.attach(io: URI.open(''), filename: '')
-        p11.photos.attach(io: URI.open(''), filename: '')
+        p11.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/drivers-big-bertha-1.png'), filename: 'drivers-big-bertha-1.png')
+        p11.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/drivers-big-bertha-2.png'), filename: 'drivers-big-bertha-2.png')
+        p11.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/drivers-big-bertha-3.png'), filename: 'drivers-big-bertha-3.png')
+        p11.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/drivers-big-bertha-4.png'), filename: 'drivers-big-bertha-4.png')
+        p11.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/drivers-big-bertha-5.png'), filename: 'drivers-big-bertha-5.png')
 
-      p12 = Product.create!({
-          name: "",
-          description: "",
-          price: ,
-          category: "",
-          specs: ""
-        })
+      # p12 = Product.create!({
+      #     name: "",
+      #     description: "",
+      #     price: ,
+      #     category: "",
+      #     specs: ""
+      #   })
 
-        p12.photos.attach(io: URI.open(''), filename: '')
-        p12.photos.attach(io: URI.open(''), filename: '')
+      #   p12.photos.attach(io: URI.open(''), filename: '')
+      #   p12.photos.attach(io: URI.open(''), filename: '')
 
-      p13 = Product.create!({
-          name: "",
-          description: "",
-          price: ,
-          category: "",
-          specs: ""
-        })
+      # p13 = Product.create!({
+      #     name: "",
+      #     description: "",
+      #     price: ,
+      #     category: "",
+      #     specs: ""
+      #   })
 
-        p13.photos.attach(io: URI.open(''), filename: '')
-        p13.photos.attach(io: URI.open(''), filename: '')
+      #   p13.photos.attach(io: URI.open(''), filename: '')
+      #   p13.photos.attach(io: URI.open(''), filename: '')
 
-      p14 = Product.create!({
-          name: "",
-          description: "",
-          price: ,
-          category: "",
-          specs: ""
-        })
+      # p14 = Product.create!({
+      #     name: "",
+      #     description: "",
+      #     price: ,
+      #     category: "",
+      #     specs: ""
+      #   })
 
-        p14.photos.attach(io: URI.open(''), filename: '')
-        p14.photos.attach(io: URI.open(''), filename: '')
+      #   p14.photos.attach(io: URI.open(''), filename: '')
+      #   p14.photos.attach(io: URI.open(''), filename: '')
 
-      p15 = Product.create!({
-          name: "",
-          description: "",
-          price: ,
-          category: "",
-          specs: ""
-        })
+      # p15 = Product.create!({
+      #     name: "",
+      #     description: "",
+      #     price: ,
+      #     category: "",
+      #     specs: ""
+      #   })
 
-        p15.photos.attach(io: URI.open(''), filename: '')
-        p15.photos.attach(io: URI.open(''), filename: '')
+      #   p15.photos.attach(io: URI.open(''), filename: '')
+      #   p15.photos.attach(io: URI.open(''), filename: '')
 
-      p = Product.create!({
-          name: "",
-          description: "",
-          price: ,
-          category: "",
-          specs: ""
-        })
+      # p16 = Product.create!({
+      #     name: "",
+      #     description: "",
+      #     price: ,
+      #     category: "",
+      #     specs: ""
+      #   })
 
-        p.photos.attach(io: URI.open(''), filename: '')
-        p.photos.attach(io: URI.open(''), filename: '')
+      #   p16.photos.attach(io: URI.open(''), filename: '')
+      #   p16.photos.attach(io: URI.open(''), filename: '')
 
-      p = Product.create!({
-          name: "",
-          description: "",
-          price: ,
-          category: "",
-          specs: ""
-        })
+      # p17 = Product.create!({
+      #     name: "",
+      #     description: "",
+      #     price: ,
+      #     category: "",
+      #     specs: ""
+      #   })
 
-        p.photos.attach(io: URI.open(''), filename: '')
-        p.photos.attach(io: URI.open(''), filename: '')
+      #   p17.photos.attach(io: URI.open(''), filename: '')
+      #   p17.photos.attach(io: URI.open(''), filename: '')
 
-      p = Product.create!({
-          name: "",
-          description: "",
-          price: ,
-          category: "",
-          specs: ""
-        })
+      # p18 = Product.create!({
+      #     name: "",
+      #     description: "",
+      #     price: ,
+      #     category: "",
+      #     specs: ""
+      #   })
 
-        p.photos.attach(io: URI.open(''), filename: '')
-        p.photos.attach(io: URI.open(''), filename: '')
+      #   p18.photos.attach(io: URI.open(''), filename: '')
+      #   p18.photos.attach(io: URI.open(''), filename: '')
 
-      p = Product.create!({
-          name: "",
-          description: "",
-          price: ,
-          category: "",
-          specs: ""
-        })
+      # p19 = Product.create!({
+      #     name: "",
+      #     description: "",
+      #     price: ,
+      #     category: "",
+      #     specs: ""
+      #   })
 
-        p.photos.attach(io: URI.open(''), filename: '')
-        p.photos.attach(io: URI.open(''), filename: '')
+      #   p19.photos.attach(io: URI.open(''), filename: '')
+      #   p19.photos.attach(io: URI.open(''), filename: '')
 
-      p = Product.create!({
-          name: "",
-          description: "",
-          price: ,
-          category: "",
-          specs: ""
-        })
+      # p20 = Product.create!({
+      #     name: "",
+      #     description: "",
+      #     price: ,
+      #     category: "",
+      #     specs: ""
+      #   })
 
-        p.photos.attach(io: URI.open(''), filename: '')
-        p.photos.attach(io: URI.open(''), filename: '')
-
-      p = Product.create!({
-          name: "",
-          description: "",
-          price: ,
-          category: "",
-          specs: ""
-        })
-
-        p.photos.attach(io: URI.open(''), filename: '')
-        p.photos.attach(io: URI.open(''), filename: '')
-
-      p = Product.create!({
-          name: "",
-          description: "",
-          price: ,
-          category: "",
-          specs: ""
-        })
-
-        p.photos.attach(io: URI.open(''), filename: '')
-        p.photos.attach(io: URI.open(''), filename: '')
-
-      p = Product.create!({
-          name: "",
-          description: "",
-          price: ,
-          category: "",
-          specs: ""
-        })
-
-        p.photos.attach(io: URI.open(''), filename: '')
-        p.photos.attach(io: URI.open(''), filename: '')
-
-      p = Product.create!({
-          name: "",
-          description: "",
-          price: ,
-          category: "",
-          specs: ""
-        })
-
-        p.photos.attach(io: URI.open(''), filename: '')
-        p.photos.attach(io: URI.open(''), filename: '')
-
-      p = Product.create!({
-          name: "",
-          description: "",
-          price: ,
-          category: "",
-          specs: ""
-        })
-
-        p.photos.attach(io: URI.open(''), filename: '')
-        p.photos.attach(io: URI.open(''), filename: '')
-
-      p = Product.create!({
-          name: "",
-          description: "",
-          price: ,
-          category: "",
-          specs: ""
-        })
-
-        p.photos.attach(io: URI.open(''), filename: '')
-        p.photos.attach(io: URI.open(''), filename: '')
+      #   p20.photos.attach(io: URI.open(''), filename: '')
+      #   p20.photos.attach(io: URI.open(''), filename: '')
 
 
-      p = Product.create!({
+      p21 = Product.create!({
           name: "Fairway C Stand Bag",
           description: "The compact, sleek and stylish Fairway C is ready for every round and easily accommodates all of your golf essentials.",
           price: 249,
@@ -376,19 +313,244 @@ require "open-uri"
           specs: "none"
         })
 
-        p.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/fairway-c-1.png'), filename: 'fairway-c-1.png')
-        p.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/fairway-c-2.png'), filename: 'fairway-c-2.png')
+        p21.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/fairway-c-1.png'), filename: 'fairway-c-1.png')
+        p21.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/fairway-c-2.png'), filename: 'fairway-c-2.png')
+        p21.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/fairway-c-3.png'), filename: 'fairway-c-3.png')
+        p21.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/fairway-c-4.png'), filename: 'fairway-c-4.png')
 
-      p = Product.create!({
-          name: "Limited Edition Chrome Soft Truvis Donut Golf Balls",
-          description: "Chrome Soft is better for everyone, from amateurs to major winners. With our proprietary Precision Technology, it\'s longer through the bag while providing the signature soft feel that golfers love. And now it\'s available in a special design to celebrate National Donut Day. Everything is better with donuts, including Chrome Soft.",
-          price: 49,
-          category: "Balls",
+        p22 = Product.create!({
+          name: "Chev Stand Bag",
+          description: "Stand Bag",
+          price: 249,
+          category: "Bags, Gear",
           specs: "none"
         })
 
-        p.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/donut-day-1.png'), filename: 'donut-ball-1.png')
-        p.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/donut-day-2.webp'), filename: 'donut-ball-2.webp')
+        p22.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/bags-chev-1.png'), filename: 'bags-chev-1.png')
+        p22.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/bags-chev-2.png'), filename: 'bags-chev-2.png')
+        p22.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/bags-chev-3.png'), filename: 'bags-chev-3.png')
+        p22.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/bags-chev-4.png'), filename: 'bags-chev-4.png')
+
+      p23 = Product.create!({
+          name: "Fairway C HD Stand Bag",
+          description: "Stand Bag",
+          price: 249,
+          category: "Bags, Gear",
+          specs: "none"
+        })
+
+        p23.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/bags-fairway-c-hd-1.webp'), filename: 'bags-fairway-c-hd-1.webp')
+        p23.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/bags-fairway-c-hd-2.png'), filename: 'bags-fairway-c-hd-2.png')
+        p23.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/bags-fairway-c-hd-3.png'), filename: 'bags-fairway-c-hd-3.png')
+        p23.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/bags-fairway-c-hd-4.png'), filename: 'bags-fairway-c-hd-4.png')
+
+      p24 = Product.create!({
+          name: "Fairway + Stand Bag",
+          description: "Stand Bag",
+          price: 249,
+          category: "Bags, Gear",
+          specs: "none"
+        })
+
+        p24.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/bags-fairway-plus-1.png'), filename: 'bags-fairway-plus-1.png')
+        p24.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/bags-fairway-plus-2.webp'), filename: 'bags-fairway-plus-2.webp')
+        p24.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/bags-fairway-plus-3.webp'), filename: 'bags-fairway-plus-3.webp')
+        p24.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/bags-fairway-plus-4.webp'), filename: 'bags-fairway-plus-4.webp')
+
+      p25 = Product.create!({
+          name: "Paradym Fairway 14 Stand Bag",
+          description: "Stand Bag",
+          price: 249,
+          category: "Bags, Gear, Paradym",
+          specs: "none"
+        })
+
+        p25.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/bags-paradym-fairway-14-1.webp'), filename: 'bags-paradym-fairway-14-1.webp')
+        p25.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/bags-paradym-fairway-14-2.webp'), filename: 'bags-paradym-fairway-14-2.webp')
+        p25.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/bags-paradym-fairway-14-3.webp'), filename: 'bags-paradym-fairway-14-3.webp')
+        p25.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/bags-paradym-fairway-14-4.webp'), filename: 'bags-paradym-fairway-14-4.webp')
+
+      p26 = Product.create!({
+          name: "Hyperlite Zero Stand Bag",
+          description: "The NEW gold standard in ultra-lightweight stand bags, Hyperlite Zero continues to raise the bar in lightweight performance. An all-new rubberized Shaft Shield™ top provides protection against club shaft wear over time and creates more space for easy club access. Anatomic straps form to your shoulders and are paired with an oversized hip pad delivering a highly comfortable carry. Updated ripstop material saves weight while maintaining durability. Hyperlite Zero exceeds in playability and organization for a bag that only weighs three pounds.",
+          price: 279,
+          category: "Bags, Gear",
+          specs: "none"
+        })
+
+        p26.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/bags-hyper-lite-zero-1.webp'), filename: 'bags-hyper-lite-zero-1.webp')
+        p26.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/bags-hyper-lite-zero-2.webp'), filename: 'bags-hyper-lite-zero-2.webp')
+        p26.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/bags-hyper-lite-zero-3.webp'), filename: 'bags-hyper-lite-zero-3.webp')
+        p26.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/bags-hyper-lite-zero-4.webp'), filename: 'bags-hyper-lite-zero-4.webp')
+
+      p27 = Product.create!({
+          name: "Limited Edition Chrome Soft Truvis Donut Golf Balls",
+          description: "Chrome Soft is better for everyone, from amateurs to major winners. With our proprietary Precision Technology, it\'s longer through the bag while providing the signature soft feel that golfers love. And now it\'s available in a special design to celebrate National Donut Day. Everything is better with donuts, including Chrome Soft.",
+          price: 49,
+          category: "Balls, Chromesoft, Limited Edition",
+          specs: "none"
+        })
+
+        p27.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/donut-day-1.png'), filename: 'donut-ball-1.png')
+        p27.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/donut-day-2.webp'), filename: 'donut-ball-2.webp')
+
+      p28 = Product.create!({
+          name: "Supersoft Matte Orange Golf Balls",
+          description: "Matte Orange color",
+          price: 49,
+          category: "Balls, Supersoft",
+          specs: "none"
+        })
+
+        p28.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/balls-supersoft-matte-orange-1.png'), filename: 'balls-supersoft-matte-orange-1.png')
+        p28.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/balls-supersoft-matte-orange-2.png'), filename: 'balls-supersoft-matte-orange-2.png')
+        p28.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/balls-supersoft-matte-orange-3.png'), filename: 'balls-supersoft-matte-orange-3.png')
+
+      p29 = Product.create!({
+          name: "Chrome Soft Golf Balls",
+          description: "Plain Design",
+          price: 49,
+          category: "Balls, Chromesoft",
+          specs: "none"
+        })
+
+        p29.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/balls-2022-chrome-soft-1.webp'), filename: 'balls-2022-chrome-soft-1.webp')
+        p29.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/balls-chrome-soft-2.png'), filename: 'balls-chrome-soft-2.png')
+        p29.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/balls-chrome-soft-3.webp'), filename: 'balls-chrome-soft-3.webp')
+
+
+        p30 = Product.create!({
+          name: "Chrome Soft Triple Track Golf Balls",
+          description: "TT Design",
+          price: 49,
+          category: "Balls, Chromesoft",
+          specs: "none"
+        })
+
+        p30.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/balls-chrome-soft-triple-track-1.png'), filename: 'balls-chrome-soft-triple-track-1.png')
+        p30.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/balls-chrome-soft-triple-track-2.png'), filename: 'balls-chrome-soft-triple-track-2.png')
+        p30.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/balls-chrome-soft-triple-track-3.png'), filename: 'balls-chrome-soft-triple-track-3.png')
+        p30.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/balls-chrome-soft-triple-track-4.png'), filename: 'balls-chrome-soft-triple-track-4.png')
+
+        p31 = Product.create!({
+          name: "Limited Edition Chrome Soft Oddysey Swirl Golf Balls",
+          description: "OS Design",
+          price: 49,
+          category: "Balls, Chromesoft, Limited Edition",
+          specs: "none"
+        })
+
+        p31.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/balls-chrome-soft-ody-swirl-1.png'), filename: 'balls-chrome-soft-ody-swirl-1.png')
+        p31.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/balls-chrome-soft-ody-swirl-2.png'), filename: 'balls-chrome-soft-ody-swirl-2.png')
+
+        p32 = Product.create!({
+          name: "Limited Edition Chrome Soft Truvis Dog Paw Golf Balls",
+          description: "DP Design",
+          price: 49,
+          category: "Balls, Chromesoft, Limited Edition",
+          specs: "none"
+        })
+
+        p32.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/balls-chrome-soft-truvis-dog-paw-1.webp'), filename: 'balls-chrome-soft-truvis-dog-paw-1.webp')
+        p32.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/balls-chrome-soft-truvis-dog-paw-2.webp'), filename: 'balls-chrome-soft-truvis-dog-paw-2.webp')
+
+        p33 = Product.create!({
+          name: "Limited Edition Chrome Soft Truvis Pink Golf Balls",
+          description: "MD Design",
+          price: 49,
+          category: "Balls, Chromesoft, Limited Edition",
+          specs: "none"
+        })
+
+        p33.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/balls-chrome-soft-truvis-pink-mothers-day-1.png'), filename: 'balls-chrome-soft-truvis-pink-mothers-day-1.png')
+        p33.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/balls-chrome-soft-truvis-pink-mothers-day-2.png'), filename: 'balls-chrome-soft-truvis-pink-mothers-day-2.png')
+
+        p34 = Product.create!({
+          name: "Supersoft Arizona Golf Balls",
+          description: "AZ Design",
+          price: 49,
+          category: "Balls, Supersoft, Geo",
+          specs: "none"
+        })
+
+        p34.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/balls-supersoft-geo-arizona-1.png'), filename: 'balls-supersoft-geo-arizona-1.png')
+        p34.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/balls-supersoft-geo-arizona-2.png'), filename: 'balls-supersoft-geo-arizona-2.png')
+        p34.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/balls-supersoft-geo-arizona-3.png'), filename: 'balls-supersoft-geo-arizona-3.png')
+
+        p35 = Product.create!({
+          name: "Supersoft California Golf Balls",
+          description: "CA Design",
+          price: 49,
+          category: "Balls, Supersoft, Geo",
+          specs: "none"
+        })
+
+        p35.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/balls-supersoft-geo-california-1.png'), filename: 'balls-supersoft-geo-california-1.png')
+        p35.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/balls-supersoft-geo-california-2.png'), filename: 'balls-supersoft-geo-california-2.png')
+        p35.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/balls-supersoft-geo-california-3.png'), filename: 'balls-supersoft-geo-california-3.png')
+
+        p36 = Product.create!({
+          name: "Supersoft Hawaii Golf Balls",
+          description: "HI Design",
+          price: 49,
+          category: "Balls, Supersoft, Geo",
+          specs: "none"
+        })
+
+        p36.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/balls-supersoft-geo-hawaii-1.png'), filename: 'balls-supersoft-geo-hawaii-1.png')
+        p36.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/balls-supersoft-geo-hawaii-2.png'), filename: 'balls-supersoft-geo-hawaii-2.png')
+        p36.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/balls-supersoft-geo-hawaii-3.png'), filename: 'balls-supersoft-geo-hawaii-3.png')
+
+        p37 = Product.create!({
+          name: "Supersoft Las Vegas Golf Balls",
+          description: "LV Design",
+          price: 49,
+          category: "Balls, Supersoft, Geo",
+          specs: "none"
+        })
+
+        p37.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/balls-supersoft-geo-vegas-1.png'), filename: 'balls-supersoft-geo-vegas-1.png')
+        p37.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/balls-supersoft-geo-vegas-2.png'), filename: 'balls-supersoft-geo-vegas-2.pn')
+        p37.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/balls-supersoft-geo-vegas-3.png'), filename: 'balls-supersoft-geo-vegas-3.png')
+
+        # p = Product.create!({
+        #   name: "",
+        #   description: "",
+        #   price: ,
+        #   category: "",
+        #   specs: ""
+        # })
+
+        # p.photos.attach(io: URI.open(''), filename: '')
+        # p.photos.attach(io: URI.open(''), filename: '')
+        # p.photos.attach(io: URI.open(''), filename: '')
+        # p.photos.attach(io: URI.open(''), filename: '')
+
+        # p = Product.create!({
+        #   name: "",
+        #   description: "",
+        #   price: ,
+        #   category: "",
+        #   specs: ""
+        # })
+
+        # p.photos.attach(io: URI.open(''), filename: '')
+        # p.photos.attach(io: URI.open(''), filename: '')
+        # p.photos.attach(io: URI.open(''), filename: '')
+        # p.photos.attach(io: URI.open(''), filename: '')
+
+        # p = Product.create!({
+        #   name: "",
+        #   description: "",
+        #   price: ,
+        #   category: "",
+        #   specs: ""
+        # })
+
+        # p.photos.attach(io: URI.open(''), filename: '')
+        # p.photos.attach(io: URI.open(''), filename: '')
+        # p.photos.attach(io: URI.open(''), filename: '')
+        # p.photos.attach(io: URI.open(''), filename: '')
 
 
 
