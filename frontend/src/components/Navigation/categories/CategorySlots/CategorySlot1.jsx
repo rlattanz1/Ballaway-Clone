@@ -26,11 +26,13 @@ export default function CategorySlot1() {
                     <br />
                     <h3>Bags</h3>
                 </div>
-                {/* <div className='gloves-category-slot'>
-                    <NavLink to={`/categories/Gloves`}>
-                        <img src="https://ballaway-seeds.s3.us-west-1.amazonaws.com/donut-day-1.png" alt="" />
-                    </NavLink>
-                </div> */}
+                <div className='gloves-category-slot'>
+                    <div className='category-link-img'>
+                        <NavLink to={`/categories/Gloves`}>
+                            <img src="https://ballaway-seeds.s3.us-west-1.amazonaws.com/gloves-opticolor-1.png" alt="" />
+                        </NavLink>
+                    </div>
+                </div>
             </div>
         </>
     )

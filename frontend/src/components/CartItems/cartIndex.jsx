@@ -23,52 +23,104 @@ export default function CartIndex() {
     let totalSum = 0;
     let totalTax = 0;
 
-
-return carts ? (
-        <div className="cart">
-            <div className="cart-right">
-                <div>
-                <h1 className="cart-title">Cart</h1>
-                    {carts.map(cartItem => (
-                        <CartIndexItem  cartItem={cartItem}/>
-                    ))}
+if (carts.length > 0) {
+        return carts ? (
+            <div className="cart">
+                <div className="cart-right">
+                    <div>
+                    <h1 className="cart-title">Cart</h1>
+                        {carts.map(cartItem => (
+                            <div>
+                            <CartIndexItem  cartItem={cartItem}/>
+                            <p>{cartItem.quantity}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+                <div className="cart-left">
+                    <h1 className="purchase-total-title">Purchase Total</h1>
+                    <div className="purchase-container">
+                        <div className="cart-cost">
+                            <div className="item-prices">
+                            items total price
+                            <br />
+                            {carts.map(cartItem => {
+                                const product = products.find(product => product.id === cartItem.productId);
+                                if (product && cartItem.userId === currentUser) {
+                                    totalSum += product.price * cartItem.quantity;
+                                    return (
+                                        <div>
+                                            {product.name}: (${product.price * cartItem.quantity}.00)
+                                        </div>
+                                    )
+                                }
+                            })}
+                            </div>
+                            <br/>
+                            <div className="total-tax">
+                                items total tax
+                                <br />
+                                ${totalTax = Math.round((totalSum * .02234)*100)/100}
+                            </div>
+                            <br/>
+                            <div className="total-cost">
+                                total purchase sum
+                                <br />
+                                ${totalSum += totalTax}
+                            </div>
+                        </div>
+                        <br />
+                        <button className="purchase-button">Fake Purchase Items</button>
+                    </div>
                 </div>
             </div>
-            <div className="cart-left">
-                <h1 className="purchase-total-title">Purchase Total</h1>
-                <div className="purchase-container">
-                    <div className="cart-cost">
-                        <div className="item-prices">
-                        items total price
+        ) : null
+    } else {
+        return carts ? (
+                <div className="cart">
+                    <div className="cart-right">
+                        <div>
+                        <h1 className="cart-title">Cart</h1>
                         <br />
-                        {carts.map(cartItem => {
-                            const product = products.find(product => product.id === cartItem.productId);
-                            if (product && cartItem.userId === currentUser) {
-                                totalSum += product.price * cartItem.quantity;
-                                return (
-                                    <div>
-                                        {product.name}: (${product.price * cartItem.quantity}.00)
-                                    </div>
-                                )
-                            }
-                        })}
-                        </div>
-                        <br/>
-                        <div className="total-tax">
-                            items total tax
-                            <br />
-                            ${totalTax = totalSum * 0.01}
-                        </div>
-                        <br/>
-                        <div className="total-cost">
-                            total purchase sum
-                            <br />
-                            ${totalSum += totalTax}
+                            No Items In Your Cart
                         </div>
                     </div>
-                    <button className="purchase-button">Fake Purchase Items</button>
+                    <div className="cart-left">
+                        <h1 className="purchase-total-title">Purchase Total</h1>
+                        <div className="purchase-container">
+                            <div className="cart-cost">
+                                <div className="item-prices">
+                                items total price
+                                <br />
+                                {carts.map(cartItem => {
+                                    const product = products.find(product => product.id === cartItem.productId);
+                                    if (product && cartItem.userId === currentUser) {
+                                        totalSum += product.price * cartItem.quantity;
+                                        return (
+                                            <div>
+                                                {product.name}: (${product.price * cartItem.quantity}.00)
+                                            </div>
+                                        )
+                                    }
+                                })}
+                                </div>
+                                <br/>
+                                <div className="total-tax">
+                                    items total tax
+                                    <br />
+                                    ${totalTax = Math.round((totalSum * .02234)*100)/100}
+                                </div>
+                                <br/>
+                                <div className="total-cost">
+                                    total purchase sum
+                                    <br />
+                                    ${totalSum += totalTax}
+                                </div>
+                            </div>
+                            <button className="purchase-button">Fake Purchase Items</button>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-    ) : null
+            ) : null
+    }
 }

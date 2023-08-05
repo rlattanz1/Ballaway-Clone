@@ -42,9 +42,6 @@ export default function HomeComponent() {
         <div className='category-slot-2'>
             <CategorySlot2 />
         </div>
-        {/* <div className='footer-wrapper'>
-            <Footer />
-        </div> */}
     </div>
     )
 }

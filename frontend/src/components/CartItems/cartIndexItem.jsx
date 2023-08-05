@@ -19,20 +19,25 @@ export default function CartIndexItem({cartItem}) { //cart item being passed int
         if (cartItem.productId) { //if a cart item exists
             dispatch(fetchProduct(cartItem.productId));
         }
-    }, [dispatch, cartItem]);
+    }, [dispatch, cartItem, quantity]);
 
-    const handleQuantity = (num) => {
-        const newCartItem = {
-            ...cartItem,
-            quantity: quantity + num
-        }
-        dispatch(updateCartItem(newCartItem))
-        setQuantity(quantity + num)
-    }
-
-    const handleDelete = e => {
+    const handleDelete = (e) => {
         e.preventDefault()
         dispatch(deleteCartItem(cartItem.id))
+        console.log(quantity)
+    }
+
+    const handleQuantity = (num) => {
+        if (quantity >= 1) {
+            const newCartItem = {
+                ...cartItem,
+                quantity: quantity + num
+            }
+
+            dispatch(updateCartItem(newCartItem))
+            setQuantity(quantity + num)
+            console.log(quantity)
+        }
     }
 
 if (cartItem.userId === currentUser) {

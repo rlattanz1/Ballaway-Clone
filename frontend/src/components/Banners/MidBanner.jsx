@@ -1,12 +1,13 @@
+import { useHistory } from 'react-router-dom';
 import './MidBanner.css'
 
 export default function MidBanner() {
-
+    const history = useHistory()
 
     const handleClick = (e) => {
 
         e.preventDefault();
-
+        history.push(`/products/${11}`)
     }
 
 return (
@@ -29,9 +30,7 @@ return (
             </div>
         </div>
         <div className='mid-inner-banner-image'>
-            {/* swag golf bag image */}
-            {/* hard code the image link from AWS after uploading it there */}
-            <img className='big-bertha' src="https://ballaway-seeds.s3.us-west-1.amazonaws.com/paradym-1.webp" alt="" />
+            <img className='big-bertha' src="https://ballaway-seeds.s3.us-west-1.amazonaws.com/drivers-big-bertha-1.png" alt="" />
         </div>
     </div>
     )

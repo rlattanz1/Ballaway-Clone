@@ -23,12 +23,12 @@ function Root() {
   return (
     <ModalProvider>
       <ShippingModalProvider>
-      <Provider store={store}>
-        <BrowserRouter>
-          <App />
-        </BrowserRouter>
-      </Provider>
-    </ShippingModalProvider>
+        <Provider store={store}>
+          <BrowserRouter>
+            <App />
+          </BrowserRouter>
+        </Provider>
+      </ShippingModalProvider>
     </ModalProvider>
   )
 }

@@ -53,7 +53,7 @@ export default function CategorySlot2() {
                     <div className='wedges-category-slot'>
                     <div className='category-link-img'>
                         <NavLink to={`/category/Wedges`}>
-                            <img src="https://ballaway-seeds.s3.us-west-1.amazonaws.com/iron-paradym-1.webp" alt="" />
+                            <img src="https://ballaway-seeds.s3.us-west-1.amazonaws.com/wedges-jaws-raw-matte-black-1.webp" alt="" />
                         </NavLink>
                     </div>
                     <br />
@@ -62,7 +62,7 @@ export default function CategorySlot2() {
                     <div className='putters-category-slot'>
                     <div className='category-link-img'>
                         <NavLink to={`/category/Putters`}>
-                            <img src="https://ballaway-seeds.s3.us-west-1.amazonaws.com/iron-paradym-1.webp" alt="" />
+                            <img src="https://ballaway-seeds.s3.us-west-1.amazonaws.com/putters-wh-versa-seven-db-1.png" alt="" />
                         </NavLink>
                     </div>
                     <br />

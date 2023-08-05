@@ -56,10 +56,8 @@ export const fetchSearchResults = (searchTerm) => async(dispatch) => {
 
 export const fetchProduct = (productId) => async(dispatch) => {
     const res = await fetch(`/api/products/${productId}`);
-    // console.log(res.json())
     if (res.ok) {
         const data = await res.json();
-        console.log(data)
         dispatch(receiveProduct(data));
     }
 }
@@ -70,7 +68,6 @@ export default function productsReducer(state={}, action) {
         case RECEIVE_PRODUCTS:
             return action.products;
         case RECEIVE_PRODUCT:
-            console.log(action)
             newState = {...state};
             const productId = action.product.id;
             newState[productId] = action.product;

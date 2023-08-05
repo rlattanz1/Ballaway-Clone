@@ -7,17 +7,23 @@ import ReviewIndex from "../../Reviews/ReviewIndex";
 import { createCartItem, fetchCartItem } from "../../../store/cartItems";
 import ImageGallery from 'react-image-gallery';
 import "react-image-gallery/styles/css/image-gallery.css";
+import StarRatingInput from "../../Reviews/StarRatingInput";
 
 export default function ProductShowPage() {
     const {productId} = useParams();
-    // const reviewId = useSelector(state => Object.keys(state.reviews))
+    const reviews = useSelector(state => Object.values(state.reviews))
     const product = useSelector(getProduct(productId));
     const user = useSelector(state => state.session.user);
     const dispatch = useDispatch();
     const user_review = useSelector(state => state.reviews.userId);
-    const product_reviews = useSelector(state => state.reviews.productId)
-    // console.log(user_review)
-    // console.log(reviewId[0])
+
+    const avgRating = () => {
+        let avg = 0;
+        reviews.map(review => {
+            return avg += review.rating
+        })
+        return avg / reviews.length
+    }
 
     const [isReadMore, setIsReadMore] = useState(true);
     let toggleReadMore = () => {
@@ -71,6 +77,7 @@ export default function ProductShowPage() {
                         <br/>
                         <h1>{product.name}</h1>
                         <div className="arverage-review">
+                            {<StarRatingInput rating={avgRating()}/>}
                         </div>
                         <div className="desc-container">
                             <p className="text">
@@ -95,7 +102,7 @@ export default function ProductShowPage() {
                 <div className="outer-reviews-container">
                     <h1>The percentage of reviewers who reccoment this product</h1>
                     <br/>
-                    <p>avg star rating</p>
+                    <p>{<StarRatingInput rating={avgRating()}/>}</p>
                     <br/>
                     <NavLink to={`/products/${productId}/createreview`}>
                         <button className="review-button" >WRITE A REVIEW</button>
@@ -118,6 +125,7 @@ export default function ProductShowPage() {
                         <br/>
                         <h1>{product.name}</h1>
                         <div className="arverage-review">
+                            {<StarRatingInput rating={avgRating()}/>}
                         </div>
                         <div className="desc-container">
                             <p className="text">
@@ -139,7 +147,7 @@ export default function ProductShowPage() {
                 <div className="outer-reviews-container">
                     <h1>The percentage of reviewers who reccoment this product</h1>
                     <br/>
-                    <p>avg star rating</p>
+                    <p>{<StarRatingInput rating={avgRating()}/>}</p>
                     <br/>
                     <div className="review-index">
                         <ReviewIndex/>

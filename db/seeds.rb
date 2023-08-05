@@ -28,7 +28,7 @@ require "open-uri"
 
     puts "Creating users..."
     # More users for testing
-    2.times do
+    10.times do
       User.create!({
         username: Faker::Internet.unique.username(specifier: 5),
         email: Faker::Internet.unique.email,
@@ -205,104 +205,129 @@ require "open-uri"
         p11.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/drivers-big-bertha-4.png'), filename: 'drivers-big-bertha-4.png')
         p11.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/drivers-big-bertha-5.png'), filename: 'drivers-big-bertha-5.png')
 
-      # p12 = Product.create!({
-      #     name: "",
-      #     description: "",
-      #     price: ,
-      #     category: "",
-      #     specs: ""
-      #   })
+      p12 = Product.create!({
+          name: "Callaway CB Wedge",
+          description: "The new Callaway CB Wedge is built to deliver short game forgiveness with incredible spin and feel. From player-friendly shaping, premium feel technologies, and the most aggressive groove in golf, it\'s designed for players who want maximum confidence from their short game.",
+          price: 159,
+          category: "Wedges, Clubs",
+          specs: "48°, 50°, 52°, 54°, 56°, 58°, 60°"
+        })
 
-      #   p12.photos.attach(io: URI.open(''), filename: '')
-      #   p12.photos.attach(io: URI.open(''), filename: '')
+        p12.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/wedges-cb-1.png'), filename: 'wedges-cb-1.png')
+        p12.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/wedges-cb-2.webp'), filename: 'wedges-cb-2.webp')
+        p12.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/wedges-cb-3.png'), filename: 'wedges-cb-3.png')
+        p12.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/wedges-cb-4.webp'), filename: 'wedges-cb-4.webp')
+        p12.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/wedges-cb-5.png'), filename: 'wedges-cb-5.png')
 
-      # p13 = Product.create!({
-      #     name: "",
-      #     description: "",
-      #     price: ,
-      #     category: "",
-      #     specs: ""
-      #   })
+      p13 = Product.create!({
+          name: "Jaws Raw Full Face Groove Wedges",
+          description: "Jaws Raw brings raw scoring performance to your wedge game. Legendary club designer Roger Cleveland has created a new line that combines artistry and craftsmanship with cutting edge innovation. Now available with grooves across the entire face to bring even more confidence and versatility to your short game. Available in lob wedges with Z, S, & W grinds, Jaws Raw with full face grooves offer a unique option for players looking for spin across the entire hitting area.",
+          price: 179,
+          category: "Wedges, Clubs",
+          specs: "58°, 60°"
+        })
 
-      #   p13.photos.attach(io: URI.open(''), filename: '')
-      #   p13.photos.attach(io: URI.open(''), filename: '')
+        p13.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/wedges-jaws-raw-full-face-chrome-1.webp'), filename: 'wedges-jaws-raw-full-face-chrome-1.webp')
+        p13.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/wedges-jaws-raw-full-face-chrome-2.webp'), filename: 'wedges-jaws-raw-full-face-chrome-2.webp')
+        p13.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/wedges-jaws-raw-full-face-chrome-3.webp'), filename: 'wedges-jaws-raw-full-face-chrome-3.webp')
+        p13.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/wedges-jaws-raw-full-face-chrome-4.webp'), filename: 'wedges-jaws-raw-full-face-chrome-4.webp')
 
-      # p14 = Product.create!({
-      #     name: "",
-      #     description: "",
-      #     price: ,
-      #     category: "",
-      #     specs: ""
-      #   })
+      p14 = Product.create!({
+          name: "Jaws Raw Wedge Matte Black",
+          description: "Jaws Raw brings raw scoring performance to your wedge game. Featuring the most aggressive grooves in golf, with a raw face that promotes maximum spin. Callaway is bringing tungsten technology to a wedge, for a weight balanced club that offers both feel and control. Jaws Raw Black Plasma wedges now extend into left-handed options. Available in a full family from 52°, 56° and 60° in the S grind, and spanning each grind S, Z, W, X in the 60°.",
+          price: 179,
+          category: "Wedges, Clubs",
+          specs: "48°, 50°, 52°, 54°, 56°, 58°, 60°"
+        })
 
-      #   p14.photos.attach(io: URI.open(''), filename: '')
-      #   p14.photos.attach(io: URI.open(''), filename: '')
+        p14.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/wedges-jaws-raw-matte-black-1.webp'), filename: 'wedges-jaws-raw-matte-black-1.webp')
+        p14.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/wedges-jaws-raw-matte-black-2.webp'), filename: 'wedges-jaws-raw-matte-black-2.webp')
+        p14.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/wedges-jaws-raw-matte-black-3.webp'), filename: 'wedges-jaws-raw-matte-black-3.webp')
+        p14.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/wedges-jaws-raw-matte-black-4.webp'), filename: 'wedges-jaws-raw-matte-black-4.webp')
 
-      # p15 = Product.create!({
-      #     name: "",
-      #     description: "",
-      #     price: ,
-      #     category: "",
-      #     specs: ""
-      #   })
+      p15 = Product.create!({
+          name: "Apex CB Iron",
+          description: "The new Apex CB \'24 Irons are designed for the most discerning tour pros and elite ball-strikers. This tour-cavity back is designed with an all-new forged construction for a pure feel, precise shot-making, and workability.",
+          price: 200,
+          category: "Iron, Clubs, Apex",
+          specs: "#4, #5, #6, #7, #8, #9"
+        })
 
-      #   p15.photos.attach(io: URI.open(''), filename: '')
-      #   p15.photos.attach(io: URI.open(''), filename: '')
+        p15.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/irons-apex-cb-chrome-1.webp'), filename: 'irons-apex-cb-chrome-1.webp')
+        p15.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/irons-apex-cb-chrome-2.webp'), filename: 'irons-apex-cb-chrome-2.webp')
+        p15.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/irons-apex-cb-chrome-3.webp'), filename: 'irons-apex-cb-chrome-3.webp')
+        p15.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/irons-apex-cb-chrome-4.webp'), filename: 'irons-apex-cb-chrome-4.webp')
+        p15.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/irons-apex-cb-chrome-5.webp'), filename: 'irons-apex-cb-chrome-5.webp')
+        p15.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/irons-apex-cb-chrome-6.webp'), filename: 'irons-apex-cb-chrome-6.webp')
 
-      # p16 = Product.create!({
-      #     name: "",
-      #     description: "",
-      #     price: ,
-      #     category: "",
-      #     specs: ""
-      #   })
+      p16 = Product.create!({
+          name: "Apex Pro Iron",
+          description: "A revolutionary multi-material forged construction paired with our patented urethane microspheres delivers unmatched feel. An all-new progressive face is designed for exceptional distance with Tour-level precision. And a Dynamic Sole Design promotes improved turf interaction and better contact. The ultimate players performance iron has officially arrived.",
+          price: 200,
+          category: "Iron, Clubs, Apex",
+          specs: "#4, #5, #6, #7, #8, #9"
+        })
 
-      #   p16.photos.attach(io: URI.open(''), filename: '')
-      #   p16.photos.attach(io: URI.open(''), filename: '')
+        p16.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/irons-apex-pro-1.webp'), filename: 'irons-apex-pro-1.webp')
+        p16.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/irons-apex-pro-2.webp'), filename: 'irons-apex-pro-2.webp')
+        p16.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/irons-apex-pro-3.webp'), filename: 'irons-apex-pro-3.webp')
+        p16.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/irons-apex-pro-4.webp'), filename: 'irons-apex-pro-4.webp')
+        p16.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/irons-apex-pro-5.webp'), filename: 'irons-apex-pro-5.webp')
+        p16.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/irons-apex-pro-6.webp'), filename: 'irons-apex-pro-6.webp')
 
-      # p17 = Product.create!({
-      #     name: "",
-      #     description: "",
-      #     price: ,
-      #     category: "",
-      #     specs: ""
-      #   })
+      p17 = Product.create!({
+          name: "Apex Utility Iron",
+          description: "The new Apex UT Iron is designed to provide better players a powerful, yet versatile option off the tee when precision is paramount. The 455 forged face cup is engineered to provide exceptional distance while a revolutionary multi-material forged construction paired with our patented urethane microspheres delivers unmatched feel.",
+          price: 275,
+          category: "Iron, Clubs, Apex",
+          specs: "#4, #5, #6, #7, #8, #9"
+        })
 
-      #   p17.photos.attach(io: URI.open(''), filename: '')
-      #   p17.photos.attach(io: URI.open(''), filename: '')
+        p17.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/irons-apex-utility-1.webp'), filename: 'irons-apex-utility-1.webp')
+        p17.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/irons-apex-utility-2.webp'), filename: 'irons-apex-utility-2.webp')
+        p17.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/irons-apex-utility-3.webp'), filename: 'irons-apex-utility-3.webp')
+        p17.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/irons-apex-utility-4.webp'), filename: 'irons-apex-utility-4.webp')
+        p17.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/irons-apex-utility-5.webp'), filename: 'irons-apex-utility-5.webp')
+        p17.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/irons-apex-utility-6.webp'), filename: 'irons-apex-utility-6.webp')
 
-      # p18 = Product.create!({
-      #     name: "",
-      #     description: "",
-      #     price: ,
-      #     category: "",
-      #     specs: ""
-      #   })
+      p18 = Product.create!({
+          name: "Eleven 2 Ball S Putter",
+          description: "The 2-Ball Eleven S is a toe hang mallet best suited for golfers with strokes with moderate face rotation and arc. This putter combines our Tour proven 2-Ball and multi-material Eleven shapes, creating a super high MOI head design with our red Stroke Lab shaft and legendary White Hot insert. This putter is equipped with two 15 gram adjustable weights.",
+          price: 299,
+          category: "Putters, Clubs, Odyssey",
+          specs: "none"
+        })
 
-      #   p18.photos.attach(io: URI.open(''), filename: '')
-      #   p18.photos.attach(io: URI.open(''), filename: '')
+        p18.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/putters-eleven-2-ball-slant-1.png'), filename: 'putters-eleven-2-ball-slant-1.png')
+        p18.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/putters-eleven-2-ball-slant-2.png'), filename: 'putters-eleven-2-ball-slant-2.png')
+        p18.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/putters-eleven-2-ball-slant-3.png'), filename: 'putters-eleven-2-ball-slant-3.png')
+        p18.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/putters-eleven-2-ball-slant-4.png'), filename: 'putters-eleven-2-ball-slant-4.png')
 
-      # p19 = Product.create!({
-      #     name: "",
-      #     description: "",
-      #     price: ,
-      #     category: "",
-      #     specs: ""
-      #   })
+      p19 = Product.create!({
+          name: "Tri Hot 5K Double Wide Putter",
+          description: "The Tri-Hot 5K Double Wide is a wide blade with a crank neck hosel yielding moderate toe hang making it suitable for strokes with moderate swing arc and face rotation. Tri-Hot 5K putters transform the performance of a blade with multi-material front loaded tungsten weighting that improves CG positioning while dramatically increasing inertia. This putter is equipped with two 25 gram adjustable weights.",
+          price: 399,
+          category: "Putters, Clubs, Odyssey",
+          specs: "none"
+        })
 
-      #   p19.photos.attach(io: URI.open(''), filename: '')
-      #   p19.photos.attach(io: URI.open(''), filename: '')
+        p19.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/putters-tri-hot-5k-double-wide-1.png'), filename: 'putters-tri-hot-5k-double-wide-1.png')
+        p19.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/putters-tri-hot-5k-double-wide-2.png'), filename: 'putters-tri-hot-5k-double-wide-2.png')
+        p19.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/putters-tri-hot-5k-double-wide-3.png'), filename: 'putters-tri-hot-5k-double-wide-3.png')
+        p19.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/putters-tri-hot-5k-double-wide-4.png'), filename: 'putters-tri-hot-5k-double-wide-4.png')
 
-      # p20 = Product.create!({
-      #     name: "",
-      #     description: "",
-      #     price: ,
-      #     category: "",
-      #     specs: ""
-      #   })
+      p20 = Product.create!({
+          name: "Tri Hot 5K Rossie Putter",
+          description: "The Tri-Hot 5K Rossie is a face-balanced double bend mallet suitable for strokes with minimal arc and face rotation. Tri-Hot 5K putters transform putting performance with multi-material front loaded tungsten weighting that improves CG positioning while dramatically increasing inertia. This putter is equipped with two 25 adjustable weights.",
+          price: 399,
+          category: "Putters, Clubs, Odyssey",
+          specs: "none"
+        })
 
-      #   p20.photos.attach(io: URI.open(''), filename: '')
-      #   p20.photos.attach(io: URI.open(''), filename: '')
+        p20.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/putters-tri-hot-5k-rossie-1.png'), filename: 'putters-tri-hot-5k-rossie-1.png')
+        p20.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/putters-tri-hot-5k-rossie-2.png'), filename: 'putters-tri-hot-5k-rossie-2.png')
+        p20.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/putters-tri-hot-5k-rossie-3.png'), filename: 'putters-tri-hot-5k-rossie-3.png')
+        p20.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/putters-tri-hot-5k-rossie-4.png'), filename: 'putters-tri-hot-5k-rossie-4.png')
 
 
       p21 = Product.create!({
@@ -513,7 +538,75 @@ require "open-uri"
         p37.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/balls-supersoft-geo-vegas-2.png'), filename: 'balls-supersoft-geo-vegas-2.pn')
         p37.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/balls-supersoft-geo-vegas-3.png'), filename: 'balls-supersoft-geo-vegas-3.png')
 
-        # p = Product.create!({
+        p38 = Product.create!({
+          name: "White Hot Versa Seven DB Putter",
+          description: "The White Hot Versa Seven is a double bend face-balanced mallet, best suited for strokes with minimal arc and face rotation. Our black and white high contrast Versa alignment system has dominated on Tours all over the world.",
+          price: 249,
+          category: "Putters, Clubs, Odyssey",
+          specs: "none"
+        })
+
+        p38.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/putters-wh-versa-seven-db-1.png'), filename: 'putters-wh-versa-seven-db-1.png')
+        p38.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/putters-wh-versa-seven-db-2.png'), filename: 'putters-wh-versa-seven-db-2.png')
+        p38.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/putters-wh-versa-seven-db-3.png'), filename: 'putters-wh-versa-seven-db-3.png')
+        p38.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/putters-wh-versa-seven-db-4.png'), filename: 'putters-wh-versa-seven-db-4.png')
+
+        p39 = Product.create!({
+          name: "OPTI Color Golf Gloves",
+          description: "Full premium leather construction, perforated back of hand and fingers for breathability and bright colors make Callaway\'s OPTI Color glove the best choice for performance and fashion.",
+          price: 19,
+          category: "Gloves, Gear",
+          specs: "none"
+        })
+
+        p39.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/gloves-opticolor-1.png'), filename: 'gloves-opticolor-1.png')
+        p39.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/gloves-opticolor-2.png'), filename: 'gloves-opticolor-2.png')
+
+        p40 = Product.create!({
+          name: "Tour Authentic Golf Gloves",
+          description: "NEW! Ultra-Soft Cabretta leather infused with ultra tacky Griptac™ provides unmatched comfort and grip on our Premium, Tour-proven glove.",
+          price: 24,
+          category: "Gloves, Gear",
+          specs: "none"
+        })
+
+        p40.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/gloves-ta-1.png'), filename: 'gloves-ta-1.png')
+        p40.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/gloves-ta-2.png'), filename: 'gloves-ta-2.png')
+
+        p41 = Product.create!({
+          name: "Tour Authentic American Golf Gloves",
+          description: "Ultra-Soft Cabretta leather infused with ultra-tacky Griptac™ provides unmatched comfort and grip on our premium, tour-proven glove. Now with a USA stars and stripes theme.",
+          price: 24,
+          category: "Gloves, Gear",
+          specs: "none"
+        })
+
+        p41.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/gloves-ta-americana-1.png'), filename: 'gloves-ta-americana-1.png')
+        p41.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/gloves-ta-americana-2.png'), filename: 'gloves-ta-americana-2.png')
+
+        p42 = Product.create!({
+          name: "Tour Authentic Lucky Golf Gloves",
+          description: "Add some Luck to your game with the Lucky Tour Authentic glove. Ultra-Soft Cabretta leather infused with ultra tacky Griptac™ provides unmatched comfort and grip on our Premium, Tour-proven glove.",
+          price: 24,
+          category: "Gloves, Gear",
+          specs: "none"
+        })
+
+        p42.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/gloves-ta-st-paddys-1.webp'), filename: 'gloves-ta-st-paddys-1.webp')
+        p42.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/gloves-ta-st-paddys-2.webp'), filename: 'gloves-ta-st-paddys-2.webp')
+
+        p43 = Product.create!({
+          name: "Weather Span Golf Gloves",
+          description: "Proprietary FUSETECH™ synthetic combined with strategically placed leather and micro-ventilation delivers comfort, feel, and fit in a highly-durable glove. Available in single and 2-pack.",
+          price: 12,
+          category: "Gloves Gear",
+          specs: "none"
+        })
+
+        p43.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/gloves-weather-spann-1.webp'), filename: 'gloves-weather-spann-1.webp')
+        p43.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/gloves-weather-spann-2.png'), filename: 'gloves-weather-spann-2.png')
+
+        # p44 = Product.create!({
         #   name: "",
         #   description: "",
         #   price: ,
@@ -521,38 +614,8 @@ require "open-uri"
         #   specs: ""
         # })
 
-        # p.photos.attach(io: URI.open(''), filename: '')
-        # p.photos.attach(io: URI.open(''), filename: '')
-        # p.photos.attach(io: URI.open(''), filename: '')
-        # p.photos.attach(io: URI.open(''), filename: '')
-
-        # p = Product.create!({
-        #   name: "",
-        #   description: "",
-        #   price: ,
-        #   category: "",
-        #   specs: ""
-        # })
-
-        # p.photos.attach(io: URI.open(''), filename: '')
-        # p.photos.attach(io: URI.open(''), filename: '')
-        # p.photos.attach(io: URI.open(''), filename: '')
-        # p.photos.attach(io: URI.open(''), filename: '')
-
-        # p = Product.create!({
-        #   name: "",
-        #   description: "",
-        #   price: ,
-        #   category: "",
-        #   specs: ""
-        # })
-
-        # p.photos.attach(io: URI.open(''), filename: '')
-        # p.photos.attach(io: URI.open(''), filename: '')
-        # p.photos.attach(io: URI.open(''), filename: '')
-        # p.photos.attach(io: URI.open(''), filename: '')
-
-
+        # p44.photos.attach(io: URI.open(''), filename: '')
+        # p44.photos.attach(io: URI.open(''), filename: '')
 
         # p.photos.attach(io: URI.open(''), filename: '')
         # p.photos.attach(io: URI.open(''), filename: '')

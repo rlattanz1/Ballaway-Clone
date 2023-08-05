@@ -1,23 +1,26 @@
 .cart {
     display: flex;
     flex-direction: row;
-    /* justify-content: center; */
+    justify-content: space-around;
+    width: 100%;
     height: 100vh;
 }
 .cart-right {
     display: flex;
     flex-direction: row;
-    /* justify-content: center; */
 }
 
 .purchase-total-title {
     display: flex;
     flex-direction: column;
-
 }
 .cart-left {
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
-    margin-left: -30vw;
+}
+
+.cart-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
