@@ -18,6 +18,7 @@ class Api::ReviewsController < ApplicationController
   def create
     @review = Review.new(review_params)
     @review.user_id = current_user.id
+    print @review
     if @review.save
       render :show
     else
@@ -27,6 +28,8 @@ class Api::ReviewsController < ApplicationController
 
   def update
     @review = Review.find_by(id: params[:id])
+    print @review
+
     if @review.update(review_params) && @review.user_id == current_user.id
       render :show
     else

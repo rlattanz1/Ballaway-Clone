@@ -1,5 +1,5 @@
 import CartIndexItem from "./cartIndexItem";
-import { clearCartItems, fetchCartItems, getCartItems } from "../../store/cartItems";
+import { clearCartItems, deleteCartItem, fetchCartItems, getCartItems } from "../../store/cartItems";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import './cartIndex.css'
@@ -15,20 +15,30 @@ export default function CartIndex() {
     const carts = useSelector(getCartItems);
     const products = useSelector(getProducts);
     const currentUser = useSelector(state => state.session.user.id);
+    const [purchased, setPurchased] = useState(false)
 
     useEffect(() => {
         dispatch(fetchCartItems())
         dispatch(fetchProducts())
     }, [dispatch])
 
-    // const handlePurchase = e => {
-    //     e.preventDefault();
+    const handlePurchase = e => {
+        e.preventDefault();
 
-    //     // dispatch(clearCartItems());
-    // }
+        carts.map(cart_item => {
+            return (
+                dispatch(deleteCartItem(cart_item.id))
+            )
+        });
+        console.log("action done")
+         setTimeout(()=>{
+            setPurchased(true)
+            },1000)
+    };
 
     let totalSum = 0;
     let totalTax = 0;
+
 
 if (carts.length > 0) {
         return carts ? (
@@ -78,9 +88,11 @@ if (carts.length > 0) {
                         <br />
                         <button
                         className="purchase-button"
-                        // onClick={handlePurchase} //this seems to prevent the modal from popping up and my breaks my link to the real callaway website
+                        onClick={handlePurchase} //this seems to prevent the modal from popping up and my breaks my link to the real callaway website
                         >
-                            <ThankyouFormModal text={'Purchase'}/>
+                        {/* <ThankyouFormModal text={'Purchase'}/> */}
+                        {purchased && <ThankyouFormModal text={'Purchase'} />}
+
                         </button>
                     </div>
                 </div>
@@ -127,6 +139,7 @@ if (carts.length > 0) {
                                     <br />
                                     ${totalSum += totalTax}
                                 </div>
+                                {purchased && <ThankyouFormModal/>}
                             </div>
                         </div>
                     </div>

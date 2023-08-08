@@ -18,6 +18,7 @@ export default function ThankyouForm () {
     };
 
 
+    console.log("fired")
     return (
         <div className="thankyou-form-wrapper">
             <div className="thankyou-form-title">

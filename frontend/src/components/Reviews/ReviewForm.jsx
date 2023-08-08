@@ -16,6 +16,7 @@ export default function CreateReviewPage() {
     const history = useHistory();
     let review = useSelector(getReview(reviewId));
     const formType = reviewId ? 'Update Review' : 'Create Review';
+    console.log(formType, "formtype")
     if (formType === 'Create Review') {
         review = {
             product_id: productId,
@@ -23,7 +24,7 @@ export default function CreateReviewPage() {
             value: 0,
             quality: 0,
             durability: 0,
-            recomendation: null,
+            recommendation: null,
             title: '',
             body: ''
         }
@@ -32,12 +33,13 @@ export default function CreateReviewPage() {
     const [value, setValue] = useState(review?.value);
     const [quality, setQuality] = useState(review?.quality);
     const [durability, setDurability] = useState(review?.durability);
-    const [recomendation, setRecomendation] = useState(review?.recomendation);
+    const [recommendation, setRecommendation] = useState(review?.recommendation);
     const [title, setTitle] = useState(review?.title);
     const [body, setBody] = useState(review?.body);
     const [err, setErr] = useState([])
     const [reviewCreated, setReviewCreated] = useState(false)
     const [reviewUpdated, setReviewUpdated] = useState(false)
+
 
     useEffect(() => {
         if (formType === 'Update Review') {
@@ -74,18 +76,20 @@ export default function CreateReviewPage() {
             value,
             quality,
             durability,
-            recomendation,
+            recommendation,
             title,
             body
         }
 
         if (formType === 'Create Review') {
+            console.log(newReview, "newReview")
             dispatch(createReview(newReview))
             .then(() => {
                 setReviewCreated(true);
             })
             .catch((handleError));
         } else {
+            console.log(newReview, "newReview")
             dispatch(updateReview(newReview))
             .then(() => {
                 setReviewUpdated(true);
@@ -115,9 +119,10 @@ export default function CreateReviewPage() {
                 return setQuality(parseInt(e));
             case "durability":
                 return setDurability(parseInt(e));
+            };
         };
-    };
 
+        console.log(recommendation, "recomendation")
     return review ? (
         <form onSubmit={handleSubmit}>
             <div className="review-container">
@@ -228,12 +233,12 @@ export default function CreateReviewPage() {
                 <input
                     type="radio"
                     name="radio1"
-                    onChange={() => setRecomendation(true)}
+                    onChange={() => setRecommendation(true)}
                 />yes
                 <input
                     type="radio"
                     name="radio1"
-                    onChange={() => setRecomendation(false)}
+                    onChange={() => setRecommendation(false)}
                 />no
             </label>
             <br/>

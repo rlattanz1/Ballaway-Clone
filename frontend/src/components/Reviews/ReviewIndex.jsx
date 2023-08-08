@@ -12,7 +12,7 @@ export default function ReviewIndex () {
     const {productId} = useParams()
     const reviews = useSelector((state) => Object.values(state.reviews));
     const currentUser = useSelector(state => state.session.user);
-    
+
     const dispatch = useDispatch();
 
 
@@ -49,11 +49,11 @@ export default function ReviewIndex () {
                     <span className="spacer">___</span>
                     <p>{review.body}</p>
                     <p> would you reccomend this product:
-                        {review.reccomendation === true ? 'no' : 'yes'}
+                        {review.recommendation === true ? 'yes' : 'no'}
                     </p>
-                    <p>was this helpful
+                    {/* <p>was this helpful
                         <button className="helpful-button">yes (num who clicked yes)</button>
-                    </p>
+                    </p> */}
                 </div>
                 <div className="review-stats">
                     <p>
@@ -100,9 +100,9 @@ export default function ReviewIndex () {
                     <p> would you reccomend this product:
                         {review.reccomendation === true ? 'no' : 'yes'}
                     </p>
-                    <p>was this helpful
+                    {/* <p>was this helpful
                         <button className="helpful-button">yes (num who clicked yes)</button>
-                    </p>
+                    </p> */}
                 </div>
                 <div className="review-stats">
                     <p>

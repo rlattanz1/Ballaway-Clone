@@ -5,13 +5,13 @@ import ThankyouForm from './ThankyouForm';
 
 
 export default function ThankyouFormModal({text}) {
-  const [showModal, setShowModal] = useState(false);
+  const [showModal, setShowModal] = useState(true);
 
   return (
     <>
       <p class="thankyou_modal" onClick={() => setShowModal(true)}>{text}</p>
       {showModal && (
-        <Modal onClose={() => setShowModal(false)}>
+        <Modal onClose={() => setShowModal(true)}>
           <ThankyouForm setShowModal={setShowModal}/>
         </Modal>
       )}

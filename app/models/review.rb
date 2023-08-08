@@ -16,8 +16,8 @@
 #  recommendation :boolean          default(TRUE)
 #
 class Review < ApplicationRecord
-  validates :body, :rating, :title, :user_id, :product_id, :value, :quality, :durability, :recommendation, presence: true
-  validates :recommendation, inclusion: {in: [true, false]}
+  validates :body, :rating, :title, :user_id, :product_id, :value, :quality, :durability, presence: true
+  validates :recommendation, inclusion: {in: [true, false], allow_nil: true, allow_blank: true}
 
   belongs_to :user
   belongs_to :product
