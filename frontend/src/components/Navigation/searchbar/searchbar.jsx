@@ -1,7 +1,7 @@
 import {AiOutlineSearch} from "react-icons/ai"
 import './searchbar.css'
 import { useDispatch } from "react-redux"
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { fetchSearchResults } from "../../../store/products";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
@@ -9,6 +9,11 @@ import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 export default function Searchbar() {
     const [searchTerm, setSearchTerm] = useState('');
     const history = useHistory();
+    // const dispatch = useDispatch();
+
+    // useEffect(() => {
+    //     dispatch(fetchSearchResults(searchTerm))
+    // }, [dispatch])
 
     const capitalize = (string) => {
         let words = string.split(' ');
@@ -18,21 +23,13 @@ export default function Searchbar() {
             }
         })
         return capWords.join(' ')
-        // let chars = string.split('').map((char, idx) => {
-        //     if (idx === 0) {
-        //         return char.toUpperCase();
-        //     } else {
-        //         return char.toLowerCase();
-        //     }
-        // })
-        // return chars.join('')
     }
 
     const handleSubmit = e => {
         e.preventDefault();
-        console.log(searchTerm)
+
         history.push(`/${searchTerm}`);
-        // setSearchTerm(''); //this is not working how I want it to
+        setSearchTerm(''); //this is not working how I want it to
     }
 
     return (

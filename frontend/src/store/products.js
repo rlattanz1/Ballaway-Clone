@@ -1,4 +1,3 @@
-import { receiveCartItems } from "./cartItems"
 
 export const RECEIVE_PRODUCTS = 'products/RECEIVE_PRODUCTS'
 export const RECEIVE_PRODUCT = 'products/RECEIVE_PRODUCT'
@@ -56,6 +55,7 @@ export const fetchSearchResults = (searchTerm) => async(dispatch) => {
     const res = await fetch(`/api/products?query=${searchTerm}`);
     if (res.ok) {
         const products = await res.json();
+        dispatch(receiveProducts(products))
     }
 }
 

@@ -86,13 +86,8 @@ if (carts.length > 0) {
                             </div>
                         </div>
                         <br />
-                        <button
-                        className="purchase-button"
-                        onClick={handlePurchase} //this seems to prevent the modal from popping up and my breaks my link to the real callaway website
-                        >
-                        {/* <ThankyouFormModal text={'Purchase'}/> */}
-                        {purchased && <ThankyouFormModal text={'Purchase'} />}
-
+                        <button className="purchase-button" onClick={handlePurchase}>
+                            Purchase
                         </button>
                     </div>
                 </div>

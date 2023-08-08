@@ -56,7 +56,6 @@ export const fetchReview = (reviewId) => async(dispatch) => {
 }
 
 export const createReview = (review) => async(dispatch) => {
-    console.log(review, "TA")
     const res = await csrfFetch('/api/reviews', {
         method: 'POST',
         headers: {
@@ -72,7 +71,6 @@ export const createReview = (review) => async(dispatch) => {
 }
 
 export const updateReview = (review) => async(dispatch) => {
-    console.log(review, "TA")
     const res = await csrfFetch(`/api/reviews/${review.id}`, {
         method: 'PATCH',
         headers: {
@@ -93,7 +91,6 @@ export const deleteReview = (reviewId) => async(dispatch) => {
     });
 
     if (res.ok) {
-        console.log(reviewId)
         dispatch(removeReview(reviewId))
     }
 }

@@ -40,6 +40,9 @@ function App() {
           {/* <Route exact path="/info/Fitting">
             <ClubFitting/>
           </Route> */}
+          <Route exact path="/:searchTerm">
+            <ProductSearchIndex />
+          </Route>
           <Route exact path="/about">
             <AboutPage/>
           </Route>
@@ -48,9 +51,6 @@ function App() {
           </Route>
           <Route exact path="/cart">
             <CartIndex />
-          </Route>
-          <Route exact path="/:searchTerm">
-            <ProductSearchIndex />
           </Route>
           <Route path="/">
             <HomeComponent />

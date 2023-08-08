@@ -18,7 +18,6 @@ export default function ThankyouForm () {
     };
 
 
-    console.log("fired")
     return (
         <div className="thankyou-form-wrapper">
             <div className="thankyou-form-title">
@@ -33,7 +32,6 @@ export default function ThankyouForm () {
                     <br />
                     <br />
                     <a href="https://www.callawaygolf.com/" rel="noreferrer" target="_blank">Callaway Golf</a>
-                    {/* anchor tag not working in my modal*/}
             <div className="social-media-links">
                 <label className='image-label'>Rocco
                 <br />
