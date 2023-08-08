@@ -122,7 +122,6 @@ export default function CreateReviewPage() {
             };
         };
 
-        console.log(recommendation, "recomendation")
     return review ? (
         <form onSubmit={handleSubmit}>
             <div className="review-container">

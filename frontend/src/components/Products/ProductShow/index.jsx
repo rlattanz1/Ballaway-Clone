@@ -88,7 +88,7 @@ export default function ProductShowPage() {
                         <br/>
                         <h1>{product.name}</h1>
                         <div className="arverage-review">
-                            {<StarRatingInput rating={avgRating()}/>}
+                            {<StarRatingInput rating={avgRating()} disabled={true}/>}
                         </div>
                         <div className="desc-container">
                             <p className="text">
@@ -123,7 +123,7 @@ export default function ProductShowPage() {
                 <div className="outer-reviews-container">
                     <h1>The percentage of reviewers who reccoment this product</h1>
                     <br/>
-                    <p>{<StarRatingInput rating={avgRating()}/>}</p>
+                    <p>{<StarRatingInput rating={avgRating()} disabled={true}/>}</p>
                     <br/>
                     <NavLink to={`/products/${productId}/createreview`}>
                         <button className="review-button" >WRITE A REVIEW</button>
@@ -146,7 +146,7 @@ export default function ProductShowPage() {
                         <br/>
                         <h1>{product.name}</h1>
                         <div className="arverage-review">
-                            {<StarRatingInput rating={avgRating()}/>}
+                            {<StarRatingInput rating={avgRating()}  disabled={true}/>}
                         </div>
                         <div className="desc-container">
                             <p className="text">
@@ -168,7 +168,7 @@ export default function ProductShowPage() {
                 <div className="outer-reviews-container">
                     <h1>The percentage of reviewers who reccoment this product</h1>
                     <br/>
-                    <p>{<StarRatingInput rating={avgRating()}/>}</p>
+                    <p>{<StarRatingInput rating={avgRating()} disabled={true}/>}</p>
                     <br/>
                     <div className="review-index">
                         <ReviewIndex/>
