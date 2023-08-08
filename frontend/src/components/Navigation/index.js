@@ -11,6 +11,7 @@ import { Logo } from '../../images/logo';
 import {AiOutlineQuestionCircle} from 'react-icons/ai'
 import {CgProfile} from 'react-icons/cg'
 import { fetchCartItems, getCartItems } from '../../store/cartItems';
+import { Link } from 'react-router-dom';
 
 
 
@@ -47,7 +48,7 @@ function Navigation() {
         <span>|</span> &nbsp; &nbsp;
         <div className='nav_item'>
           <AiOutlineQuestionCircle/> &nbsp;
-          <NavLink class="help_link" to="">Help</NavLink> &nbsp; &nbsp;
+          <Link class="help_link" to="/about">About</Link> &nbsp; &nbsp;
         </div>
         <div className='nav_item'>
           <CgProfile/> &nbsp;
@@ -66,7 +67,7 @@ function Navigation() {
         <span>|</span> &nbsp; &nbsp;
         <div className='nav_item'>
             <AiOutlineQuestionCircle/> &nbsp;
-            <NavLink class="help_link" to="">Help</NavLink> &nbsp; &nbsp;
+            <Link class="help_link" to="/about">About</Link> &nbsp; &nbsp;
         </div>
         <div className='nav_item'>
             <CgProfile/> &nbsp;

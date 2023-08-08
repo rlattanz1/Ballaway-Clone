@@ -28,7 +28,7 @@ export default function CategorySlot1() {
                 </div>
                 <div className='gloves-category-slot'>
                     <div className='category-link-img'>
-                        <NavLink to={`/categories/Gloves`}>
+                        <NavLink to={`/category/Gloves`}>
                             <img src="https://ballaway-seeds.s3.us-west-1.amazonaws.com/gloves-opticolor-1.png" alt="" />
                         </NavLink>
                     </div>

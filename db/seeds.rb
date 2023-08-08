@@ -28,7 +28,7 @@ require "open-uri"
 
     puts "Creating users..."
     # More users for testing
-    10.times do
+    15.times do
       User.create!({
         username: Faker::Internet.unique.username(specifier: 5),
         email: Faker::Internet.unique.email,
@@ -47,7 +47,7 @@ require "open-uri"
         description: "The Paradym driver model provides a refined shape with high MOI and adjustable perimeter weighting. Engineered for players of all skill levels, this club promotes high launch and low spin characteristics along with a neutral ball flight. It is our best combination of distance, forgiveness, and adjustability.",
         price: 599,
         category: "Driver, Clubs, Featured, Paradym",
-        specs: "9°, RH / LH, 45.75\", 57.0°"
+        specs: "9°, 10.5°, 12°"
       })
 
       p1.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/paradym-1.webp'), filename: 'paradym-1.webp')
@@ -62,7 +62,7 @@ require "open-uri"
         description: "The Paradym X Driver is built for a high launch with high MOI, along with a generously stretched profile at address. This model is best suited for golfers seeking extreme forgiveness and a slight draw bias from their driver.",
         price: 599,
         category: "Driver, Clubs, Paradym",
-        specs: "9°, RH / LH, 45.75\", 60.0°"
+        specs: "9°, 10.5°, 12°"
       })
       p2.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/paradym-x-1.webp'), filename: 'paradym-x-1.webp')
       p2.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/paradym-x-2.webp'), filename: 'paradym-x-2.webp')
@@ -77,7 +77,7 @@ require "open-uri"
         description: "The Paradym Triple Diamond Driver is a compact, 450cc shape designed for better players who want to work the ball. It is the lowest spinning and lowest launching Paradym model with a neutral ball flight.",
         price: 599,
         category: "Driver, Clubs, Featured, Paradym",
-        specs: "9°, RH / LH, 45.75\", 57.0°"
+        specs: "9°, 10.5°, 12°"
       })
 
       p3.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/paradym-td-1.webp'), filename: 'paradym-td-1.webp')
@@ -92,7 +92,7 @@ require "open-uri"
           description: "Our Paradym Irons combine our A.I. Designed Forged 455 Face with the all-new Speed Frame. They\'re designed for golfers who are looking for a players\' distance iron with a refined shape and premium forging.",
           price: 200,
           category: "Iron, Clubs, Featured, Paradym",
-          specs: "20°, RH / LH, 38.875\", 61.0°"
+          specs: "#4, #5, #6, #7, #8, #9"
         })
 
         p4.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/iron-paradym-1.webp'), filename: 'iron-paradym-1.webp')
@@ -106,7 +106,7 @@ require "open-uri"
           description: "Our Paradym X Irons combine a Forged 455 Face with the all-new Speed Frame, giving you the best of incredibly long distance technologies and premium forged feel.",
           price: 200,
           category: "Iron, Clubs, Featured, Paradym",
-          specs: "20°, RH / LH, 38.875\", 61.0°"
+          specs: "#4, #5, #6, #7, #8, #9"
         })
 
         p5.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/iron-paradym-x-1.webp'), filename: 'iron-paradym-x-1.webp')
@@ -220,7 +220,7 @@ require "open-uri"
         p12.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/wedges-cb-5.png'), filename: 'wedges-cb-5.png')
 
       p13 = Product.create!({
-          name: "Jaws Raw Full Face Groove Wedges",
+          name: "Jaws Raw Full Face Groove Wedge",
           description: "Jaws Raw brings raw scoring performance to your wedge game. Legendary club designer Roger Cleveland has created a new line that combines artistry and craftsmanship with cutting edge innovation. Now available with grooves across the entire face to bring even more confidence and versatility to your short game. Available in lob wedges with Z, S, & W grinds, Jaws Raw with full face grooves offer a unique option for players looking for spin across the entire hitting area.",
           price: 179,
           category: "Wedges, Clubs",
@@ -233,7 +233,7 @@ require "open-uri"
         p13.photos.attach(io: URI.open('https://ballaway-seeds.s3.us-west-1.amazonaws.com/wedges-jaws-raw-full-face-chrome-4.webp'), filename: 'wedges-jaws-raw-full-face-chrome-4.webp')
 
       p14 = Product.create!({
-          name: "Jaws Raw Wedge Matte Black",
+          name: "Jaws Raw Matte Black Wedge",
           description: "Jaws Raw brings raw scoring performance to your wedge game. Featuring the most aggressive grooves in golf, with a raw face that promotes maximum spin. Callaway is bringing tungsten technology to a wedge, for a weight balanced club that offers both feel and control. Jaws Raw Black Plasma wedges now extend into left-handed options. Available in a full family from 52°, 56° and 60° in the S grind, and spanning each grind S, Z, W, X in the 60°.",
           price: 179,
           category: "Wedges, Clubs",
@@ -345,7 +345,7 @@ require "open-uri"
 
         p22 = Product.create!({
           name: "Chev Stand Bag",
-          description: "Stand Bag",
+          description: "The NEW Chev offers a sleek and versatile midsized stand bag, featuring updated branding, ample storage and 4-way club organization at an exceptional value.",
           price: 249,
           category: "Bags, Gear",
           specs: "none"
@@ -358,7 +358,7 @@ require "open-uri"
 
       p23 = Product.create!({
           name: "Fairway C HD Stand Bag",
-          description: "Stand Bag",
+          description: "A sleek and stylish compact stand bag with waterproof construction, the Fairway C easily accommodates all your golf essentials while keeping the elements out.",
           price: 249,
           category: "Bags, Gear",
           specs: "none"
@@ -371,7 +371,7 @@ require "open-uri"
 
       p24 = Product.create!({
           name: "Fairway + Stand Bag",
-          description: "Stand Bag",
+          description: "Fairway + bridges the gap between Fairway C and Fairway 14. Featuring our proprietary 4-way Lowrider top with Apex divider system, the Fairway + is light enough to carry or integrates seamlessly with most modern push carts.",
           price: 249,
           category: "Bags, Gear",
           specs: "none"
@@ -384,7 +384,7 @@ require "open-uri"
 
       p25 = Product.create!({
           name: "Paradym Fairway 14 Stand Bag",
-          description: "Stand Bag",
+          description: "Fairway 14 offers the best of both worlds, combining the organization and size of a cart bag with the portability of a stand bag, and now integrates easily with most pushcarts. Now with Paradym colors.",
           price: 249,
           category: "Bags, Gear, Paradym",
           specs: "none"
@@ -421,7 +421,7 @@ require "open-uri"
 
       p28 = Product.create!({
           name: "Supersoft Matte Orange Golf Balls",
-          description: "Matte Orange color",
+          description: "Supersoft is one of the most popular balls in golf, particularly for its long, straight distance, and most importantly the super soft feel. We\'ve advanced the cover, core, and construction technologies to enhance these key benefits, with improved performance from tee-to-green, plus an impressive, eye-catching Matte Orange Finish.",
           price: 49,
           category: "Balls, Supersoft",
           specs: "none"
@@ -433,7 +433,7 @@ require "open-uri"
 
       p29 = Product.create!({
           name: "Chrome Soft Golf Balls",
-          description: "Plain Design",
+          description: "Chrome Soft is better for everyone, from amateurs to major winners. Now with our proprietary new Precision Technology, the Chrome Soft Golf Ball is longer through the bag while providing the signature soft feel that golfers love.",
           price: 49,
           category: "Balls, Chromesoft",
           specs: "none"
@@ -446,7 +446,7 @@ require "open-uri"
 
         p30 = Product.create!({
           name: "Chrome Soft Triple Track Golf Balls",
-          description: "TT Design",
+          description: "Chrome Soft is better for everyone, from amateurs to major winners. Now with our proprietary new Precision Technology, the Chrome Soft Golf Ball is longer through the bag while providing the signature soft feel that golfers love, plus our major-winning Triple Track Technology.",
           price: 49,
           category: "Balls, Chromesoft",
           specs: "none"
@@ -459,7 +459,7 @@ require "open-uri"
 
         p31 = Product.create!({
           name: "Limited Edition Chrome Soft Oddysey Swirl Golf Balls",
-          description: "OS Design",
+          description: "Chrome Soft is better for everyone, from amateurs to major winners. Now with our proprietary new Precision Technology, the Chrome Soft Golf Ball is longer through the bag while providing the signature soft feel that golfers love. And now it\'s available in an iconic Odyssey swirl pattern across the ball to showcase the #1 Putter in Golf.",
           price: 49,
           category: "Balls, Chromesoft, Limited Edition",
           specs: "none"
@@ -470,7 +470,7 @@ require "open-uri"
 
         p32 = Product.create!({
           name: "Limited Edition Chrome Soft Truvis Dog Paw Golf Balls",
-          description: "DP Design",
+          description: "Chrome Soft is better for everyone, from amateurs to major winners. With our proprietary Precision Technology, it\'s longer through the bag while providing the signature soft feel that golfers love. It\'s better for everyone, and if you\'re a dog person, this limited edition Truvis design is for you!",
           price: 49,
           category: "Balls, Chromesoft, Limited Edition",
           specs: "none"
@@ -481,7 +481,7 @@ require "open-uri"
 
         p33 = Product.create!({
           name: "Limited Edition Chrome Soft Truvis Pink Golf Balls",
-          description: "MD Design",
+          description: "Chrome Soft is better for everyone, from amateurs to major winners. Now with our proprietary new Precision Technology, the Chrome Soft Golf Ball is longer through the bag while providing the signature soft feel that golfers love, along with our popular Truvis hi-res technology.",
           price: 49,
           category: "Balls, Chromesoft, Limited Edition",
           specs: "none"
@@ -492,7 +492,7 @@ require "open-uri"
 
         p34 = Product.create!({
           name: "Supersoft Arizona Golf Balls",
-          description: "AZ Design",
+          description: "Supersoft is one of the most popular balls in golf, particularly for its long, straight distance, super soft feel, and great control in the short game. We\'ve advanced the cover, core, and construction technologies to enhance these key benefits, with improved performance from tee-to-green. Now our limited-edition Geo Collection highlights some of the most popular golf regions across the U.S. with visual features and messages to showcase each region. The Geo Collection is available in 4 unique designs: Arizona, California, Hawaii, Las Vegas.",
           price: 49,
           category: "Balls, Supersoft, Geo",
           specs: "none"
@@ -504,7 +504,7 @@ require "open-uri"
 
         p35 = Product.create!({
           name: "Supersoft California Golf Balls",
-          description: "CA Design",
+          description: "Supersoft is one of the most popular balls in golf, particularly for its long, straight distance, super soft feel, and great control in the short game. We\'ve advanced the cover, core, and construction technologies to enhance these key benefits, with improved performance from tee-to-green. Now our limited-edition Geo Collection highlights some of the most popular golf regions across the U.S. with visual features and messages to showcase each region. The Geo Collection is available in 4 unique designs: Arizona, California, Hawaii, Las Vegas.",
           price: 49,
           category: "Balls, Supersoft, Geo",
           specs: "none"
@@ -516,7 +516,7 @@ require "open-uri"
 
         p36 = Product.create!({
           name: "Supersoft Hawaii Golf Balls",
-          description: "HI Design",
+          description: "Supersoft is one of the most popular balls in golf, particularly for its long, straight distance, super soft feel, and great control in the short game. We\'ve advanced the cover, core, and construction technologies to enhance these key benefits, with improved performance from tee-to-green. Now our limited-edition Geo Collection highlights some of the most popular golf regions across the U.S. with visual features and messages to showcase each region. The Geo Collection is available in 4 unique designs: Arizona, California, Hawaii, Las Vegas.",
           price: 49,
           category: "Balls, Supersoft, Geo",
           specs: "none"
@@ -528,7 +528,7 @@ require "open-uri"
 
         p37 = Product.create!({
           name: "Supersoft Las Vegas Golf Balls",
-          description: "LV Design",
+          description: "Supersoft is one of the most popular balls in golf, particularly for its long, straight distance, super soft feel, and great control in the short game. We\'ve advanced the cover, core, and construction technologies to enhance these key benefits, with improved performance from tee-to-green. Now our limited-edition Geo Collection highlights some of the most popular golf regions across the U.S. with visual features and messages to showcase each region. The Geo Collection is available in 4 unique designs: Arizona, California, Hawaii, Las Vegas.",
           price: 49,
           category: "Balls, Supersoft, Geo",
           specs: "none"
@@ -599,7 +599,7 @@ require "open-uri"
           name: "Weather Span Golf Gloves",
           description: "Proprietary FUSETECH™ synthetic combined with strategically placed leather and micro-ventilation delivers comfort, feel, and fit in a highly-durable glove. Available in single and 2-pack.",
           price: 12,
-          category: "Gloves Gear",
+          category: "Gloves, Gear",
           specs: "none"
         })
 
@@ -668,7 +668,7 @@ require "open-uri"
         })
         Review.create!({
           user_id: 3,
-          product_id: 5,
+          product_id: 22,
           title: 'OK bag',
           body: 'it gets the job done but a but overpriced for what it has',
           rating: 3,
@@ -678,7 +678,7 @@ require "open-uri"
         })
         Review.create!({
           user_id: 1,
-          product_id: 5,
+          product_id: 27,
           title: 'Sweet Balls',
           body: 'These golf balls are the best',
           rating: 5,
@@ -688,12 +688,482 @@ require "open-uri"
         })
         Review.create!({
           user_id: 2,
-          product_id: 6,
+          product_id: 28,
           title: 'Cool Balls',
-          body: 'They look cool and are easily recognizable but they dont travel the belst for some reason!',
+          body: 'They look cool and are easily recognizable but they dont travel the best for some reason!',
           rating: 3,
           value: 4,
           quality: 5,
+          durability: 4
+        })
+        Review.create!({
+          user_id: 4,
+          product_id: 18,
+          title: 'Great Putter',
+          body: 'Wow this is the best putter ever',
+          rating: 5,
+          value: 4,
+          quality: 5,
+          durability: 4
+        })
+        Review.create!({
+          user_id: 8,
+          product_id: 15,
+          title: 'Amazing Iron',
+          body: 'Wow this is the best Iron pretty awesome',
+          rating: 3,
+          value: 4,
+          quality: 3,
+          durability: 4
+        })
+        Review.create!({
+          user_id: 4,
+          product_id: 14,
+          title: 'Super Awesome Amazing Iron',
+          body: 'OMG this is the most super awesome amazing iron I\'ve ever used ever',
+          rating: 5,
+          value: 5,
+          quality: 5,
+          durability: 5
+        })
+        Review.create!({
+          user_id: 1,
+          product_id: 24,
+          title: 'This bag is pretty good',
+          body: 'This bag is good but it is has already started to wear out a bit after only 6 months',
+          rating: 3,
+          value: 4,
+          quality: 4,
+          durability: 2
+        })
+        Review.create!({
+          user_id: 10,
+          product_id: 22,
+          title: 'Good bag',
+          body: 'it gets the job done but a and is reasonably priced',
+          rating: 4,
+          value: 4,
+          quality: 4,
+          durability: 4
+        })
+        Review.create!({
+          user_id: 7,
+          product_id: 28,
+          title: 'Great Balls Of Fire',
+          body: 'These golf balls are the coolest design and they hit hella straight',
+          rating: 5,
+          value: 4,
+          quality: 5,
+          durability: 4
+        })
+        Review.create!({
+          user_id: 6,
+          product_id: 32,
+          title: 'Coolest Balls Around',
+          body: 'They look sooo cool with the dog paw design and are easily recognizable but they dont travel the best for some reason!',
+          rating: 3,
+          value: 4,
+          quality: 5,
+          durability: 4
+        })
+        Review.create!({
+          user_id: 10,
+          product_id: 36,
+          title: 'Great Balls',
+          body: 'Wow these are the coolest balls ever I love representing the Islands when I\'m golfing',
+          rating: 5,
+          value: 4,
+          quality: 5,
+          durability: 5
+        })
+        Review.create!({
+          user_id: 3,
+          product_id: 11,
+          title: 'Iconic Driver',
+          body: 'The Big Bertha is one of the most iconic drivers out there and it hits great',
+          rating: 4,
+          value: 4,
+          quality: 5,
+          durability: 4
+        })
+        Review.create!({
+          user_id: 13,
+          product_id: 12,
+          title: 'Super Awesome Amazing Wedge',
+          body: 'OMG this is the most super awesome amazing wedge I\'ve ever used ever',
+          rating: 5,
+          value: 5,
+          quality: 5,
+          durability: 4
+        })
+        Review.create!({
+          user_id: 15,
+          product_id: 14,
+          title: 'best Wedge',
+          body: 'Wow this wedge hits great it gets a perfect loft for me every time!',
+          rating: 4,
+          value: 4,
+          quality: 5,
+          durability: 4
+        })
+        Review.create!({
+          user_id: 13,
+          product_id: 35,
+          title: 'Chill Vibes Bro',
+          body: 'These surf board golf balls give me chill vibes when golfing bro',
+          rating: 5,
+          value: 4,
+          quality: 5,
+          durability: 5
+        })
+        Review.create!({
+          user_id: 1,
+          product_id: 27,
+          title: 'Sweet Balls',
+          body: 'These golf balls are the best',
+          rating: 5,
+          value: 4,
+          quality: 5,
+          durability: 4
+        })
+        Review.create!({
+          user_id: 2,
+          product_id: 30,
+          title: 'Cool Balls',
+          body: 'They look cool and are easily recognizable but they dont travel the best for some reason!',
+          rating: 3,
+          value: 4,
+          quality: 5,
+          durability: 4
+        })
+        Review.create!({
+          user_id: 14,
+          product_id: 38,
+          title: 'Great Putter',
+          body: 'Wow this is the best putter I have ever used',
+          rating: 5,
+          value: 4,
+          quality: 5,
+          durability: 4
+        })
+        Review.create!({
+          user_id: 12,
+          product_id: 39,
+          title: 'Cool Gloves',
+          body: 'Wow these gloves have a pretty cool design but they are a little rough',
+          rating: 3,
+          value: 4,
+          quality: 3,
+          durability: 4
+        })
+        Review.create!({
+          user_id: 13,
+          product_id: 40,
+          title: 'Perfect Gloves',
+          body: 'These Gloves really upped my game',
+          rating: 5,
+          value: 5,
+          quality: 5,
+          durability: 5
+        })
+        Review.create!({
+          user_id: 12,
+          product_id: 41,
+          title: 'Real Lucky Gloves',
+          body: 'These gloves totally got my game going in the right direction!',
+          rating: 5,
+          value: 5,
+          quality: 5,
+          durability: 5
+        })
+        Review.create!({
+          user_id: 10,
+          product_id: 42,
+          title: 'Good Gloves',
+          body: 'cost effective and comfortable gloves',
+          rating: 5,
+          value: 4,
+          quality: 4,
+          durability: 4
+        })
+        Review.create!({
+          user_id: 7,
+          product_id: 37,
+          title: 'Great Balls Of Fire',
+          body: 'These golf balls are the coolest design and they hit hella straight',
+          rating: 5,
+          value: 4,
+          quality: 5,
+          durability: 4
+        })
+        Review.create!({
+          user_id: 6,
+          product_id: 32,
+          title: 'Coolest Balls Around',
+          body: 'They look sooo cool with the mothers day design and are easily recognizable but they dont travel the best for some reason!',
+          rating: 3,
+          value: 4,
+          quality: 3,
+          durability: 4
+        })
+        Review.create!({
+          user_id: 10,
+          product_id: 13,
+          title: 'Great wedge',
+          body: 'Wow this is the best wedge ever',
+          rating: 5,
+          value: 4,
+          quality: 5,
+          durability: 4
+        })
+        Review.create!({
+          user_id: 2,
+          product_id: 6,
+          title: 'Amazing Hybrid',
+          body: 'Wow this is the best hybrid. It\'s pretty awesome',
+          rating: 4,
+          value: 4,
+          quality: 5,
+          durability: 5
+        })
+        Review.create!({
+          user_id: 6,
+          product_id: 7,
+          title: 'Super Awesome Amazing Hybrid',
+          body: 'OMG this is the most super awesome amazing hybrid I\'ve ever used ever',
+          rating: 4,
+          value: 4,
+          quality: 4,
+          durability: 4
+        })
+        Review.create!({
+          user_id: 12,
+          product_id: 8,
+          title: 'best wood',
+          body: 'Wow this wood hits like a driver I am shocked',
+          rating: 5,
+          value: 5,
+          quality: 5,
+          durability: 4
+        })
+        Review.create!({
+          user_id: 3,
+          product_id: 9,
+          title: 'best wood',
+          body: 'Wow this wood hits like a driver I am shocked',
+          rating: 5,
+          value: 4,
+          quality: 5,
+          durability: 5
+        })
+        Review.create!({
+          user_id: 10,
+          product_id: 10,
+          title: 'Great wood',
+          body: 'Wow this wood hits like a driver I am shocked',
+          rating: 5,
+          value: 5,
+          quality: 5,
+          durability: 4
+        })
+        Review.create!({
+          user_id: 2,
+          product_id: 12,
+          title: 'Cool wedge',
+          body: 'They look cool and hit the ball great!',
+          rating: 4,
+          value: 4,
+          quality: 5,
+          durability: 4
+        })
+        Review.create!({
+          user_id: 14,
+          product_id: 19,
+          title: 'Great Putter',
+          body: 'Wow this is the best putter ever',
+          rating: 5,
+          value: 4,
+          quality: 5,
+          durability: 4
+        })
+        Review.create!({
+          user_id: 3,
+          product_id: 15,
+          title: 'Amazing Iron',
+          body: 'Wow this is a great Iron',
+          rating: 4,
+          value: 4,
+          quality: 4,
+          durability: 4
+        })
+        Review.create!({
+          user_id: 4,
+          product_id: 14,
+          title: 'Super Awesome Amazing Iron',
+          body: 'OMG agreed this is the most super awesome amazing driver I\'ve ever used ever',
+          rating: 5,
+          value: 5,
+          quality: 5,
+          durability: 5
+        })
+        Review.create!({
+          user_id: 5,
+          product_id: 24,
+          title: 'This bag is pretty good',
+          body: 'This bag is allright but it is has already started to rip a bit',
+          rating: 4,
+          value: 4,
+          quality: 3,
+          durability: 3
+        })
+        Review.create!({
+          user_id: 9,
+          product_id: 22,
+          title: 'Good bag',
+          body: 'it gets the job done but a and is reasonably priced but just so-so',
+          rating: 3,
+          value: 3,
+          quality: 3,
+          durability: 3
+        })
+        Review.create!({
+          user_id: 5,
+          product_id: 30,
+          title: 'Great Balls Of Fire',
+          body: 'These golf balls are the coolest design and they hit hella straight',
+          rating: 5,
+          value: 4,
+          quality: 5,
+          durability: 4
+        })
+        Review.create!({
+          user_id: 6,
+          product_id: 34,
+          title: 'Coolest Balls Around',
+          body: 'They look sooo cool with the design and are easily recognizable but they dont travel the best for some reason!',
+          rating: 3,
+          value: 4,
+          quality: 5,
+          durability: 4
+        })
+        Review.create!({
+          user_id: 10,
+          product_id: 35,
+          title: 'Great Balls',
+          body: 'Wow these are the coolest balls ever I love representing the Cali when I\'m golfing',
+          rating: 5,
+          value: 4,
+          quality: 5,
+          durability: 5
+        })
+        Review.create!({
+          user_id: 13,
+          product_id: 11,
+          title: 'Iconic Driver',
+          body: 'The Big Bertha is Amazing',
+          rating: 4,
+          value: 5,
+          quality: 5,
+          durability: 4
+        })
+        Review.create!({
+          user_id: 13,
+          product_id: 14,
+          title: 'Super Awesome Amazing Wedge',
+          body: 'OMG this is the most super awesome amazing wedge I\'ve ever used ever',
+          rating: 5,
+          value: 5,
+          quality: 5,
+          durability: 4
+        })
+        Review.create!({
+          user_id: 15,
+          product_id: 12,
+          title: 'good Wedge',
+          body: 'Wow this wedge hits great but seems a little dinged up after a few outings',
+          rating: 3,
+          value: 4,
+          quality: 3,
+          durability: 3
+        })
+        Review.create!({
+          user_id: 11,
+          product_id: 34,
+          title: 'Chillin',
+          body: 'These cali-balls give me chill vibes man',
+          rating: 5,
+          value: 5,
+          quality: 5,
+          durability: 5
+        })
+        Review.create!({
+          user_id: 12,
+          product_id: 27,
+          title: 'Sweet Balls',
+          body: 'These golf balls are great',
+          rating: 5,
+          value: 4,
+          quality: 5,
+          durability: 4
+        })
+        Review.create!({
+          user_id: 10,
+          product_id: 29,
+          title: 'Cool Balls',
+          body: 'They look cool and are easily recognizable but they dont travel the best for some reason!',
+          rating: 3,
+          value: 4,
+          quality: 5,
+          durability: 4
+        })
+        Review.create!({
+          user_id: 14,
+          product_id: 38,
+          title: 'Awesome Putter',
+          body: 'Wow this is the most interesting putter I have ever used',
+          rating: 3,
+          value: 4,
+          quality: 3,
+          durability: 3
+        })
+        Review.create!({
+          user_id: 12,
+          product_id: 39,
+          title: 'Meh Gloves',
+          body: 'Wow these gloves have a pretty cool design but they aren\'t very effective',
+          rating: 2,
+          value: 3,
+          quality: 2,
+          durability: 4
+        })
+        Review.create!({
+          user_id: 13,
+          product_id: 40,
+          title: 'Good Gloves',
+          body: 'These Gloves are pretty good but expensinve',
+          rating: 3,
+          value: 3,
+          quality: 3,
+          durability: 3
+        })
+        Review.create!({
+          user_id: 14,
+          product_id: 41,
+          title: 'Lucky Of the Irish',
+          body: 'I hit a hole in one with these babies... it was definitely the gloves!',
+          rating: 5,
+          value: 5,
+          quality: 5,
+          durability: 5
+        })
+        Review.create!({
+          user_id: 9,
+          product_id: 42,
+          title: 'Pretty Good Gloves',
+          body: 'cost effective and comfortable gloves',
+          rating: 3,
+          value: 3,
+          quality: 3,
           durability: 4
         })
 

@@ -11,6 +11,7 @@ import CartIndex from './components/CartItems/cartIndex';
 import Footer from './components/Footer/footer'
 import ClubFitting from './components/ClubFitting/Fitting';
 import UserProfile from './components/UserProfile/userProfile';
+import AboutPage from './components/About/About';
 
 
 function App() {
@@ -36,8 +37,11 @@ function App() {
           <Route exact path="/category/:category">
             <ProductIndex />
           </Route>
-          <Route exact path="/info/Fitting">
+          {/* <Route exact path="/info/Fitting">
             <ClubFitting/>
+          </Route> */}
+          <Route exact path="/about">
+            <AboutPage/>
           </Route>
           <Route exact path="/signup">
             <SignupFormPage />

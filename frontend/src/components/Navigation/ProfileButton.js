@@ -31,10 +31,10 @@ function ProfileButton({ user }) {
     dispatch(sessionActions.logout());
   };
 
-  const profile = (e) => {
-    e.preventDefault();
-    history.push(`/users/${user}/profile`)
-  }
+  // const profile = (e) => {
+  //   e.preventDefault();
+  //   history.push(`/users/${user}/profile`)
+  // }
 
   return (
     <div className="profile-container">

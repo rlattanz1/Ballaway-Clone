@@ -30,7 +30,9 @@ return (
             </div>
         </div>
         <div className='mid-inner-banner-image'>
-            <img className='big-bertha' src="https://ballaway-seeds.s3.us-west-1.amazonaws.com/drivers-big-bertha-1.png" alt="" />
+            <div>
+                <img className='big-bertha' src="https://ballaway-seeds.s3.us-west-1.amazonaws.com/drivers-big-bertha-1.png" alt="" />
+            </div>
         </div>
     </div>
     )

@@ -96,9 +96,9 @@ width: 350px;
     height: 50px
 }
 
-.text {
+/* .text {
 
-}
+} */
 
 .read-hide-button {
     color: rgb(141, 141, 141);
@@ -106,4 +106,21 @@ width: 350px;
 
 .image-gallery-icon:hover {
     margin-top: -110px;
+}
+
+.spec-selection-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.spec-selection-wrapper .spec-selection {
+    background-color: white;
+    color: black;
+}
+
+.spec-selection-wrapper .spec-selection.selected{
+    background-color: black;
+    color: white;
 }

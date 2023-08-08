@@ -2,6 +2,7 @@ import { receiveCartItems } from "./cartItems"
 
 export const RECEIVE_PRODUCTS = 'products/RECEIVE_PRODUCTS'
 export const RECEIVE_PRODUCT = 'products/RECEIVE_PRODUCT'
+export const CLEAR_PRODUCTS = 'products/CLEAR_PRODUCTS'
 
 
 
@@ -18,6 +19,11 @@ export const receiveProduct = (data) => {
         type: RECEIVE_PRODUCT,
         product: data.product,
         reviews: data.reviews
+    }
+}
+export const clearProducts = () => {
+    return {
+        type: CLEAR_PRODUCTS
     }
 }
 
@@ -50,7 +56,6 @@ export const fetchSearchResults = (searchTerm) => async(dispatch) => {
     const res = await fetch(`/api/products?query=${searchTerm}`);
     if (res.ok) {
         const products = await res.json();
-        dispatch(receiveProducts(products));
     }
 }
 
@@ -72,6 +77,8 @@ export default function productsReducer(state={}, action) {
             const productId = action.product.id;
             newState[productId] = action.product;
             return newState;
+        case CLEAR_PRODUCTS:
+            return {};
         default:
             return state;
     }

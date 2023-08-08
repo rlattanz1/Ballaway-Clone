@@ -15,7 +15,7 @@ export default function Footer() {
             <label className='corporate-links'>Github
             <br />
                 <div className='Github-link'>
-                    <a href="https://github.com/rlattanz1">
+                    <a href="https://github.com/rlattanz1" rel="noreferrer" target="_blank">
                         <FaGithubSquare size={100}/>
                     </a>
                 </div>
@@ -23,7 +23,7 @@ export default function Footer() {
             <label className='legal-links'>LinkedIn
             <br />
                 <div className='LinkedIn-link'>
-                    <a href="https://www.linkedin.com/in/rocco-lattanzio-a8aba5a5/">
+                    <a href="https://www.linkedin.com/in/rocco-lattanzio-a8aba5a5/" rel="noreferrer" target="_blank">
                         <FaLinkedin size={100}/>
                     </a>
                 </div>

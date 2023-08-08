@@ -32,12 +32,12 @@ ul {
     color: black;
 }
 
-.help_link {
+.nav_item .help_link {
     font-size: 13px;
     text-decoration: none;
 }
 
-.help_link:hover {
+.nav_item .help_link:hover {
     text-decoration: underline;
     transition: gray;
 }

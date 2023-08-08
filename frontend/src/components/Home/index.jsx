@@ -6,7 +6,7 @@ import SlotSwiper2 from '../SlotSwipers/SlotSwiper2'
 import MidBanner from '../Banners/MidBanner'
 import SlotSwiper3 from '../SlotSwipers/SlotSwiper3'
 import CategorySlot1 from '../Navigation/categories/CategorySlots/CategorySlot1'
-import BotBanner from '../Banners/BotBanner'
+// import BotBanner from '../Banners/BotBanner'
 import CategorySlot2 from '../Navigation/categories/CategorySlots/CategorySlot2'
 // import Footer from '../Footer/footer'
 
@@ -37,7 +37,7 @@ export default function HomeComponent() {
             <CategorySlot1 />
         </div>
         <div className='bot-banner'>
-            <BotBanner />
+            {/* <BotBanner /> */}
         </div>
         <div className='category-slot-2'>
             <CategorySlot2 />

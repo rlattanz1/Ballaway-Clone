@@ -1,9 +1,10 @@
 import CartIndexItem from "./cartIndexItem";
-import { fetchCartItems, getCartItems } from "../../store/cartItems";
+import { clearCartItems, fetchCartItems, getCartItems } from "../../store/cartItems";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import './cartIndex.css'
 import { fetchProducts, getProducts } from "../../store/products";
+import ThankyouFormModal from "../ThankyouModal/ThankyouFormModal";
 
 
 
@@ -20,6 +21,12 @@ export default function CartIndex() {
         dispatch(fetchProducts())
     }, [dispatch])
 
+    // const handlePurchase = e => {
+    //     e.preventDefault();
+
+    //     // dispatch(clearCartItems());
+    // }
+
     let totalSum = 0;
     let totalTax = 0;
 
@@ -31,8 +38,7 @@ if (carts.length > 0) {
                     <h1 className="cart-title">Cart</h1>
                         {carts.map(cartItem => (
                             <div>
-                            <CartIndexItem  cartItem={cartItem}/>
-                            <p>{cartItem.quantity}</p>
+                            <CartIndexItem  cartItem={cartItem} key={cartItem.id}/>
                             </div>
                         ))}
                     </div>
@@ -70,7 +76,12 @@ if (carts.length > 0) {
                             </div>
                         </div>
                         <br />
-                        <button className="purchase-button">Fake Purchase Items</button>
+                        <button
+                        className="purchase-button"
+                        // onClick={handlePurchase} //this seems to prevent the modal from popping up and my breaks my link to the real callaway website
+                        >
+                            <ThankyouFormModal text={'Purchase'}/>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -117,7 +128,6 @@ if (carts.length > 0) {
                                     ${totalSum += totalTax}
                                 </div>
                             </div>
-                            <button className="purchase-button">Fake Purchase Items</button>
                         </div>
                     </div>
                 </div>

@@ -5,11 +5,18 @@ import csrfFetch from "./csrf";
 export const RECEIVE_CART_ITEMS = '/cartItems/RECEIVE_CART_ITEMS';
 export const RECEIVE_CART_ITEM = '/cartItems/RECEIVE_CART_ITEM';
 export const REMOVE_CART_ITEM = '/cartItems/REMOVE_CART_ITEM';
+export const CLEAR_CART_ITEMS = '/cartItems/CLEAR_CART_ITEMS';
 
 export const receiveCartItems = (cartItems) => {
     return {
         type: RECEIVE_CART_ITEMS,
         cartItems
+    }
+}
+
+export const clearCartItems = () => {
+    return {
+        type: CLEAR_CART_ITEMS
     }
 }
 
@@ -113,6 +120,8 @@ export default function cartItemsReducer(state={}, action) {
             newState = {...state};
             delete newState[action.cartItemId];
             return newState;
+        case CLEAR_CART_ITEMS:
+            return {};
         default:
             return state;
     }

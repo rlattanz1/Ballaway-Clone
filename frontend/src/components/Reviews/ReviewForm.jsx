@@ -85,14 +85,12 @@ export default function CreateReviewPage() {
                 setReviewCreated(true);
             })
             .catch((handleError));
-            // console.log(err)
         } else {
             dispatch(updateReview(newReview))
             .then(() => {
                 setReviewUpdated(true);
             })
             .catch((handleError));
-            // console.log(err)
         };
     }
 

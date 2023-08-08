@@ -30,14 +30,22 @@ export default function SlotSwiper2() {
                         desktop: {
                             breakpoint: {
                             max: 3000,
-                            min: 1100
+                            min: 1600
                             },
                             items: 4,
                             partialVisibilityGutter: 40
                         },
+                        smallComp: {
+                            breakpoint: {
+                              max: 1600,
+                              min: 1200
+                            },
+                            items: 3,
+                            partialVisibilityGutter: 40
+                          },
                         mobile: {
                             breakpoint: {
-                            max: 464,
+                            max: 700,
                             min: 0
                             },
                             items: 1,
@@ -45,8 +53,8 @@ export default function SlotSwiper2() {
                         },
                         tablet: {
                             breakpoint: {
-                            max: 1100,
-                            min: 464
+                            max: 1200,
+                            min: 700
                             },
                             items: 2,
                             partialVisibilityGutter: 30

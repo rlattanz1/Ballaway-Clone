@@ -17,6 +17,7 @@ export default function ProductShowPage() {
     const dispatch = useDispatch();
     const user_review = useSelector(state => state.reviews.userId);
 
+
     const avgRating = () => {
         let avg = 0;
         reviews.map(review => {
@@ -44,6 +45,15 @@ export default function ProductShowPage() {
         dispatch(createCartItem(cartItem))
     }
 
+    // const handleSelection = e => {
+    //     e.preventDefault();
+    //     if (e.target.className.includes('selected')) {
+    //         e.target.classList.remove('selected');
+    //     } else {
+    //         e.target.classList.add('selected');
+    //     }
+    // }
+
 
 
     function gallery() {
@@ -65,6 +75,7 @@ export default function ProductShowPage() {
         }
     }
 
+    //  && product.specs !== "none"
     if (user && !(user_review === user.id)) {
 
         return product ? (
@@ -87,6 +98,16 @@ export default function ProductShowPage() {
                                 </span>
                             </p>
                         </div>
+                        {/* <h3>
+                            Loft
+                        </h3>
+                            <div className="spec-selection-wrapper">
+                                {product.specs.split(',').map(spec => {
+                                    return (
+                                            <button className="spec-selection" onClick={handleSelection}>{spec}</button>
+                                    )
+                                })}
+                            </div> */}
                         <br/>
                         <div className="price-container">
                             <p>{`$${product.price}`}</p>
