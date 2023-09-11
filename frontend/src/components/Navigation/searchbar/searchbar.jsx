@@ -29,7 +29,7 @@ export default function Searchbar() {
         e.preventDefault();
 
         history.push(`/${searchTerm}`);
-        setSearchTerm(''); //this is not working how I want it to
+        setSearchTerm(""); //this is not working how I want it to
     }
 
     return (

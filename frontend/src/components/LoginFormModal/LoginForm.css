@@ -8,6 +8,15 @@ form {
     margin-left: 30%;
 }
 
+.title {
+    width: 150%;
+    margin: 10%;
+}
+
+.login-modal-button {
+    margin: 1%;
+}
+
 button:hover {
     transform: scale(1.01, 1.01);
 }
@@ -19,14 +28,19 @@ button:hover {
 }
 
 .label {
-
+    margin: 1%;
 }
 
 .input {
-border-radius: 1em;
-
+    border-radius: 1em;
+    margin: 5%;
 }
 
 .login_modal {
     cursor: pointer
+}
+
+.sign-up-link {
+    margin: 10%;
+    width: 100%;
 }

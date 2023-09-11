@@ -83,10 +83,10 @@ export default function LoginForm(props) {
             onChange={e => setPassword(e.target.value)}
             required
           />
-        <button type="submit">Log In</button>
-        <button onClick={handleDemoUser}>Demo User</button>
+        <button className='login-modal-button' type="submit">Log In</button>
+        <button className='login-modal-button' onClick={handleDemoUser}>Demo User</button>
 
-        <p>Create an Account. &nbsp;
+        <p className='sign-up-link'>Create an Account. &nbsp;
             <NavLink to="/signup" onClick={() => props.setShowModal(false)} >
                 Join rewards & start earning today!
             </NavLink>
