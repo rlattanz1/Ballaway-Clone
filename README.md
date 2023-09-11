@@ -17,11 +17,11 @@ Things you may want to cover:
 
 2.  Review create, update, and delete ability specific to each user for the products they like or don't like
 
-![creating a review](https://github.com/rlattanz1/Ballaway-Clone/Ballaway/images/main/create_reviews.png)
+![creating a review](https://github.com/rlattanz1/Ballaway-Clone/Ballaway/images/create_reviews.png?raw=true)
 
-![updating a review](https://github.com/rlattanz1/Ballaway-Clone/blob/main/update_reviews.png)
+![updating a review](https://github.com/rlattanz1/Ballaway-Clone/blob/update_reviews.png?raw=true)
 
-![seeing product reviews](https://github.com/rlattanz1/Ballaway-Clone/images/main/product_reviews.png)
+![seeing product reviews](https://github.com/rlattanz1/Ballaway-Clone/images/product_reviews.png?raw=true)
 
 3. Shopping Cart specific to each user that allows each user to add, update quantity, or delete products they want or don't want
 
