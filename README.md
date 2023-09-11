@@ -13,9 +13,9 @@ Things you may want to cover:
 
 1. User Authentification for secure login user Experience
 
-![secure user login](https://raw.github.com/rlattanz1/Ballaway-Clone/main/images/login.jpg?raw=true)
+![secure user login](https://raw.github.com/rlattanz1/Ballaway-Clone/main/images/login.png?raw=true)
 
-![secure user logout](https://raw.github.com/rlattanz1/Ballaway-Clone/main/images/logout.jpg?raw=true)
+![secure user logout](https://raw.github.com/rlattanz1/Ballaway-Clone/main/images/logout.png?raw=true)
 
 2.  Review create, update, and delete ability specific to each user for the products they like or don't like
 
