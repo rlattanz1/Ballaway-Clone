@@ -13,25 +13,27 @@ Things you may want to cover:
 
 1. User Authentification for secure login user Experience
 
-![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+![secure user login](https://raw.github.com/rlattanz1/Ballaway-Clone/main/images/login.jpg?raw=true)
+
+![secure user logout](https://raw.github.com/rlattanz1/Ballaway-Clone/main/images/logout.jpg?raw=true)
 
 2.  Review create, update, and delete ability specific to each user for the products they like or don't like
 
-![creating a review](https://github.com/rlattanz1/Ballaway-Clone/Ballaway/images/main/create_reviews.png?raw=true)
+![creating a review](https://raw.github.com/rlattanz1/Ballaway-Clone/main/images/create_reviews.png?raw=true)
 
-![updating a review](https://github.com/rlattanz1/Ballaway-Clone/main/images/update_reviews.png?raw=true)
+![updating a review](https://raw.github.com/rlattanz1/Ballaway-Clone/main/images/update_reviews.png?raw=true)
 
-![seeing product reviews](https://github.com/rlattanz1/Ballaway-Clone/images/main/product_reviews.png?raw=true)
+![seeing product reviews](https://raw.github.com/rlattanz1/Ballaway-Clone/main/images/product_reviews.png?raw=true)
 
 3. Shopping Cart specific to each user that allows each user to add, update quantity, or delete products they want or don't want
 
-![utilizing a cart](https://github.com/rlattanz1/Ballaway-Clone/images/main/cart.png?raw=true)
+![utilizing a cart](https://raw.github.com/rlattanz1/Ballaway-Clone/main/images/cart.png?raw=true)
 
 4. Categories browsing and Search bar browsing for specific products
 
-![utilizing a search bar](https://github.com/rlattanz1/Ballaway-Clone/images/main/categories.png?raw=true)
+![utilizing a search bar](https://raw.github.com/rlattanz1/Ballaway-Clone/main/images/categories.png?raw=true)
 
-![utillizing a categories filter](https://github.com/rlattanz1/Ballaway-Clone/images/main/search.png?raw=true)
+![utillizing a categories filter](https://raw.github.com/rlattanz1/Ballaway-Clone/main/images/search.png?raw=true)
 
 * Installation Instructions:
 To get started with Ballaway locally, follow these steps:
