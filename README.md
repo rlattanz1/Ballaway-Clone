@@ -15,7 +15,7 @@ Things you may want to cover:
 
 2.  Review create, update, and delete ability specific to each user for the products they like or don't like
 
-(https://github.com/rlattanz1/Ballaway-Clone/images/main/create_reviews.jpg?raw=true)
+![creating a review](https://github.com/rlattanz1/Ballaway-Clone/images/main/create_reviews.jpg?raw=true)
 
 (https://github.com/rlattanz1/Ballaway-Clone/images/main/update_reviews.jpg?raw=true)
 
