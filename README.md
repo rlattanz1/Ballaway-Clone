@@ -15,21 +15,21 @@ Things you may want to cover:
 
 2.  Review create, update, and delete ability specific to each user for the products they like or don't like
 
-![alt text](https://github.com/rlattanz1/Ballaway-Clone/images/main/create_reviews.jpg?raw=true)
+(https://github.com/rlattanz1/Ballaway-Clone/images/main/create_reviews.jpg?raw=true)
 
-![alt text](https://github.com/rlattanz1/Ballaway-Clone/images/main/update_reviews.jpg?raw=true)
+(https://github.com/rlattanz1/Ballaway-Clone/images/main/update_reviews.jpg?raw=true)
 
-![alt text](https://github.com/rlattanz1/Ballaway-Clone/images/main/product_reviews.jpg?raw=true)
+(https://github.com/rlattanz1/Ballaway-Clone/images/main/product_reviews.jpg?raw=true)
 
 3. Shopping Cart specific to each user that allows each user to add, update quantity, or delete products they want or don't want
 
-![alt text](https://github.com/rlattanz1/Ballaway-Clone/images/main/cart.jpg?raw=true)
+(https://github.com/rlattanz1/Ballaway-Clone/images/main/cart.jpg?raw=true)
 
 4. Categories browsing and Search bar browsing for specific products
 
-![alt text](https://github.com/rlattanz1/Ballaway-Clone/images/main/categories.jpg?raw=true)
+(https://github.com/rlattanz1/Ballaway-Clone/images/main/categories.jpg?raw=true)
 
-![alt text](https://github.com/rlattanz1/Ballaway-Clone/images/main/search.jpg?raw=true)
+(https://github.com/rlattanz1/Ballaway-Clone/images/main/search.jpg?raw=true)
 
 * Installation Instructions:
 To get started with Ballaway locally, follow these steps:
