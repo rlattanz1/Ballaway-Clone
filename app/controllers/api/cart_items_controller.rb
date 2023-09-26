@@ -13,7 +13,7 @@ class Api::CartItemsController < ApplicationController
             render :show
         else
             render json: @cart_item.errors.full_messages, status: 422
-        end
+        end 
     end
 
     def create
