@@ -7,6 +7,7 @@ export const RECEIVE_CART_ITEM = '/cartItems/RECEIVE_CART_ITEM';
 export const REMOVE_CART_ITEM = '/cartItems/REMOVE_CART_ITEM';
 export const CLEAR_CART_ITEMS = '/cartItems/CLEAR_CART_ITEMS';
 
+// action creators => creating the actions that I will send through my reducers
 export const receiveCartItems = (cartItems) => {
     return {
         type: RECEIVE_CART_ITEMS,
@@ -45,7 +46,8 @@ export const getCartItem = (cartItemId) => (state) => (
 )
 
 
-
+// Thunk Action Creators => making an asynchronous request to the backend and checking if the response is 200 status
+// then dispatching that action to go through the reducer and update the redux store
 export const fetchCartItems = () => async(dispatch) => {
     const res = await fetch (`/api/cart_items`);
 
@@ -105,7 +107,7 @@ export const deleteCartItem = (cartItemId) => async(dispatch) => {
     }
 }
 
-
+// cart items reducer =>
 export default function cartItemsReducer(state={}, action) {
     let newState;
     switch(action.type) {
