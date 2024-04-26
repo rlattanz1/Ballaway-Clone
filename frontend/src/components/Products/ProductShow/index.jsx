@@ -1,13 +1,14 @@
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect, useState } from "react";
-import { NavLink, Redirect, useParams } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
 import { fetchProduct, getProduct } from "../../../store/products";
 import './index.css'
 import ReviewIndex from "../../Reviews/ReviewIndex";
-import { createCartItem, fetchCartItem } from "../../../store/cartItems";
+import { createCartItem } from "../../../store/cartItems";
 import ImageGallery from 'react-image-gallery';
 import "react-image-gallery/styles/css/image-gallery.css";
 import StarRatingInput from "../../Reviews/StarRatingInput";
+import { useHistory } from "react-router-dom";
 
 export default function ProductShowPage() {
     const {productId} = useParams();
@@ -16,7 +17,7 @@ export default function ProductShowPage() {
     const user = useSelector(state => state.session.user);
     const dispatch = useDispatch();
     const user_review = useSelector(state => state.reviews.userId);
-
+    const history = useHistory();
 
     const avgRating = () => {
         let avg = 0;
@@ -42,7 +43,8 @@ export default function ProductShowPage() {
             product_id: productId,
             quantity: 1
         }
-        dispatch(createCartItem(cartItem))
+        dispatch(createCartItem(cartItem));
+        history.push(`/cart`);
     }
 
     // const handleSelection = e => {

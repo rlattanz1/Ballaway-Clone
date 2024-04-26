@@ -14,10 +14,10 @@ export default function CartIndexItem({cartItem}) { //cart item being passed int
     const product = useSelector(getProduct(cartItem.productId)) //get product will take in the product id of this cart item as an arg
     const currentUser = useSelector(state => state.session.user.id)
 
-
     useEffect(() => {
         if (cartItem.productId) { //if a cart item exists
             dispatch(fetchProduct(cartItem.productId));
+            setQuantity(cartItem.quantity); //is this ok or is there a more efficient way to do this with out having it happen on every render
         }
     }, [dispatch, cartItem, quantity]);
 
@@ -32,9 +32,8 @@ export default function CartIndexItem({cartItem}) { //cart item being passed int
                 ...cartItem,
                 quantity: quantity + num
             }
-
-            dispatch(updateCartItem(newCartItem))
-            setQuantity(quantity + num)
+            dispatch(updateCartItem(newCartItem));
+            setQuantity(quantity + num);
         }
     }
 

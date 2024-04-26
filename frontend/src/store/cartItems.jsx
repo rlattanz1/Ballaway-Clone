@@ -65,7 +65,7 @@ export const fetchCartItem = (cartItemId) => async(dispatch) => {
         dispatch(receiveCartItem(cartItem));
     }
 }
-
+ 
 export const createCartItem = (cartItem) => async(dispatch) => {
 
     const res = await csrfFetch('/api/cart_items', {

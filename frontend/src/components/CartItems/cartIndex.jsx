@@ -11,7 +11,7 @@ import ThankyouFormModal from "../ThankyouModal/ThankyouFormModal";
 
 
 export default function CartIndex() {
-    const dispatch = useDispatch();
+    const dispatch = useDispatch(); 
     const carts = useSelector(getCartItems);
     const products = useSelector(getProducts);
     const currentUser = useSelector(state => state.session.user.id);
