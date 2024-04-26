@@ -17,7 +17,7 @@ export default function CartIndexItem({cartItem}) { //cart item being passed int
     useEffect(() => {
         if (cartItem.productId) { //if a cart item exists
             dispatch(fetchProduct(cartItem.productId));
-            setQuantity(cartItem.quantity); //is this ok or is there a more efficient way to do this with out having it happen on every render
+            // setQuantity(cartItem.quantity); //is this ok or is there a more efficient way to do this with out having it happen on every render
         }
     }, [dispatch, cartItem, quantity]);
 
