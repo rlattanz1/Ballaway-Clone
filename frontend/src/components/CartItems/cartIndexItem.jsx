@@ -25,7 +25,7 @@ export default function CartIndexItem({cartItem}) { //cart item being passed int
         e.preventDefault()
         dispatch(deleteCartItem(cartItem.id))
     }
-
+ 
     const handleQuantity = (num) => {
         if (quantity >= 1) {
             const newCartItem = {

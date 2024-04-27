@@ -16,7 +16,7 @@ class Api::CartItemsController < ApplicationController
             @cart_item.quantity += 1
             # increment the quantity of the cart_item by one
             if @cart_item.save
-                render :show #what is going on here???
+                render :show #what is going on here why doesnt index work and show does even though I have deleted my show???
                 # save the cart_item and render it here
             else
                 render json: @cart_item.errors.full_messages, status: 422
