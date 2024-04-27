@@ -40,20 +40,26 @@ class Api::CartItemsController < ApplicationController
     def update
 
         @cart_item = CartItem.find_by(id: params[:id])
-        if @cart_item.update(cart_items_params) && @cart_item.user_id == current_user.id
+        # grabbing an instance of a cart_item by the existing cart item's id param
+        if @cart_item.update(cart_items_params) && @cart_item.user_id == current_user.id #not sure the user_id check is neccessary
             render :show #what is going on here???
+            # update the cart item params as long as the cart items user_id param is the same the current users id and render it here
         else
             render json: @cart_item.errors.full_messages, status: 422
+            # render the error message if it does not update the cart_item
         end
     end
 
     def destroy
         @cart_item = CartItem.find_by(id: params[:id])
+        # grabbing an instance of a cart_item by the existing cart item's id param
         if @cart_item
             @cart_item.destroy
             render :show #what is going on here???
+            # if the cart item with that id exists destroy it and render the cart items here
         else
             render json: {message: ['not a valid user cart item']}, status: 422
+            # render the error message if it does not destroy the cart_item
         end
     end
 
@@ -61,5 +67,6 @@ class Api::CartItemsController < ApplicationController
 
     def cart_items_params
         params.require(:cart_item).permit(:user_id, :product_id, :quantity)
+        # these are the params that are required for each instance of the cart_items
     end
 end
