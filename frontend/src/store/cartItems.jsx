@@ -1,5 +1,6 @@
 
 import csrfFetch from "./csrf";
+import { REMOVE_CURRENT_USER } from "./session";
 
 
 export const RECEIVE_CART_ITEMS = '/cartItems/RECEIVE_CART_ITEMS';
@@ -123,6 +124,8 @@ export default function cartItemsReducer(state={}, action) {
             delete newState[action.cartItemId];
             return newState;
         case CLEAR_CART_ITEMS:
+            return {};
+        case REMOVE_CURRENT_USER:
             return {};
         default:
             return state;

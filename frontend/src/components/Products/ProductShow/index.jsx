@@ -36,14 +36,25 @@ export default function ProductShowPage() {
         dispatch(fetchProduct(productId))
     }, [dispatch])
 
-    const handleClick = e => {
+    // const handleClick = e => {
+    //     e.preventDefault();
+
+    //     const cartItem = {
+    //         product_id: productId,
+    //         quantity: 1
+    //     }
+    //     dispatch(createCartItem(cartItem));
+    //     history.push(`/cart`);
+    // }
+
+    async function handleClick(e) {
         e.preventDefault();
 
         const cartItem = {
             product_id: productId,
             quantity: 1
         }
-        dispatch(createCartItem(cartItem));
+        await dispatch(createCartItem(cartItem));
         // history.push(`/cart`);
     }
 

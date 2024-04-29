@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 import {FaTrashAlt} from 'react-icons/fa'
 import './cartIndexItem.css'
 
-
+ 
 
 export default function CartIndexItem({cartItem}) { //cart item being passed into the functional component
     const dispatch = useDispatch();
@@ -25,7 +25,7 @@ export default function CartIndexItem({cartItem}) { //cart item being passed int
         e.preventDefault()
         dispatch(deleteCartItem(cartItem.id))
     }
- 
+
     const handleQuantity = (num) => {
         if (quantity >= 1) {
             const newCartItem = {
