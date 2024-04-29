@@ -1,4 +1,5 @@
 import { RECEIVE_PRODUCT } from "./products";
+import { REMOVE_CURRENT_USER } from "./session";
 import csrfFetch from "./csrf";
 
 export const RECEIVE_REVIEWS = 'reviews/RECEIVE_REVIEWS';
@@ -114,6 +115,8 @@ export default function reviewsReducer(state={}, action) {
             newState = {...state};
             delete newState[action.reviewId];
             return newState;
+        case REMOVE_CURRENT_USER:
+            return {};
         default:
             return state;
     }

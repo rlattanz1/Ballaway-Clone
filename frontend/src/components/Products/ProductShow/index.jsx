@@ -36,27 +36,27 @@ export default function ProductShowPage() {
         dispatch(fetchProduct(productId))
     }, [dispatch])
 
-    // const handleClick = e => {
-    //     e.preventDefault();
-
-    //     const cartItem = {
-    //         product_id: productId,
-    //         quantity: 1
-    //     }
-    //     dispatch(createCartItem(cartItem));
-    //     history.push(`/cart`);
-    // }
-
-    async function handleClick(e) {
+    const handleClick = e => {
         e.preventDefault();
 
         const cartItem = {
             product_id: productId,
             quantity: 1
         }
-        await dispatch(createCartItem(cartItem));
-        // history.push(`/cart`);
+        dispatch(createCartItem(cartItem));
+    //     history.push(`/cart`);
     }
+
+    // async function handleClick(e) {
+    //     e.preventDefault();
+
+    //     const cartItem = {
+    //         product_id: productId,
+    //         quantity: 1
+    //     }
+    //     await dispatch(createCartItem(cartItem));
+        // history.push(`/cart`);
+    // }
 
     // const handleSelection = e => {
     //     e.preventDefault();
