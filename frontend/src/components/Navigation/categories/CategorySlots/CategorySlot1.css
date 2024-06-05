@@ -18,14 +18,25 @@ h2 {
     width: 250px;
 }
 .category-link-img {
-    background: white;
-
+    background: rgb(208, 214, 216);
 }
 
 .category-link-img:hover {
-    background: gray;
+    background: darkgray;
 }
 .balls-category-slot {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.bags-category-slot {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.gloves-category-slot {
     display: flex;
     flex-direction: column;
     justify-content: center;

@@ -32,6 +32,8 @@ export default function CategorySlot1() {
                             <img src="https://ballaway-seeds.s3.us-west-1.amazonaws.com/gloves-opticolor-1.png" alt="" />
                         </NavLink>
                     </div>
+                    <br />
+                    <h3>Gloves</h3>
                 </div>
             </div>
         </>
