@@ -51,50 +51,58 @@ function SignupFormPage() {
         <p class="title">
             <b>Join The Team</b>
         </p>
-      <label class="label">
-        <b>Email</b>
-      </label>
-        <input
-          class="input"
-          type="text"
-          placeholder="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
-      <label class="label">
-        <b>Username</b>
-      </label>
-        <input
-          class="input"
-          type="text"
-          placeholder="username"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-          required
+      <div className="input-container">
+        <label class="label">
+          <b>Email</b>
+        </label>
+          <input
+            class="input"
+            type="text"
+            placeholder="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
           />
-      <label class="label">
-        <b>Password</b>
-      </label>
-        <input
-          class="input"
-          type="password"
-          placeholder="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        />
-      <label class="label">
-       <b>Confirm Password</b>
-      </label>
-        <input
-          class="input"
-          type="password"
-          placeholder="password"
-          value={confirmPassword}
-          onChange={(e) => setConfirmPassword(e.target.value)}
-          required
-        />
+      </div>
+      <div className="input-container">
+        <label class="label">
+          <b>Username</b>
+        </label>
+          <input
+            class="input"
+            type="text"
+            placeholder="username"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+            required
+            />
+      </div>
+      <div className="input-container">
+        <label class="label">
+          <b>Password</b>
+        </label>
+          <input
+            class="input"
+            type="password"
+            placeholder="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+      </div>
+      <div className="input-container">
+        <label class="label">
+        <b>Confirm Password</b>
+        </label>
+          <input
+            class="input"
+            type="password"
+            placeholder="password"
+            value={confirmPassword}
+            onChange={(e) => setConfirmPassword(e.target.value)}
+            required
+          />
+      </div>
       <button type="submit">Sign Up</button>
 
 

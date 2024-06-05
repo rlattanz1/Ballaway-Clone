@@ -61,7 +61,7 @@ function Navigation() {
     );
   } else {
     sessionLinks = (
-        <div class="right_links">
+      <div class="right_links">
             {/* phone num spells 1-800-bal-away */}
         <p className='phone_num'>1-800-225-2929</p> &nbsp; &nbsp;
         <span>|</span> &nbsp; &nbsp;
