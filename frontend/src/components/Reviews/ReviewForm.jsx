@@ -51,7 +51,6 @@ export default function CreateReviewPage() {
         let data;
         try {
             data = await res.json();
-            console.log(data)
         } catch {
             data = await res.text();
         }
@@ -82,14 +81,12 @@ export default function CreateReviewPage() {
         }
 
         if (formType === 'Create Review') {
-            console.log(newReview, "newReview")
             dispatch(createReview(newReview))
             .then(() => {
                 setReviewCreated(true);
             })
             .catch((handleError));
         } else {
-            console.log(newReview, "newReview")
             dispatch(updateReview(newReview))
             .then(() => {
                 setReviewUpdated(true);

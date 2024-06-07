@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Redirect } from "react-router-dom";
 import * as sessionActions from "../../store/session";
@@ -14,99 +14,147 @@ function SignupFormPage() {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [errors, setErrors] = useState([]);
 
+
   if (sessionUser) return <Redirect to="/" />;
+
+
+  const handleError = async (res) => {
+    let data;
+    if (password === confirmPassword) {
+      try {
+          data = await res.json();
+      } catch {
+          data = await res.text();
+      }
+      if (data) {
+          setErrors(data.message)
+      } else if (data) {
+          setErrors([data.message])
+      } else {
+          setErrors([res.statusText])
+      };
+    } else {
+      setErrors(['Confirm Password field must be the same as the Password field']);
+    }
+};
 
   const handleSubmit = e => {
     e.preventDefault();
-    if (password === confirmPassword) {
-      setErrors([]);
-      return dispatch(sessionActions.signup({ email, username, password }))
-        .catch(async (res) => {
-        let data;
-        try {
-          // .clone() essentially allows you to read the response body twice
-          data = await res.clone().json();
-        } catch {
-          data = await res.text(); // Will hit this case if the server is down
-        }
-        if (data?.errors) {
-            setErrors(data.errors);
-        } else if (data) {
-            setErrors([data]);
-        }
-        else {
-            setErrors([res.statusText]);
-        }
-      });
-    }
-    return setErrors(['Confirm Password field must be the same as the Password field']);
+
+    dispatch(sessionActions.signup({ email, username, password }))
+    .catch((handleError));
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <ul>
-        {errors.map(error => <li class="error_message" key={error}>{error.message}</li>)}
-      </ul>
-      <p>{Logo}</p>
-        <p class="title">
-            <b>Join The Team</b>
-        </p>
-      <div className="input-container">
-        <label class="label">
-          <b>Email</b>
-        </label>
-          <input
-            class="input"
-            type="text"
-            placeholder="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-      </div>
-      <div className="input-container">
-        <label class="label">
-          <b>Username</b>
-        </label>
-          <input
-            class="input"
-            type="text"
-            placeholder="username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            required
+      <form onSubmit={handleSubmit}>
+        <p>{Logo}</p>
+          <p class="title">
+              <b>Join The Team</b>
+          </p>
+        <div className="input-container">
+          <label class="label">
+            <b>Email</b>
+          </label>
+            <input
+              class="input"
+              type="text"
+              placeholder="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
             />
-      </div>
-      <div className="input-container">
-        <label class="label">
-          <b>Password</b>
-        </label>
-          <input
-            class="input"
-            type="password"
-            placeholder="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-      </div>
-      <div className="input-container">
-        <label class="label">
-        <b>Confirm Password</b>
-        </label>
-          <input
-            class="input"
-            type="password"
-            placeholder="password"
-            value={confirmPassword}
-            onChange={(e) => setConfirmPassword(e.target.value)}
-            required
-          />
-      </div>
-      <button type="submit">Sign Up</button>
+        </div>
+        <div className="errors-container">
+          <ul>
+            {errors.map( error => {
+            if (error.includes('Email')) {
+                return(
+                        <li>
+                            {error}
+                        </li>
+                    )}
+                })}
+          </ul>
+        </div>
+        <div className="input-container">
+          <label class="label">
+            <b>Username</b>
+          </label>
+            <input
+              class="input"
+              type="text"
+              placeholder="username"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              required
+              />
+        </div>
+        <div className="errors-container">
+          <ul>
+            {errors.map( error => {
+            if (error.includes('Username')) {
+                return(
+                        <li>
+                            {error}
+                        </li>
+                    )}
+                })}
+          </ul>
+        </div>
+        <div className="input-container">
+          <label class="label">
+            <b>Password</b>
+          </label>
+            <input
+              class="input"
+              type="password"
+              placeholder="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+        </div>
+        <div className="errors-container">
+          <ul>
+            {errors.map( error => {
+            if (error.includes('Password')) {
+                return(
+                        <li>
+                            {error}
+                        </li>
+                    )}
+                })}
+          </ul>
+        </div>
+        <div className="input-container">
+          <label class="label">
+          <b>Confirm Password</b>
+          </label>
+            <input
+              class="input"
+              type="password"
+              placeholder="password"
+              value={confirmPassword}
+              onChange={(e) => setConfirmPassword(e.target.value)}
+              required
+            />
+        </div>
+        <div className="errors-container">
+          <ul>
+            {errors.map( error => {
+            if (error.includes('Confirm Password')) {
+                return(
+                        <li>
+                            {error}
+                        </li>
+                    )}
+                })}
+          </ul>
+        </div>
+        <button type="submit">Sign Up</button>
 
 
-    </form>
+      </form>
   );
 }
 
