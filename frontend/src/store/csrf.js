@@ -14,8 +14,14 @@ export default async function csrfFetch(url, options = {}) {
       options.headers['X-CSRF-Token'] = sessionStorage.getItem('X-CSRF-Token');
     }
 
+    console.log(origin, url)
+    console.log(options.headers['X-CSRF-Token'])
+
     // call fetch with the url and the updated options hash
     const res = await fetch(url, options);
+    console.log(options.headers['X-CSRF-Token'])
+    console.log(origin, url)
+    console.log(res)
 
     // if the response status code is 400 or above, then throw an error with the
     // error being the response

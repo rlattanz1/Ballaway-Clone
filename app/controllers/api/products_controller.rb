@@ -18,11 +18,13 @@ class Api::ProductsController < ApplicationController
 
     def show
         @product = Product.find_by(id: params[:id])
+        # debugger
         if @product
             render 'api/products/show'
         else
             render json: {message: @product.errors.full_messages}, status: 422
         end
+        puts status
     end
 
     private

@@ -6,14 +6,17 @@ import ShippingBanner from "../../Banners/ShippingBanner"
 
 export default function Categories() {
     const categories = ['Products', 'Clubs', 'Balls', 'Bags', 'Gloves', 'Gear']
+
+
     return (
         <div className="categories-div">
             <div className="category-links">
                 <ul className="category-ul">
                     <div className="prod-ele">
-                    {categories.map(category => (
+                        {/* why is the key prop here not being recognized as unique */}
+                    {categories.map((category, i) => (
                     <li className="category-li">
-                        <NavLink className="category" to={`/category/${category}`}>{category}</NavLink>
+                        <NavLink className="category" to={`/category/${category}`} key={i}>{category}</NavLink>
                     </li>
                     ))}
                     </div>

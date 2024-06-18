@@ -13,20 +13,20 @@ module AuthenticateMe
 
     # config/application.rb
 
-module Backend
-  class Application < Rails::Application
-    # ...
-    config.middleware.use ActionDispatch::Cookies
-    config.middleware.use ActionDispatch::Session::CookieStore,
-      key: '_auth_me_session',
-      same_site: :lax,
-      secure: Rails.env.production?
-      initializer(:remove_extra_routes, after: :add_routing_paths) { |app|
-      app.routes_reloader.paths.delete_if {|path| path =~ /actionmailbox/ }
-    }
-    config.railties_order = [:all, :main_app]
+  module Backend
+    class Application < Rails::Application
+      # ...
+      config.middleware.use ActionDispatch::Cookies
+      config.middleware.use ActionDispatch::Session::CookieStore,
+        key: '_auth_me_session',
+        same_site: :lax,
+        secure: Rails.env.production?
+        initializer(:remove_extra_routes, after: :add_routing_paths) { |app|
+        app.routes_reloader.paths.delete_if {|path| path =~ /actionmailbox/ }
+      }
+      config.railties_order = [:all, :main_app]
+    end
   end
-end
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files
